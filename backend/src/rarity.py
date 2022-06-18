@@ -45,10 +45,16 @@ def isIncrementing(ens):
         return('Y')
     elif len(ens) == 4 and int(ens[0]) - int(ens[1]) == int(ens[1]) - int(ens[2]) == int(ens[2]) - int(ens[3]):
         return('Y')
-    elif len(ens) == 5 and int(ens[0]) - int(ens[1]) == int(ens[1]) - int(ens[2]) == int(ens[2]) - int(ens[3]) == int(ens[3]) - int(ens[4]):
-        return('Y')
-    elif len(ens) == 5 and ens[2] == 'h' and int(ens[0]) - int(ens[1]) == int(ens[1]) - int(ens[3]) == int(ens[3]) - int(ens[4]):
-        return('Y')
+    elif len(ens) == 5 and ens[2] != 'h':
+        if int(ens[0]) - int(ens[1]) == int(ens[1]) - int(ens[2]) == int(ens[2]) - int(ens[3]) == int(ens[3]) - int(ens[4]):
+            return('Y')
+        else:
+            return('N')
+    elif len(ens) == 5 and ens[2] == 'h':
+        if int(ens[0]) - int(ens[1]) == int(ens[1]) - int(ens[3]) == int(ens[3]) - int(ens[4]):
+            return('Y')
+        else:
+            return('N')
     elif 7 >= len(ens) >= 5 and ens[:2] == '0x':
         if len(ens[2:]) == 3 and int(ens[2]) - int(ens[3]) == int(ens[3]) - int(ens[4]):
             return('Y')
@@ -67,11 +73,11 @@ def isIncrementing(ens):
 
 def isRepeating(string):
     store = []
-    if 5 >= len(ens) >= 3 and ens[:2] != '0x' and ens[2] != 'h':
+    if 5 >= len(string) >= 3 and string[:2] != '0x' and string[2] != 'h':
         valid = string;
-    elif 7 >= len(ens) >= 5 and ens[:2] == '0x':
+    elif 7 >= len(string) >= 5 and string[:2] == '0x':
         valid = string[2:]
-    elif len(ens) == 5 and ens[2] == 'h':
+    elif len(string) == 5 and string[2] == 'h':
         valid = string[:2] + string[3:]
     for item in set(valid):
         store.append(valid.count(item))

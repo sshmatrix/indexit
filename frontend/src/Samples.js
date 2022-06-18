@@ -63,10 +63,15 @@ const Samples = (props) => {
             .then(response => response.json())
             .then(data => {
               console.log(data);
-              const urlImg = data.image.slice(0, -4);
-              setNFTFront(urlImg + '-Front.png');
-              setNFTBack(urlImg + '-Back.png');
-              setStatus('✅ Card Generated! See below.');
+              if (data.image === 'empty') {
+                setStatus('✋ Slow down champ! Let the previous request finish ⌛');
+                window.alert('✋ Slow down champ! Let the previous request finish ⌛')
+              } else {
+                const urlImg = data.image.slice(0, -4);
+                setNFTFront(urlImg + '-Front.png');
+                setNFTBack(urlImg + '-Back.png');
+                setStatus('✅ Card Generated! See below.');
+              }
             });
         } catch (error) {
           setStatus('✋ Coming soon! We are still in Beta! ⌛');

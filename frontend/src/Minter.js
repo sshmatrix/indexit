@@ -209,6 +209,7 @@ const Minter = (props) => {
         SWITCH WALLET
       </button>
       <br></br>
+      <h5 style={{ marginLeft: '200px', marginTop: '50px' }}>"If you are your number and your number is you, then this NFT is certainly for you" - indexit.eth</h5>
       <h1 id="title">🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
       <h2 className='blink_me'><span style={{ color: 'blue', fontSize: 20 }}>⚒️⚒️⚒️ CLICK 'SAMPLES' ↑ ↑ ↑ </span></h2>
       <img style={{ float: 'right', marginBottom: '20px' }} alt="sample" src={sample} width="337" height="400"/>
