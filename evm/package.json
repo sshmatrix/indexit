@@ -1,0 +1,18 @@
+{
+  "name": "IndexIt",
+  "version": "0.0.1",
+  "description": "Rarity Cards for Number Clubs",
+  "main": "index.js",
+  "author": "indexit.eth",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "ethers": "^5.6.8",
+    "hardhat": "^2.9.7",
+    "@alch/alchemy-web3": "^1.0.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0",
+    "dotenv": "^16.0.1"
+  }
+}

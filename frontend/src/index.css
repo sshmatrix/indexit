@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
+@font-face {
+    font-family: 'SFPro';
+    src: url('./fonts/SFPro-Regular-Web.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+		margin: 0;
+		padding: 0;
+}
+
+@font-face {
+    font-family: 'Aadhunik';
+    src: url('./fonts/Aadhunik-Regular-Web.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+		margin: 0;
+		padding: 0;
+}
+
+@font-face {
+    font-family: 'SFMono';
+    src: url('./fonts/SFMono-Regular-Web.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+		margin: 0;
+		padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Aadhunik';
+  color: #000000;
+  background: url('./img/background.png');
+  background-size: contain;
+  border-radius: 0px !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'SFMono',
+    monospace;
+}
+
+.Minter {
+  background: rgba(138, 177, 255, 0.9);
+  border-color: rgba(4, 4, 5, 0.1);
+  border-radius: 15px;
+  max-width: 80%;
+  padding: 50px 50px;
+  margin: 50px auto;
+  text-align: left;
+  float: center;
+}
+
+.Samples {
+  background: rgba(138, 177, 255, 0.9);
+  border-color: rgba(4, 4, 5, 0.1);
+  border-radius: 15px;
+  max-width: 80%;
+  padding: 50px 50px;
+  margin: 50px auto;
+  text-align: left;
+  float: center;
+}
+
+.Algorithm {
+  background: rgba(138, 177, 255, 0.9);
+  border-color: rgba(4, 4, 5, 0.1);
+  border-radius: 15px;
+  max-width: 80%;
+  padding: 50px 50px;
+  margin: 50px auto;
+  text-align: left;
+  float: center;
+}
+
+input {
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  font-family: 'SFMono';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  width: 100%;
+  border-color: rgba(4, 4, 5, 0.1);
+  line-height: 32px;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgba(4, 4, 5, 0.4);
+  font-family: 'SFMono';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+}
+
+::placeholder {
+  font-family: 'SFMono';
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+}
+
+input:-webkit-autofill:active {
+  font-family: 'SFMono';
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 1200;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+  font-family: 'Rubik';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+h3 {
+  font-size: 22px;
+  font-weight: 600;
+  font-family: 'Rubik';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'DM Mono';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+h5 {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: 'DM Mono';
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+a { color: inherit }
+
+button {
+  padding: 9px 16px;
+  max-height: 40px;
+  /*box-shadow: 4px 4px 15px 0 rgb(0 0 0 / 20%);*/
+  border-color: #000000;
+  color: #000000;
+  background-color: white;
+  border-radius: 8px;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  font-weight: bold;
+  cursor:pointer;
+}
+
+button:hover {
+  margin-top: -1px;
+}
+
+#title {
+  padding-top: 24px;
+  font-family: 'Rubik';
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.uploadFile {
+  border: 4px dashed rgba(4, 4, 5, 0.1);
+  border-radius: 16px;
+  text-align: center;
+  padding: 32px 60px;
+}
+
+#walletButton {
+  text-align: right;
+  float:right;
+  margin-bottom: 50px;
+  line-height: 16px;
+  font-family: 'Aadhunik';
+  color: #000000;
+  background-color: #07d400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#walletButton:hover {
+  border-color: #000000;
+  background-color: #ff5233;
+  color: #ffffff;
+}
+
+#disconnectButton {
+  text-align: right;
+  float:right;
+  margin-bottom: 50px;
+  margin-right: 5px;
+  line-height: 16px;
+  font-family: 'Aadhunik';
+  color: #000000;
+  background-color: #f5aa42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#disconnectButton:hover {
+  border-color: #000000;
+  background-color: #ff5233;
+  color: #ffffff;
+}
+
+#sampleButton {
+  text-align: right;
+  float:left;
+  margin-bottom: 0px;
+  margin-left: 5px;
+  margin-right: 5px;
+  line-height: 16px;
+  font-family: 'Aadhunik';
+  color: #000000;
+  background-color: #ffeab0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#sampleButton:hover {
+  border-color: #000000;
+  background-color: #ff5233;
+  color: #ffffff;
+}
+
+#mintButton {
+  margin-top: 0px;
+  border-color: #000000;
+  background-color: #00ff00;
+  color:black;
+  margin-left: 20px;
+  line-height: 16px;
+  font-family: 'Aadhunik';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#mintButton:hover {
+  border-color: #000000;
+  background-color: #00a2ff;
+  color: #ffffff;
+}
+
+#signButton {
+  text-align: right;
+  float: left;
+  margin-bottom: 50px;
+  line-height: 16px;
+  font-family: 'Aadhunik';
+  color: #000000;
+  border-color: #000000;
+  background-color: #00fffb;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#signButton:hover {
+  border-color: #000000;
+  background-color: #758f8e;
+  color: #ffffff;
+}
+
+.blink_me {
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0.3;
+  }
+}
