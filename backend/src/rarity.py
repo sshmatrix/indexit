@@ -3,6 +3,8 @@
 from sympy import isprime, nextprime, prevprime, primeomega, primorial, prime, bernoulli, primerange
 import sys
 
+global dir
+
 def rotate(l, n):
     return l[-n:] + l[:-n]
     
@@ -45,7 +47,7 @@ def isIncrementing(ens):
         return('Y')
     elif len(ens) == 4 and int(ens[0]) - int(ens[1]) == int(ens[1]) - int(ens[2]) == int(ens[2]) - int(ens[3]):
         return('Y')
-    elif len(ens) == 5 and ens[2] != 'h':
+    elif len(ens) == 5 and ens[2] != 'h' and ens[:2] != '0x':
         if int(ens[0]) - int(ens[1]) == int(ens[1]) - int(ens[2]) == int(ens[2]) - int(ens[3]) == int(ens[3]) - int(ens[4]):
             return('Y')
         else:
@@ -228,7 +230,7 @@ def generatefortunatePrime(num): # computationally expensive; use list of first 
     return(flag)
 
 def fortunatePrime(num): #15 first 3000 primorals
-    with open('/root/indexit/src/fortunatePrimes.log') as f:
+    with open(dir + 'fortunatePrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -256,7 +258,7 @@ def generateGoodPrime(num): # computationally expensive; introduce in v2
     return(flag)
 
 def goodPrime(num): #17 first 10000 primorals
-    with open('/root/indexit/src/goodPrimes.log') as f:
+    with open(dir + 'goodPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -264,7 +266,7 @@ def goodPrime(num): #17 first 10000 primorals
     return(flag)
 
 def happyPrime(num): #18 first 10000 primorals
-    with open('/root/indexit/src/happyPrimes.log') as f:
+    with open(dir + 'happyPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -272,7 +274,7 @@ def happyPrime(num): #18 first 10000 primorals
     return(flag)
 
 def harmonicPrime(num): #19 first 10000 primorals
-    with open('/root/indexit/src/harmonicPrimes.log') as f:
+    with open(dir + 'harmonicPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -294,7 +296,7 @@ def generateHiggsPrime(end): # generate Higgs primes; computationally expensive
     return(higgs)
 
 def higgsPrime(num): #20 first 100,000 primorials
-    with open('/root/indexit/src/higgsPrimes.log') as f:
+    with open(dir + 'higgsPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -302,7 +304,7 @@ def higgsPrime(num): #20 first 100,000 primorials
     return(flag)
 
 def homePrime(num): #21 first 115 primorals
-    with open('/root/indexit/src/homePrimes.log') as f:
+    with open(dir + 'homePrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -329,7 +331,7 @@ def leylandPrime(num): #24
     return(flag)
 
 def longPrime(num): #25 first 10,000 primorals
-    with open('/root/indexit/src/longPrimes.log') as f:
+    with open(dir + 'longPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -343,7 +345,7 @@ def lucasPrime(num): #26
     return(flag)
 
 def luckyPrime(num): #27 first 10,000 primorals
-    with open('/root/indexit/src/longPrimes.log') as f:
+    with open(dir + 'longPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -357,7 +359,7 @@ def mersennePrime(num): #28 first 12 only
     return(flag)
 
 def mersenneDivisorPrime(num): #29 mersenne divisors for first 10,000 primorials
-    with open('/root/indexit/src/mersenneDivisorPrimes.log') as f:
+    with open(dir + 'mersenneDivisorPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -411,7 +413,7 @@ def nonGenerousPrime(num): #36
     return(flag)
 
 def palindromicPrime(num): #37 under 12 digits
-    with open('/root/indexit/src/palindromicPrimes.log') as f:
+    with open(dir + 'palindromicPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -449,7 +451,7 @@ def perrinPrime(num): #41
     return(flag)
 
 def pierpointPrime(num): #42 under 12 digits
-    with open('/root/indexit/src/pierpointPrimes.log') as f:
+    with open(dir + 'pierpointPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -457,7 +459,7 @@ def pierpointPrime(num): #42 under 12 digits
     return(flag)
 
 def pillaiPrime(num): #43 under 12 digits
-    with open('/root/indexit/src/pillaiPrimes.log') as f:
+    with open(dir + 'pillaiPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -465,7 +467,7 @@ def pillaiPrime(num): #43 under 12 digits
     return(flag)
 
 def primevalPrime(num): #44 under 12 digits
-    with open('/root/indexit/src/primevalPrimes.log') as f:
+    with open(dir + 'primevalPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -479,7 +481,7 @@ def primorialPrime(num): #45
     return(flag)
 
 def prothPrime(num): #46 first 10,000 primorials
-    with open('/root/indexit/src/prothPrimes.log') as f:
+    with open(dir + 'prothPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -503,7 +505,7 @@ def quadrupletPrime(num): #48
     return(flag)
 
 def quartanPrime(num): #49 first 10,000 primorials
-    with open('/root/indexit/src/quartanPrimes.log') as f:
+    with open(dir + 'quartanPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -511,7 +513,7 @@ def quartanPrime(num): #49 first 10,000 primorials
     return(flag)
 
 def ramanujanPrime(num): #50 first 10,000 primorials
-    with open('/root/indexit/src/ramanujanPrimes.log') as f:
+    with open(dir + 'ramanujanPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -525,7 +527,7 @@ def safePrime(num): #51
     return(flag)
 
 def selfPrime(num): #52 first 10,000 primorials
-    with open('/root/indexit/src/selfPrimes.log') as f:
+    with open(dir + 'selfPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -545,7 +547,7 @@ def smarandacheWellinPrime(num): #54
     return(flag)
 
 def solinasPrime(num): #55 first 10,000 primorials
-    with open('/root/indexit/src/solinasPrimes.log') as f:
+    with open(dir + 'solinasPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -559,7 +561,7 @@ def sternPrime(num): #56
     return(flag)
 
 def stroboGrammaticPrime(num): #57 first 10,000 primorials
-    with open('/root/indexit/src/stroboGrammaticPrimes.log') as f:
+    with open(dir + 'stroboGrammaticPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -567,7 +569,7 @@ def stroboGrammaticPrime(num): #57 first 10,000 primorials
     return(flag)
 
 def superPrime(num): #58 first 100,000 primorials
-    with open('/root/indexit/src/superPrimes.log') as f:
+    with open(dir + 'superPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -605,7 +607,7 @@ def twinPrime(num): #63
     return(flag)
 
 def uniquePrime(num): #64 first 46
-    with open('/root/indexit/src/uniquePrimes.log') as f:
+    with open(dir + 'uniquePrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -623,7 +625,7 @@ def generateWagstaffPrime(num): # computationally expensive
     return(flag)
 
 def wagstaffPrime(num): #65 first 20
-    with open('/root/indexit/src/wagstaffPrimes.log') as f:
+    with open(dir + 'wagstaffPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -631,7 +633,7 @@ def wagstaffPrime(num): #65 first 20
     return(flag)
 
 def weaklyPrime(num): #66 first 3167
-    with open('/root/indexit/src/weaklyPrimes.log') as f:
+    with open(dir + 'weaklyPrimes.log') as f:
         lines = f.read()
     flag = False
     if str(num) in lines:
@@ -662,6 +664,8 @@ val = sys.argv[1]
 prompt = sys.argv[2]
 primeCount = int(sys.argv[3])
 primeString = sys.argv[4]
+dir = sys.argv[5]
+
 
 if val[:2] == '0x' and val[2] != 'h':
     num = int(val[2:])

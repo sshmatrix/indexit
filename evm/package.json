@@ -6,10 +6,11 @@
   "author": "indexit.eth",
   "license": "MIT",
   "devDependencies": {
+    "@alch/alchemy-web3": "^1.0.1",
     "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "chai": "^4.3.6",
     "ethers": "^5.6.8",
-    "hardhat": "^2.9.7",
-    "@alch/alchemy-web3": "^1.0.1"
+    "hardhat": "^2.9.7"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.6.0",

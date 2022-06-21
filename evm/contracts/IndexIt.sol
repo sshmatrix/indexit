@@ -22,6 +22,9 @@ contract IndexIt is ERC721URIStorage, Ownable {
     uint256 public constant price10kClub = 0;
     uint256 public constant price0x100kClub = 0;
     uint256 public constant priceIdiotClub = 0;
+
+    // Debugger
+    event Sig(address indexed, address indexed);
     
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
@@ -101,6 +104,7 @@ contract IndexIt is ERC721URIStorage, Ownable {
         bytes32 payloadHash = keccak256(abi.encode(hash, message));
         bytes32 messageHash = prefixed(payloadHash);
         address signer = recoverSigner(messageHash, signature);
+        emit Sig(msg.sender, signer);
         require(msg.sender == signer, "Signer does not match minter");
         uint256 newTokenID = _tokenIds.current();
         uint256 mintPrice = price(name);

@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Fira+Code&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
 @font-face {
     font-family: 'SFPro';
-    src: url('./fonts/SFPro-Regular-Web.woff2') format('woff2');
+    src: url('./fonts/SFPro-Thin-Web.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 		margin: 0;
@@ -29,7 +35,7 @@
 
 body {
   margin: 0;
-  font-family: 'Aadhunik';
+  font-family: 'SFPro';
   color: #000000;
   background: url('./img/background.png');
   background-size: contain;
@@ -101,7 +107,7 @@ input:focus {
 
 ::placeholder {
   font-family: 'SFMono';
-  font-weight: 600;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 14px;
@@ -118,34 +124,35 @@ input:-webkit-autofill:active {
 h1 {
   font-size: 40px;
   font-weight: 1200;
+  font-family: 'Rubik';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
 h2 {
   font-size: 24px;
   font-weight: 800;
-  font-family: 'Rubik';
+  font-family: 'Fredoka One';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
 h3 {
   font-size: 22px;
   font-weight: 600;
-  font-family: 'Rubik';
+  font-family: 'Major Mono Display';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
 h4 {
   font-size: 18px;
-  font-weight: 600;
-  font-family: 'DM Mono';
+  font-weight: 400;
+  font-family: 'Space Mono';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
 h5 {
   font-size: 18px;
   font-weight: 600;
-  font-family: 'DM Mono';
+  font-family: 'SFPro';
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
@@ -156,15 +163,11 @@ button {
   padding: 9px 16px;
   max-height: 40px;
   /*box-shadow: 4px 4px 15px 0 rgb(0 0 0 / 20%);*/
-  border-color: #000000;
-  color: #000000;
-  background-color: white;
   border-radius: 8px;
   align-items: center;
   font-size: 16px;
-  font-weight: 500;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
   cursor:pointer;
 }
 
@@ -174,7 +177,7 @@ button:hover {
 
 #title {
   padding-top: 12px;
-  font-family: 'Rubik';
+  font-family: 'Fredoka One';
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -192,17 +195,19 @@ button:hover {
   float:right;
   margin-bottom: 50px;
   line-height: 16px;
-  font-family: 'Aadhunik';
-  color: #000000;
-  background-color: #07d400;
+  font-family: 'SFPro';
+  color: #ffffff;
+  border-color: #000000;
+  background: radial-gradient(circle, rgba(164,34,185,1) 0%, rgba(0,212,255,1) 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 #walletButton:hover {
-  border-color: #000000;
-  background-color: #ff5233;
-  color: #ffffff;
+  border-color: #ffffff;
+  background: radial-gradient(circle, rgba(164,34,185,1) 0%, rgba(71,135,225,1) 100%, rgba(0,212,255,1) 100%);;
+  color: #00ffee;
+  font-weight: 1200;
 }
 
 #disconnectButton {
@@ -211,17 +216,19 @@ button:hover {
   margin-bottom: 50px;
   margin-right: 5px;
   line-height: 16px;
-  font-family: 'Aadhunik';
-  color: #000000;
-  background-color: #f5aa42;
+  font-family: 'SFPro';
+  color: #ffffff;
+  border-color: #000000;
+  background: radial-gradient(circle, rgba(164,34,185,1) 0%, rgba(0,212,255,1) 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 #disconnectButton:hover {
-  border-color: #000000;
-  background-color: #ff5233;
-  color: #ffffff;
+  border-color: #ffffff;
+  background: radial-gradient(circle, rgba(164,34,185,1) 0%, rgba(71,135,225,1) 100%, rgba(0,212,255,1) 100%);;
+  color: #00ffee;
+  font-weight: 1200;
 }
 
 #sampleButton {
@@ -231,35 +238,40 @@ button:hover {
   margin-left: 5px;
   margin-right: 5px;
   line-height: 16px;
-  font-family: 'Aadhunik';
-  color: #000000;
-  background-color: #ffeab0;
+  font-family: 'SFPro';
+  color: #ffffff;
+  border-color: #000000;
+  background: radial-gradient(circle, rgba(164,34,185,1) 0%, rgba(0,212,255,1) 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 #sampleButton:hover {
-  border-color: #000000;
-  background-color: #ff5233;
-  color: #ffffff;
+  border-color: #ffffff;
+  background: radial-gradient(circle, rgba(164,34,185,1) 0%, rgba(71,135,225,1) 100%, rgba(0,212,255,1) 100%);;
+  color: #00ffee;
+  font-weight: 1200;
 }
 
 #mintButton {
   margin-top: 0px;
   border-color: #000000;
-  background-color: #00ff00;
-  color:black;
+  color: white;
   margin-left: 20px;
   line-height: 16px;
-  font-family: 'Aadhunik';
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: 'SFPro';
+  background: radial-gradient(circle, rgba(164,34,185,1) 0%, rgba(0,212,255,1) 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 #mintButton:hover {
-  border-color: #000000;
-  background-color: #00a2ff;
-  color: #ffffff;
+  border-color: #ffffff;
+  background: radial-gradient(circle, rgba(164,34,185,1) 0%, rgba(71,135,225,1) 100%, rgba(0,212,255,1) 100%);;
+  color: #00ffee;
+  font-weight: 1200;
 }
 
 #signButton {
@@ -267,18 +279,21 @@ button:hover {
   float: left;
   margin-bottom: 50px;
   line-height: 16px;
-  font-family: 'Aadhunik';
-  color: #000000;
+  font-family: 'SFPro';
+  color: #ffffff;
   border-color: #000000;
-  background-color: #00fffb;
+  padding-left: 30px;
+  padding-right: 30px;
+  background: radial-gradient(circle, rgba(164,34,185,1) 0%, rgba(0,212,255,1) 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 #signButton:hover {
-  border-color: #000000;
-  background-color: #758f8e;
-  color: #ffffff;
+  border-color: #ffffff;
+  background: radial-gradient(circle, rgba(164,34,185,1) 0%, rgba(71,135,225,1) 100%, rgba(0,212,255,1) 100%);;
+  color: #00ffee;
+  font-weight: 1200;
 }
 
 .blink_me {
@@ -287,6 +302,26 @@ button:hover {
 
 @keyframes blinker {
   50% {
-    opacity: 0.3;
+    opacity: 0.65;
   }
+}
+
+.errorbox {
+  float: left;
+  justify-content: space-between;
+  border-color: inherit;
+  background-color: black;
+  border-radius: 8px;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #ffffff;
+  margin-top: 30px;
+  animation: blinker 2s ease infinite;
+  font-family: 'Major Mono Display';
 }

@@ -7,15 +7,15 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
-    "axios": "^0.21.1",
+    "caniuse-lite": "^1.0.30001352",
+    "ethers": "^5.6.1",
+    "fs": "^0.0.1-security",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
     "react-router": "^6.1.0",
     "react-router-dom": "^6.0.0-beta.8",
-    "web-vitals": "^1.0.1",
-    "ethers": "^5.6.1",
-    "caniuse-lite": "^1.0.30001352"
+    "react-scripts": "^4.0.3",
+    "web-vitals": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

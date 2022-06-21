@@ -2,7 +2,7 @@ import './App.css';
 import Minter from './Minter';
 import Samples from './Samples';
 import Algorithm from './Algorithm';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
