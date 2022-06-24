@@ -2392,35 +2392,6 @@
        x2="187.09819"
        y2="57.200951"
        gradientUnits="userSpaceOnUse" />
-    <meshgradient
-       inkscape:collect="always"
-       id="meshgradient1657"
-       gradientUnits="userSpaceOnUse"
-       x="-71.472885"
-       y="27.954325">
-      <meshrow
-         id="meshrow1659">
-        <meshpatch
-           id="meshpatch1661">
-          <stop
-             path="c 11.1938,0  22.3877,0  33.5815,0"
-             style="stop-color:#000000;stop-opacity:1"
-             id="stop1663" />
-          <stop
-             path="c 0,0.509072  0,1.01814  0,1.52722"
-             style="stop-color:#ffffff;stop-opacity:1"
-             id="stop1665" />
-          <stop
-             path="c -11.1938,0  -22.3877,0  -33.5815,0"
-             style="stop-color:#000000;stop-opacity:1"
-             id="stop1667" />
-          <stop
-             path="c 0,-0.509072  0,-1.01814  0,-1.52722"
-             style="stop-color:#ffffff;stop-opacity:1"
-             id="stop1669" />
-        </meshpatch>
-      </meshrow>
-    </meshgradient>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -5163,16 +5134,14 @@
       <text
          xml:space="preserve"
          style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:-0.100323px;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="73.783073"
+         x="77.972641"
          y="47.795532"
          id="text2137-6-4"><tspan
            sodipodi:role="line"
            id="tspan2135-76-0"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke:#000000;stroke-width:0.15;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="73.783073"
-           y="47.795532">_-<tspan
-   style="stroke-linecap:round;stroke-linejoin:round"
-   id="tspan1810" /></tspan></text>
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           x="77.872314"
+           y="47.795532">_-</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.46439px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"

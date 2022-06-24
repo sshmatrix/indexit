@@ -39,7 +39,7 @@ const Samples = (props) => {
       (digit.length >= 3 && digit.length <= 7 && digit.startsWith("0x") && /^[0-9]+$/.test(digit.substring(2)))
     ) {
       setENS(`${digit}.eth`);
-      setStatus('⌛ Generating card... please wait! (can take up to 60 seconds)');
+      setStatus('⌛ Generating card... please wait! (up to 60 seconds)');
 
       try {
         console.log('⌛ Generating card... please wait!');
@@ -79,11 +79,11 @@ const Samples = (props) => {
               }
             });
         } catch (error) {
-          setStatus('✋ Coming soon! We are still in Beta! ⌛');
-          window.alert('✋ Coming soon! We are still in Beta! ⌛')
+          setStatus('✋ Hold up! Backend is not reachable. Try later ⌛');
+          window.alert('✋ Hold up! Backend is not reachable. Try later ⌛')
         }
       } catch (error) {
-        setStatus("✅ Valid ENS! Click 'NEXT →' to generate");
+        setStatus("✅ Valid ENS! Click 'NEXT ▶▶▶' to generate");
       }
     } else {
       setENS('.none');
@@ -102,16 +102,15 @@ const Samples = (props) => {
       <button id="sampleButton" onClick={goToAlgorithm}>
         ALGORITHM
       </button>
-
+      <img style={{ float: 'right', marginBottom: '20px' }} alt="sample" src={sample} width="337" height="400"/>
       <br></br>
       <h1 id="title" style={{ marginTop: '100px' }}>🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
-      <img style={{ float: 'right', marginBottom: '20px' }} alt="sample" src={sample} width="337" height="400"/>
       <h4 style={{ marginTop: '10px', marginLeft: '10px' }}><span style={{ fontSize: 30 }}>🎁 </span>Enter ENS name & generate a sample unsigned card</h4>
       <form style={{ marginBottom: '10px', width: '300px', marginLeft: '10px' }}>
         <input
           id="ens"
           type="text"
-          placeholder="Enter ENS & Click on 'NEXT →'"
+          placeholder="Enter ENS & Click on 'NEXT ▶▶▶'"
           onChange={(event) => setENS(event.target.value)}
         />
       </form>
@@ -120,13 +119,13 @@ const Samples = (props) => {
       {!ens.endsWith(".eth") ? (
         <div>
           <button id="signButton" style={{ background: 'grey', color: 'white', marginLeft: '10px' }}>
-            <span>NEXT →</span>
+            <span>🔒 NEXT</span>
           </button>
         </div>
         ) : (
         <div>
           <button id="signButton" onClick={onGeneratePressed} style={{ marginLeft: '10px' }}>
-            <span>NEXT →</span>
+            <span>NEXT ▶▶▶</span>
           </button>
         </div>
       )}
@@ -138,16 +137,22 @@ const Samples = (props) => {
         ) : (
         <p></p>
       )}
+      <br></br>
       {nftFront && nftBack ? (
-        <div style={{ marginLeft: '10px' }}>
+        <div style={{ float: 'left', marginLeft: '10px', marginTop: '100px', marginBottom: '100px' }}>
           <img alt="nftfront" src={nftFront} width="337" height="400"/>
           <img alt="nftback" src={nftBack} width="337" height="400"/>
         </div>
         ) : (
         <p></p>
       )}
-      <p> </p>
-      <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br>
+      <p></p>
+      <br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br>
       <span style={{ fontFamily: 'Major Mono Display', fontSize: '14px', fontWeight: 600, marginLeft: '10%' }}>twitter: <a style={{ color: 'blue', textDecoration: 'none' }} href="https://twitter.com/indexit_eth" target='_blank' rel="noreferrer">@indexit_eth</a></span>
       <br></br>

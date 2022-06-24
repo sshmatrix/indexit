@@ -12,11 +12,17 @@ resources='/root/indexit/resources/'
 # src='/Users/avneetsingh/Documents/Self/Fun/indexIt/backend/src/'
 # dist='/Users/avneetsingh/Documents/Self/Fun/indexIt/resources/'
 # resources='/Users/avneetsingh/Documents/Self/Fun/indexIt/resources/'
-
+markerFirst='0xfuckthisfuckwhyfuckberaswagmigmgmgmgmggmygmigmiaaauuurrgggggobli'
+markerLast='ntownsaylordokwon3acsuzhucelsiusmarkrektlolallwhyplshelpmafamiliia'
+    
 if [ "$direc" == "samples" ]; then
     holder=$ensName
+    sigFirst=$markerFirst
+    sigLast=$markerLast
 elif [ "$direc" == "cards" ]; then
     holder=$signature
+    sigFirst=${signature:0:${#signature}/2}
+    sigLast=${signature:${#signature}/2}
 fi
 
 ensName=${ensName%.*}
@@ -70,7 +76,7 @@ else
         sed -i "s/xxxxx/$ensName/g" $cardBack
         sed -i "s/xxxxx/$ensName/g" $cardFront
     elif [[ "$clubName" == "0x" ]]; then
-        sed -i "s/0xxxxxx/$ensName/g" $cardBack
+        sed -i -e "s/0xxxxxx/$ensName/g" $cardBack
         sed -i "s/0xxxxxx/$ensName/g" $cardFront
     elif [[ "$clubName" == "24h" ]]; then
         sed -i "s/xxhxx/$ensName/g" $cardBack
@@ -86,7 +92,11 @@ else
     sed -i "s/NOL3/$isAlternating/g" $cardBack
     sed -i "s/YOL4/$isIncrementing/g" $cardBack
     sed -i "s/_-/$primeCount/g" $cardBack
-
+    sed -i "s/$markerFirst/$sigFirst/g" $cardBack
+    sed -i "s/$markerLast/$sigLast/g" $cardBack
+    sed -i "s/$markerFirst/$sigFirst/g" $cardFront
+    sed -i "s/$markerLast/$sigLast/g" $cardFront
+        
     IFS='-' read -ra ADDR <<< "$primeForm"
     countB="${ADDR[1]}"
     sed -i "s/2<\/tspan>C/$countB<\/tspan>C/g" $cardBack
@@ -123,13 +133,13 @@ else
     countU="${ADDR[17]}"
     sed -i "s/1<\/tspan>W/$countU<\/tspan>W/g" $cardBack
     countW="${ADDR[18]}"
-    sed -i "s/5<\/tspan>/$countW<\/tspan>/g" $cardBack
+    sed -i "s/>5<\/tspan>/>$countW<\/tspan>/g" $cardBack
 
     # rm -r ${dist}$ensName
     cd $NFTDir
     # echo "SVG Written; Exporting PNG"
-    inkscape --without-gui -d 600 --export-area-drawing "$cardFront" -e "$NFTFront" > /dev/null 2>&1
-    inkscape --without-gui -d 600 --export-area-drawing "$cardBack" -e "$NFTBack" > /dev/null 2>&1
+    inkscape --without-gui -d 300 --export-area-drawing "$cardFront" -e "$NFTFront" > /dev/null 2>&1
+    inkscape --without-gui -d 300 --export-area-drawing "$cardBack" -e "$NFTBack" > /dev/null 2>&1
     convert +append $NFTDir$NFTFront $NFTDir$NFTBack $NFTDir$NFT
     cd $cwd
     # echo "PNG Generated"

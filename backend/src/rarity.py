@@ -1113,7 +1113,6 @@ if prompt == 'woodall' or prompt == 'all': #69
         primeString += 'W'
         #print(woodallPrime(num))
 
-primeCount = "{:02d}".format(primeCount)
 primeForm = ''
 for item in 'BCDEFGHILMNPQRSTUW': #max: B2C4D1E3F5G3H4I2L4M6N1P11Q2R2S9T4U1W5
     primeForm += '-' + str(primeString.count(item))
@@ -1121,4 +1120,4 @@ for item in 'BCDEFGHILMNPQRSTUW': #max: B2C4D1E3F5G3H4I2L4M6N1P11Q2R2S9T4U1W5
 if primeForm == '':
     primeForm = '-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0-0'
     
-print(club(val) + ',' + primeIndex + ',' + writeEven + ',' + writeOdd + ',' + writePalindrome + ',' + writePrime + ',' + primeCount + ',' + primeForm + ',' + isRepeating(val) + ',' + isAlternating(val) + ',' + isIncrementing(val))
+print(club(val) + ',' + primeIndex + ',' + writeEven + ',' + writeOdd + ',' + writePalindrome + ',' + writePrime + ',' + str(primeCount) + ',' + primeForm + ',' + isRepeating(val) + ',' + isAlternating(val) + ',' + isIncrementing(val))

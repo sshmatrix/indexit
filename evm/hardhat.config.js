@@ -12,7 +12,7 @@ module.exports = {
       goerli: {
          url: API_URL,
          accounts: [`0x${PRIVATE_KEY}`],
-         gas: 2100000,
+         gas: 350000,
          gasPrice: 2000000000
       }
    },

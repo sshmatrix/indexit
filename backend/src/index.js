@@ -107,28 +107,129 @@ app.post('/write', jsonParser, function (request, response) {
 					const messageStrip = toSign.split(' ');
 					const traits = `${metadata[7]}`.split('-');
 					const primeForm = `B${traits[1]}C${traits[2]}D${traits[3]}E${traits[4]}F${traits[5]}G${traits[6]}H${traits[7]}I${traits[8]}L${traits[9]}M${traits[10]}N${traits[11]}P${traits[12]}Q${traits[13]}R${traits[14]}S${traits[15]}T${traits[16]}U${traits[17]}W${traits[18]}`
+
+					let values = JSON.parse('{"attributes": []}');
+					let isEven = '';
+					let isOdd = '';
+					let isPalindrome = '';
+					let isPrime = '';
+					let isAlternating = '';
+					let isIncrementing = '';
+					/*Trait 1*/
+					const clubType = {
+						trait_type: 'Club',
+						value: `${metadata[0]}`
+					}
+					values['attributes'].push(clubType);
+					/*Trait 2*/
+					const index = {
+						display_type: "number",
+						trait_type: 'Index',
+						value: parseFloat(metadata[1])
+					}
+					values['attributes'].push(index);
+					/*Trait 3*/
+					if (`${metadata[2]}` === 'Y' && `${metadata[3]}` === 'N') {
+						const index = {
+							value: 'Even'
+						}
+						values['attributes'].push(index);
+						isEven = true;
+						isOdd = false;
+					} else if (`${metadata[2]}` === 'N' && `${metadata[3]}` === 'Y') {
+						const index = {
+							value: 'Odd'
+						}
+						values['attributes'].push(index);
+						isEven = false;
+						isOdd = true;
+					}
+					/*Trait 4*/
+					if (`${metadata[4]}` === 'Y') {
+						const palindrome = {
+							value: 'Palindrome'
+						}
+						values['attributes'].push(palindrome);
+						isPalindrome = true;
+					} else {
+						isPalindrome = false;
+					}
+					/*Trait 5*/
+					if (`${metadata[5]}` === 'Y') {
+						const prime = {
+							value: 'Prime'
+						}
+						values['attributes'].push(prime);
+						isPrime = true;
+					} else {
+						isPrime = false;
+					}
+					/*Trait 6*/
+					const primeCount = {
+						display_type: "boost_number",
+						trait_type: 'Prime Count',
+						value: parseInt(metadata[6])
+					}
+					values['attributes'].push(primeCount);
+					/*Trait 7*/
+					const primeFormJSON = {
+						trait_type: 'Prime Form',
+						value: primeForm
+					}
+					values['attributes'].push(primeFormJSON);
+					/*Trait 8*/
+					if (`${metadata[8]}` === '1.0') {
+						const repeating = {
+							value: 'Repeating'
+						}
+						values['attributes'].push(repeating);
+					}
+					let isRepeating = metadata[8];
+					/*Trait 9*/
+					if (`${metadata[9]}` === 'Y') {
+						const alternating = {
+							value: 'Alternating'
+						}
+						values['attributes'].push(alternating);
+						isAlternating = true;
+					} else {
+						isAlternating = false;
+					}
+					/*Trait 10*/
+					if (`${metadata[10]}`.slice(0,-1) === 'Y') {
+						const incrementing = {
+							value: 'Incrementing'
+						}
+						values['attributes'].push(incrementing);
+						isIncrementing = true;
+					} else {
+						isIncrementing = false;
+					}
+
 					const jsonData = {
 						"ens": `${ens}`,
+						"external_url": `https://indexit.club/public/${direc}/${holder}/${holder}.png`,
 						"description": "Rarity Cards for Digit Clubs (v0)",
 		  			"image": `https://indexit.club/public/${direc}/${holder}/${holder}.png`,
 						"svg": `https://indexit.club/public/${direc}/${holder}/${holder}.svg`,
 		  			"name": `Rarity Card for ${ens}`,
 						"mintedBy": `${messageStrip[2]}`,
-						"timestamp": `${messageStrip[5]}`,
+						"timestamp": parseInt(messageStrip[5]),
 						"toSign": toSign,
 						"message": message,
 						"signature": signature,
 						"club": `${metadata[0]}`,
-						"index": `${metadata[1]}`,
-						"isEven": `${metadata[2]}`,
-						"isOdd": `${metadata[3]}`,
-						"isPalindrome": `${metadata[4]}`,
-						"isPrime": `${metadata[5]}`,
-						"primeCount": `${metadata[6]}`,
+						"index": parseFloat(metadata[1]),
+						"isEven": isEven,
+						"isOdd": isOdd,
+						"isPalindrome": isPalindrome,
+						"isPrime": isPrime,
+						"primeCount": parseInt(metadata[6]),
 						"primeForm": `${primeForm}`,
-						"isRepeating": `${metadata[8]}`,
-						"isAlternating": `${metadata[9]}`,
-						"isIncrementing": `${metadata[10]}`.slice(0,-1)
+						"isRepeating": parseFloat(isRepeating),
+						"isAlternating": isAlternating,
+						"isIncrementing": isIncrementing,
+						"attributes" : values['attributes']
 					};
 					const content = jsonData;
 					fs.writeFile(`/var/www/html/public/${direc}/${holder}/${holder}.json`, JSON.stringify(content, null, 4), err => {

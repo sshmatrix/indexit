@@ -8,28 +8,30 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "./StringUtils.sol";
 
+abstract contract ENS {
+    function resolver(bytes32 node) public virtual view returns (Resolver);
+}
+
+abstract contract Resolver {
+    function addr(bytes32 node) public virtual view returns (address);
+}
+
 contract IndexIt is ERC721URIStorage, Ownable {
     using StringUtils for *;
 
     // Prices
-    // uint256 public constant price999Club = 30000000000000000;
-    // uint256 public constant price10kClub = 20000000000000000;
-    // uint256 public constant price0x100kClub = 10000000000000000;
-    // uint256 public constant priceIdiotClub = 1000000000000000000;
-
-    // Test
-    uint256 public constant price999Club = 0;
-    uint256 public constant price10kClub = 0;
-    uint256 public constant price0x100kClub = 0;
-    uint256 public constant priceIdiotClub = 0;
+    uint256 public constant priceTier1 = 10000000000000000;
+    uint256 public constant priceTier2 = 1000000000000000;
+    uint256 public constant priceTier3 = 500000000000000;
+    uint256 public constant priceIdiotClub = 1000000000000000000;
 
     // Debugger
-    event Sig(address indexed, address indexed);
+    event Print(address indexed, address indexed, address indexed);
     
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() ERC721("IndexIt", "IIT") {
+    constructor() ERC721("indexitv0", "IND0") {
     }
     
     // Library
@@ -39,6 +41,14 @@ contract IndexIt is ERC721URIStorage, Ownable {
     returns (string memory) 
     {
         return string(abi.encodePacked(a, b, c, d, e));
+    }
+
+    function add(string memory a, string memory b) 
+    internal 
+    pure 
+    returns (string memory) 
+    {
+        return string(abi.encodePacked(a, b));
     }
 
     function splitSignature(bytes memory signature)
@@ -65,6 +75,20 @@ contract IndexIt is ERC721URIStorage, Ownable {
     function prefixed(bytes32 hash) internal pure returns (bytes32) {
         return keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", hash));
     }
+
+    // Resolves ENS
+    function computeNameHash(string memory name) public pure returns (bytes32 namehash) {
+        namehash = 0x0000000000000000000000000000000000000000000000000000000000000000;
+        namehash = keccak256(abi.encodePacked(namehash, keccak256(abi.encodePacked('eth'))));
+        namehash = keccak256(abi.encodePacked(namehash, keccak256(abi.encodePacked(name))));
+        return namehash;
+    }
+
+    ENS ens = ENS(0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e);
+    function resolve(bytes32 node) public view returns(address) {
+        Resolver resolver = ens.resolver(node);
+        return resolver.addr(node);
+    }
     
     // Recovers signature
     function recoverSigner(bytes32 hash, bytes memory signature) internal pure
@@ -85,11 +109,11 @@ contract IndexIt is ERC721URIStorage, Ownable {
         uint256 mintPrice;
 
         if (len == 3) {
-            mintPrice = price999Club;
+            mintPrice = priceTier1;
         } else if (len == 4) {
-            mintPrice = price10kClub;
+            mintPrice = priceTier2;
         } else if (len >= 5) {
-            mintPrice = price0x100kClub;
+            mintPrice = priceTier3;
         } else {
             mintPrice = priceIdiotClub;
         }
@@ -104,8 +128,15 @@ contract IndexIt is ERC721URIStorage, Ownable {
         bytes32 payloadHash = keccak256(abi.encode(hash, message));
         bytes32 messageHash = prefixed(payloadHash);
         address signer = recoverSigner(messageHash, signature);
-        emit Sig(msg.sender, signer);
-        require(msg.sender == signer, "Signer does not match minter");
+        bytes32 nameHash = computeNameHash(name);
+        address owner = resolve(nameHash); // Results in 'Fail' transaction if ENS is not owned
+        emit Print(msg.sender, owner, signer);
+        // Require: Minter = Signer
+        require(msg.sender == signer, "Minter & Signer are not same");
+        // Require: Minter = Owner (fail safe)
+        require(msg.sender == owner, "Minter & Owner are not same");
+        // Require: Owner = Signer (fail safe)
+        require(owner == signer, "Owner & Signer are not same");
         uint256 newTokenID = _tokenIds.current();
         uint256 mintPrice = price(name);
         require(msg.value >= mintPrice, "Insufficient ether sent");
