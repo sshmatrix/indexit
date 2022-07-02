@@ -2,8 +2,9 @@
 
 cwd=$(pwd)
 ensName=$1
-signature=$2
+message=$2
 direc=$3
+signature=$4
 
 src='/root/indexit/src/'
 dist='/var/www/html/public/'$direc$'/'
@@ -14,23 +15,25 @@ resources='/root/indexit/resources/'
 # resources='/Users/avneetsingh/Documents/Self/Fun/indexIt/resources/'
 markerFirst='0xfuckthisfuckwhyfuckberaswagmigmgmgmgmggmygmigmiaaauuurrgggggobli'
 markerLast='ntownsaylordokwon3acsuzhucelsiusmarkrektlolallwhyplshelpmafamiliia'
-    
+ensName=${ensName%.*}
+
 if [ "$direc" == "samples" ]; then
     holder=$ensName
+    folder=$ensName
     sigFirst=$markerFirst
     sigLast=$markerLast
 elif [ "$direc" == "cards" ]; then
-    holder=$signature
+    holder=$message
+    folder=$ensName
     sigFirst=${signature:0:${#signature}/2}
     sigLast=${signature:${#signature}/2}
 fi
 
-ensName=${ensName%.*}
-mkdir -p ${dist}$holder > /dev/null 2>&1
-chmod 755 ${dist}$holder
+mkdir -p ${dist}$folder
+chmod 755 ${dist}$folder
 
 status=$(timeout 60 python3 ${src}$'rarity.py' $ensName $'all' $'0' $'' $src)
-
+# echo $status
 if [ -z "${status}" ]; then
     echo "timeout" 1>&2
     exit 64
@@ -49,13 +52,13 @@ else
     isAlternating="${ADDR[9]}"
     isIncrementing="${ADDR[10]}"
 
-    cardFront=${dist}$holder$'/'$holder$'-Front.svg'
-    cardBack=${dist}$holder$'/'$holder$'-Back.svg'
+    cardFront=${dist}$folder$'/'$holder$'-Front.svg'
+    cardBack=${dist}$folder$'/'$holder$'-Back.svg'
 
     cp ${resources}$'Card-'$clubName$'-Front.svg' $cardFront
     cp ${resources}$'Card-'$clubName$'-Back.svg' $cardBack
 
-    NFTDir=${dist}$holder$'/'
+    NFTDir=${dist}$folder$'/'
     NFTFront=$holder$'-Front.png'
     NFTBack=$holder$'-Back.png'
     NFT=$holder$'.png'
@@ -75,7 +78,7 @@ else
     elif [[ "$clubName" == "100k" ]]; then
         sed -i "s/xxxxx/$ensName/g" $cardBack
         sed -i "s/xxxxx/$ensName/g" $cardFront
-    elif [[ "$clubName" == "0x" ]]; then
+    elif [[ "$clubName" == "0xdigit" ]]; then
         sed -i -e "s/0xxxxxx/$ensName/g" $cardBack
         sed -i "s/0xxxxxx/$ensName/g" $cardFront
     elif [[ "$clubName" == "24h" ]]; then

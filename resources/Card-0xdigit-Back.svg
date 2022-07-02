@@ -156,7 +156,8 @@
        y1="72.289307"
        x2="77.738518"
        y2="29.047081"
-       gradientUnits="userSpaceOnUse" />
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(0.00823666)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient5718"
@@ -2400,11 +2401,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.88"
-     inkscape:cx="103.19149"
-     inkscape:cy="121.54255"
+     inkscape:zoom="1.07"
+     inkscape:cx="264.48598"
+     inkscape:cy="107.00935"
      inkscape:document-units="mm"
-     inkscape:current-layer="g2723"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="1252"
      inkscape:window-height="819"
@@ -2478,11 +2479,11 @@
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600" />
     <rect
-       style="opacity:0.8488746;fill:url(#linearGradient5696);fill-rule:evenodd;stroke:#005bff;stroke-width:0.282376;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000;fill-opacity:1"
+       style="opacity:0.848875;fill:url(#linearGradient5696);fill-opacity:1;fill-rule:evenodd;stroke:#005bff;stroke-width:0.282376;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers;stop-color:#000000"
        id="rect868-5"
        width="57.185658"
        height="67.90554"
-       x="26.170059"
+       x="26.178295"
        y="5.7418928"
        rx="1"
        inkscape:export-filename="/Users/avneetsingh/Documents/Self/Fun/indexIt/minter/public/nft.png"
@@ -5268,6 +5269,14 @@
            x="77.838409"
            y="59.48772">YOL4</tspan></text>
     </g>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#0d1e86;stroke-width:0.294636;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.0403226;paint-order:stroke fill markers;stop-color:#000000"
+       id="rect1645"
+       width="57.173363"
+       height="114.64136"
+       x="26.184425"
+       y="-17.626017"
+       ry="1.4241015" />
   </g>
   <script
      id="mesh_polyfill"

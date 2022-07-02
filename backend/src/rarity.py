@@ -18,7 +18,7 @@ def club(ens):
     elif len(ens) == 5 and ens[2] == 'h':
         clubName = '24h'
     elif 7 >= len(ens) >= 5 and ens[:2] == '0x':
-        clubName = '0x'
+        clubName = '0xdigit'
     return(clubName)
     
 def isAlternating(ens):
@@ -311,11 +311,11 @@ def homePrime(num): #21 first 115 primorals
         flag = True
     return(flag)
 
-def irregularPrime(num, p): #22 check retroactively; for p = 3, 5, 9
+def irregularPrime(num, p): #22 check retroactively; for p = 3, 5, 9 but only until counter = 1000
     counter = 1
-    while 2*counter <= num - p and bernoulli(2*counter).numerator % num:
+    while 2*counter <= num - p and counter < 1000 and bernoulli(2*counter).numerator % num:
         counter += 1
-    return 2*counter <= num - p
+    return(2*counter <= num - p)
 
 
 def isolatedPrime(num): #23

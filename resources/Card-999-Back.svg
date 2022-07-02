@@ -3575,13 +3575,13 @@
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4901823"
-     inkscape:cx="94.619296"
-     inkscape:cy="160.71859"
+     inkscape:cx="148.304"
+     inkscape:cy="117.77083"
      inkscape:document-units="mm"
      inkscape:current-layer="g2723"
      showgrid="false"
      inkscape:window-width="1252"
-     inkscape:window-height="819"
+     inkscape:window-height="735"
      inkscape:window-x="1"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
@@ -6678,6 +6678,14 @@
    id="tspan6564">1</tspan>W<tspan
    style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.06883px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono Light';baseline-shift:sub;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.03;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    id="tspan6566">5</tspan></tspan></text>
+      <rect
+         style="fill:none;fill-rule:evenodd;stroke:#0d1e86;stroke-width:0.294635;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.0403226;paint-order:stroke fill markers;stop-color:#000000"
+         id="rect1645"
+         width="57.173363"
+         height="114.64136"
+         x="26.175346"
+         y="-17.625847"
+         ry="1.4241016" />
     </g>
   </g>
 </svg>

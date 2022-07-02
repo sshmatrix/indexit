@@ -20,29 +20,18 @@ contract IndexIt is ERC721URIStorage, Ownable {
     using StringUtils for *;
 
     // Prices
-    uint256 public constant priceTier1 = 10000000000000000;
-    uint256 public constant priceTier2 = 1000000000000000;
-    uint256 public constant priceTier3 = 500000000000000;
+    uint256 public constant priceTier1 = 50000000000000000;
+    uint256 public constant priceTier2 = 10000000000000000;
+    uint256 public constant priceTier3 = 5000000000000000;
     uint256 public constant priceIdiotClub = 1000000000000000000;
 
-    // Debugger
-    event Print(address indexed, address indexed, address indexed);
-    
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() ERC721("indexitv0", "IND0") {
+    constructor() ERC721("INDEXIT-GENESIS", "IIG") {
     }
     
     // Library
-    function append(string memory a, string memory b, string memory c, string memory d, string memory e) 
-    internal 
-    pure 
-    returns (string memory) 
-    {
-        return string(abi.encodePacked(a, b, c, d, e));
-    }
-
     function add(string memory a, string memory b) 
     internal 
     pure 
@@ -130,19 +119,23 @@ contract IndexIt is ERC721URIStorage, Ownable {
         address signer = recoverSigner(messageHash, signature);
         bytes32 nameHash = computeNameHash(name);
         address owner = resolve(nameHash); // Results in 'Fail' transaction if ENS is not owned
-        emit Print(msg.sender, owner, signer);
         // Require: Minter = Signer
-        require(msg.sender == signer, "Minter & Signer are not same");
-        // Require: Minter = Owner (fail safe)
-        require(msg.sender == owner, "Minter & Owner are not same");
-        // Require: Owner = Signer (fail safe)
-        require(owner == signer, "Owner & Signer are not same");
+        require(msg.sender == signer, "Please no scam ser");
+        // Require: Minter = Owner (failsafe)
+        require(msg.sender == owner, "Don't fuck thy neighbour's wife");
+        // Require: Owner = Signer (failsafe)
+        require(owner == signer, "There is no level you wouldn't stoop to");
         uint256 newTokenID = _tokenIds.current();
         uint256 mintPrice = price(name);
-        require(msg.value >= mintPrice, "Insufficient ether sent");
-        string memory tokenURI = append("https://indexit.club/public/", uri, "/", uri, ".json");
+        require(msg.value >= mintPrice, "Because you are a cheap motherfucker");
+        string memory tokenURI = uri;
         _mint(msg.sender, newTokenID);
         _setTokenURI(newTokenID, tokenURI);
         _tokenIds.increment();
+    }
+
+    function withdraw() external onlyOwner {
+        require(address(this).balance > 0, "There is no money in the contract. Rugged!");
+        payable(msg.sender).transfer(address(this).balance);
     }
 }

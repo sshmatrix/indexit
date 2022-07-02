@@ -52,7 +52,7 @@ const Samples = (props) => {
           prompt: 'sample'
         };
         try {
-          console.log(meta);
+          // console.log(meta);
           await fetch(
             "https://indexit.club:3001/write",
             {
@@ -64,18 +64,21 @@ const Samples = (props) => {
             })
             .then(response => response.json())
             .then(data => {
-              console.log(data);
+              // console.log(data);
               if (data.image === 'empty') {
                 setStatus('✋ Slow down champ! Let the previous request finish ⌛');
                 window.alert('✋ Slow down champ! Let the previous request finish ⌛')
               } else if (data.image === 'reset') {
                 setStatus('❌ Your card could not be generated. Devs have been told 🥴');
                 window.alert('❌ Your card could not be generated. Devs have been told 🥴')
-              } else {
-                const urlImg = data.image.slice(0, -4);
+              } else if (data.image === 'exists' || data.image.startsWith('https')) {
+                const urlImg = data.link.slice(0, -4);
                 setNFTFront(urlImg + '-Front.png');
                 setNFTBack(urlImg + '-Back.png');
                 setStatus('✅ Card generated! See below.');
+              } else {
+                setStatus('❌ Unknown error! Try again ⌛');
+                window.alert('❌ Unknown error! Try again ⌛')
               }
             });
         } catch (error) {
@@ -94,18 +97,19 @@ const Samples = (props) => {
   return (
     <div className="Minter">
       <button id="sampleButton" onClick={goToHome}>
-        HOME
+        🏛 HOME
       </button>
       <button id="sampleButton" onClick={goToGenerate}>
-        SAMPLES
+        🎁 SAMPLES
       </button>
       <button id="sampleButton" onClick={goToAlgorithm}>
-        ALGORITHM
+        📃 INFO
       </button>
+      <br></br><br></br>
       <img style={{ float: 'right', marginBottom: '20px' }} alt="sample" src={sample} width="337" height="400"/>
-      <br></br>
+      <br></br><br></br>
       <h1 id="title" style={{ marginTop: '100px' }}>🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
-      <h4 style={{ marginTop: '10px', marginLeft: '10px' }}><span style={{ fontSize: 30 }}>🎁 </span>Enter ENS name & generate a sample unsigned card</h4>
+      <h4 style={{ marginTop: '10px', marginLeft: '10px' }}><span style={{ fontSize: 30 }}>🎁 </span>enter ens name & generate a sample unsigned card</h4>
       <form style={{ marginBottom: '10px', width: '300px', marginLeft: '10px' }}>
         <input
           id="ens"
@@ -114,8 +118,8 @@ const Samples = (props) => {
           onChange={(event) => setENS(event.target.value)}
         />
       </form>
-      <h5 style={{ marginTop: '-8px', color: 'blue', fontSize: 15, marginLeft: '10px', fontFamily: 'SFMono', fontWeight: 15 }}>999, 10k, 100k, 24h and 0xdigit Clubs only,</h5>
-      <h5 style={{ marginTop: '-28px', color: 'blue', fontSize: 15, marginLeft: '10px', fontFamily: 'SFMono', fontWeight: 15 }}>e.g. 034.eth, 0x01397.eth, 05h11.eth etc</h5>
+      <h6 style={{ marginTop: '-8px', color: 'blue', fontSize: 15, marginLeft: '10px', fontFamily: 'SFMono', fontWeight: 15 }}>999, 10k, 100k, 24h and 0xdigit Clubs only,</h6>
+      <h6 style={{ marginTop: '-38px', color: 'blue', fontSize: 15, marginLeft: '10px', fontFamily: 'SFMono', fontWeight: 15 }}>e.g. 034.eth, 0x01397.eth, 05h11.eth etc</h6>
       {!ens.endsWith(".eth") ? (
         <div>
           <button id="signButton" style={{ background: 'grey', color: 'white', marginLeft: '10px' }}>
@@ -140,8 +144,8 @@ const Samples = (props) => {
       <br></br>
       {nftFront && nftBack ? (
         <div style={{ float: 'left', marginLeft: '10px', marginTop: '100px', marginBottom: '100px' }}>
-          <img alt="nftfront" src={nftFront} width="337" height="400"/>
-          <img alt="nftback" src={nftBack} width="337" height="400"/>
+          <img alt="nftfront" src={nftFront} width="337"/>
+          <img alt="nftback" src={nftBack} width="337"/>
         </div>
         ) : (
         <p></p>

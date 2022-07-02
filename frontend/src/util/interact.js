@@ -1,8 +1,8 @@
 import { pinJSONToIPFS } from "./pinata.js";
 require("dotenv").config();
-const alchemyURL = process.env.REACT_APP_ALCHEMY_URL_GOERLI;
+const alchemyURL = process.env.REACT_APP_ALCHEMY_URL_MAINNET;
 const contractABI = require("../contract-abi.json");
-const contractAddress = '0xe24B85ECfAd328d0347BEe0DF92aF499f842146C';
+const contractAddress = '0x14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2';
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyURL);
 
@@ -77,10 +77,9 @@ export const mintNFT = async (url, name, message, signature, messageHash) => {
       status: "❗ Metadata is incomplete.",
     };
   } else {
-    console.log('⌛ Pinning metadata to IPFS & Minting!');
-    const jsonData = await getJSON(url)
+    console.log('⌛ Minting...');
+    const jsonData = await getJSON(url);
     // console.log(jsonData);
-    let tokenURI = url;
 
     if (jsonData.signature === signature) {
       if (!url) {
@@ -90,24 +89,26 @@ export const mintNFT = async (url, name, message, signature, messageHash) => {
           status: "❌ Metadata URI missing ❗",
         };
       } else {
-        const pinataResponse = await pinJSONToIPFS(jsonData);
-        if (!pinataResponse.success) {
-          console.log('❌ Something went wrong while pinning metadata to IPFS ❗');
+        const pinataResponseMetadata = await pinJSONToIPFS(jsonData);
+        if (!pinataResponseMetadata.success) {
+          console.log('❌ Something went wrong while pinning metadat/image to IPFS ❗');
           return {
             success: false,
-            status: "❌ Something went wrong while pinning metadata to IPFS ❗",
+            status: "❌ Something went wrong while pinning metadata/image to IPFS ❗",
           };
         } else {
-          let tokenURI = pinataResponse.pinataUrl;
-          console.log('📎 Metadata pinned at: ' + tokenURI);
+          let tokenIPFS = pinataResponseMetadata.pinataUrl;
+          let tokenURI = url
+          console.log('📎 metadata pinned at: ' + tokenIPFS);
+          console.log('📎 tokenURI is set at: ' + tokenURI);
 
           var price = '1.0';
           if (name.slice(0, -4).length === 3) {
-            var price = '0.01';
+            price = '0.05';
           } else if (name.slice(0, -4).length === 4) {
-            var price = '0.001';
+            price = '0.01';
           } else if (name.slice(0, -4).length >= 5) {
-            var price = '0.0005';
+            price = '0.005';
           }
 
           window.contract = await new web3.eth.Contract(contractABI.abi, contractAddress);
@@ -118,19 +119,20 @@ export const mintNFT = async (url, name, message, signature, messageHash) => {
               .mintToken(messageHash, message, signature, tokenURI, name.slice(0, -4))
               .encodeABI(),
             value: web3.utils.toHex(web3.utils.toWei(price, "ether" )),
-            chainID: '5',
-            gas: '500000',
+            chainID: '1',
+            gas: web3.utils.toHex('175000'),
           };
-          // console.log(transactionParameters);
+
           try {
             const txHash = await window.ethereum.request({
               method: "eth_sendTransaction",
               params: [transactionParameters],
             });
-            // console.log(txHash);
+            console.log(txHash);
+
             return {
               success: true,
-              status: "🚀 Transaction sent! Check your wallet or OpenSea.",
+              status: "🚀 Transaction sent! Check your wallet or LooksRare/Rarible/OpenSea.",
             };
           } catch (error) {
             return {

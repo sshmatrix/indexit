@@ -1976,14 +1976,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.1771238"
-     inkscape:cx="62.92706"
-     inkscape:cy="129.29903"
+     inkscape:zoom="1.0081798"
+     inkscape:cx="116.05073"
+     inkscape:cy="97.700827"
      inkscape:document-units="mm"
-     inkscape:current-layer="g2723"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="1252"
-     inkscape:window-height="819"
+     inkscape:window-height="763"
      inkscape:window-x="1"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
@@ -4235,569 +4235,562 @@
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600" />
     <g
-       id="g1850"
-       style="fill-opacity:1;fill:#000000"
-       inkscape:export-filename="/Users/avneetsingh/Documents/Self/Fun/indexIt/minter/public/nft.png"
-       inkscape:export-xdpi="600"
-       inkscape:export-ydpi="600">
-      <g
-         id="g1340"
-         transform="translate(1.1580678)"
-         style="opacity:0.36334405;fill-opacity:1;fill:#000000">
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.77491961;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="21.427954"
-           id="text1251"><tspan
-             sodipodi:role="line"
-             id="tspan1249"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="21.427954">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="10.428109"
-           id="text1251-9"><tspan
-             sodipodi:role="line"
-             id="tspan1249-0"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="10.428109">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="12.628078"
-           id="text1251-0"><tspan
-             sodipodi:role="line"
-             id="tspan1249-7"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="12.628078">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.76848875;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="14.828047"
-           id="text1251-5"><tspan
-             sodipodi:role="line"
-             id="tspan1249-6"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="14.828047">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="17.028017"
-           id="text1251-52"><tspan
-             sodipodi:role="line"
-             id="tspan1249-5"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="17.028017">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="19.227985"
-           id="text1251-6"><tspan
-             sodipodi:role="line"
-             id="tspan1249-4"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="19.227985">ENS</tspan></text>
-      </g>
-      <g
-         id="g1340-3"
-         transform="translate(5.3409026)"
-         style="opacity:0.36334405;fill-opacity:1;fill:#000000">
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="21.427954"
-           id="text1251-8"><tspan
-             sodipodi:role="line"
-             id="tspan1249-09"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="21.427954">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.63987138;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="10.428109"
-           id="text1251-9-0"><tspan
-             sodipodi:role="line"
-             id="tspan1249-0-7"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="10.428109">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="12.628078"
-           id="text1251-0-9"><tspan
-             sodipodi:role="line"
-             id="tspan1249-7-8"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="12.628078">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.68488746;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="14.828047"
-           id="text1251-5-7"><tspan
-             sodipodi:role="line"
-             id="tspan1249-6-7"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="14.828047">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="17.028017"
-           id="text1251-52-0"><tspan
-             sodipodi:role="line"
-             id="tspan1249-5-1"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="17.028017">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.69131833;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="19.227985"
-           id="text1251-6-1"><tspan
-             sodipodi:role="line"
-             id="tspan1249-4-1"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="19.227985">ENS</tspan></text>
-      </g>
+       id="g1340"
+       transform="translate(1.1580678)"
+       style="opacity:0.363344;fill:#000000;fill-opacity:1">
       <text
          xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.77492;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="21.427954"
+         id="text1251"><tspan
+           sodipodi:role="line"
+           id="tspan1249"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="21.427954">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="10.428109"
+         id="text1251-9"><tspan
+           sodipodi:role="line"
+           id="tspan1249-0"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="10.428109">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="12.628078"
+         id="text1251-0"><tspan
+           sodipodi:role="line"
+           id="tspan1249-7"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="12.628078">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.768489;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="14.828047"
+         id="text1251-5"><tspan
+           sodipodi:role="line"
+           id="tspan1249-6"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="14.828047">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="17.028017"
+         id="text1251-52"><tspan
+           sodipodi:role="line"
+           id="tspan1249-5"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="17.028017">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="19.227985"
+         id="text1251-6"><tspan
+           sodipodi:role="line"
+           id="tspan1249-4"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="19.227985">ENS</tspan></text>
+    </g>
+    <g
+       id="g1340-3"
+       transform="translate(5.3409026)"
+       style="opacity:0.363344;fill:#000000;fill-opacity:1">
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="21.427954"
+         id="text1251-8"><tspan
+           sodipodi:role="line"
+           id="tspan1249-09"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="21.427954">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.639871;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="10.428109"
+         id="text1251-9-0"><tspan
+           sodipodi:role="line"
+           id="tspan1249-0-7"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="10.428109">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="12.628078"
+         id="text1251-0-9"><tspan
+           sodipodi:role="line"
+           id="tspan1249-7-8"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="12.628078">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.684887;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="14.828047"
+         id="text1251-5-7"><tspan
+           sodipodi:role="line"
+           id="tspan1249-6-7"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="14.828047">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="17.028017"
+         id="text1251-52-0"><tspan
+           sodipodi:role="line"
+           id="tspan1249-5-1"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="17.028017">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.691318;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="19.227985"
+         id="text1251-6-1"><tspan
+           sodipodi:role="line"
+           id="tspan1249-4-1"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="19.227985">ENS</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="38.780594"
+       y="21.427954"
+       id="text1251-56"><tspan
+         sodipodi:role="line"
+         id="tspan1249-9"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
          x="38.780594"
-         y="21.427954"
-         id="text1251-56"><tspan
-           sodipodi:role="line"
-           id="tspan1249-9"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="38.780594"
-           y="21.427954">ENS</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
+         y="21.427954">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="38.780594"
+       y="10.428109"
+       id="text1251-9-6"><tspan
+         sodipodi:role="line"
+         id="tspan1249-0-4"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
          x="38.780594"
-         y="10.428109"
-         id="text1251-9-6"><tspan
-           sodipodi:role="line"
-           id="tspan1249-0-4"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="38.780594"
-           y="10.428109">ENS</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
+         y="10.428109">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="38.780594"
+       y="12.628078"
+       id="text1251-0-6"><tspan
+         sodipodi:role="line"
+         id="tspan1249-7-4"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
          x="38.780594"
-         y="12.628078"
-         id="text1251-0-6"><tspan
-           sodipodi:role="line"
-           id="tspan1249-7-4"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="38.780594"
-           y="12.628078">ENS</tspan></text>
-      <g
-         id="g1340-19"
-         transform="translate(42.986411)"
-         style="opacity:0.36334405;fill-opacity:1;fill:#000000">
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="21.427954"
-           id="text1251-89"><tspan
-             sodipodi:role="line"
-             id="tspan1249-75"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="21.427954">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="10.428109"
-           id="text1251-9-3"><tspan
-             sodipodi:role="line"
-             id="tspan1249-0-5"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="10.428109">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="12.628078"
-           id="text1251-0-5"><tspan
-             sodipodi:role="line"
-             id="tspan1249-7-0"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="12.628078">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.60450161;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="14.828047"
-           id="text1251-5-6"><tspan
-             sodipodi:role="line"
-             id="tspan1249-6-55"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="14.828047">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="17.028017"
-           id="text1251-52-8"><tspan
-             sodipodi:role="line"
-             id="tspan1249-5-2"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="17.028017">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.7170418;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="19.227985"
-           id="text1251-6-7"><tspan
-             sodipodi:role="line"
-             id="tspan1249-4-4"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="19.227985">ENS</tspan></text>
-      </g>
-      <g
-         id="g1340-31"
-         transform="translate(47.169241)"
-         style="opacity:0.36334405;fill-opacity:1;fill:#000000">
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="21.427954"
-           id="text1251-09"><tspan
-             sodipodi:role="line"
-             id="tspan1249-98"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="21.427954">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="10.428109"
-           id="text1251-9-7"><tspan
-             sodipodi:role="line"
-             id="tspan1249-0-56"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="10.428109">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.7266881;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="12.628078"
-           id="text1251-0-3"><tspan
-             sodipodi:role="line"
-             id="tspan1249-7-9"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="12.628078">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="14.828047"
-           id="text1251-5-78"><tspan
-             sodipodi:role="line"
-             id="tspan1249-6-78"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="14.828047">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="17.028017"
-           id="text1251-52-00"><tspan
-             sodipodi:role="line"
-             id="tspan1249-5-8"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="17.028017">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.77170418;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="19.227985"
-           id="text1251-6-2"><tspan
-             sodipodi:role="line"
-             id="tspan1249-4-17"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="19.227985">ENS</tspan></text>
-      </g>
+         y="12.628078">ENS</tspan></text>
+    <g
+       id="g1340-19"
+       transform="translate(42.986411)"
+       style="opacity:0.363344;fill:#000000;fill-opacity:1">
       <text
          xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="21.427954"
+         id="text1251-89"><tspan
+           sodipodi:role="line"
+           id="tspan1249-75"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="21.427954">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="10.428109"
+         id="text1251-9-3"><tspan
+           sodipodi:role="line"
+           id="tspan1249-0-5"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="10.428109">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="12.628078"
+         id="text1251-0-5"><tspan
+           sodipodi:role="line"
+           id="tspan1249-7-0"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="12.628078">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.604502;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="14.828047"
+         id="text1251-5-6"><tspan
+           sodipodi:role="line"
+           id="tspan1249-6-55"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="14.828047">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="17.028017"
+         id="text1251-52-8"><tspan
+           sodipodi:role="line"
+           id="tspan1249-5-2"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="17.028017">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.717042;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="19.227985"
+         id="text1251-6-7"><tspan
+           sodipodi:role="line"
+           id="tspan1249-4-4"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="19.227985">ENS</tspan></text>
+    </g>
+    <g
+       id="g1340-31"
+       transform="translate(47.169241)"
+       style="opacity:0.363344;fill:#000000;fill-opacity:1">
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="21.427954"
+         id="text1251-09"><tspan
+           sodipodi:role="line"
+           id="tspan1249-98"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="21.427954">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="10.428109"
+         id="text1251-9-7"><tspan
+           sodipodi:role="line"
+           id="tspan1249-0-56"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="10.428109">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.726688;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="12.628078"
+         id="text1251-0-3"><tspan
+           sodipodi:role="line"
+           id="tspan1249-7-9"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="12.628078">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="14.828047"
+         id="text1251-5-78"><tspan
+           sodipodi:role="line"
+           id="tspan1249-6-78"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="14.828047">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="17.028017"
+         id="text1251-52-00"><tspan
+           sodipodi:role="line"
+           id="tspan1249-5-8"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="17.028017">ENS</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.771704;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
+         y="19.227985"
+         id="text1251-6-2"><tspan
+           sodipodi:role="line"
+           id="tspan1249-4-17"
+           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+           x="29.256859"
+           y="19.227985">ENS</tspan></text>
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="68.060432"
+       y="21.427954"
+       id="text1251-63"><tspan
+         sodipodi:role="line"
+         id="tspan1249-79"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
          x="68.060432"
-         y="21.427954"
-         id="text1251-63"><tspan
-           sodipodi:role="line"
-           id="tspan1249-79"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="68.060432"
-           y="21.427954">ENS</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
+         y="21.427954">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="68.060432"
+       y="10.428109"
+       id="text1251-9-2"><tspan
+         sodipodi:role="line"
+         id="tspan1249-0-0"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
          x="68.060432"
-         y="10.428109"
-         id="text1251-9-2"><tspan
-           sodipodi:role="line"
-           id="tspan1249-0-0"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="68.060432"
-           y="10.428109">ENS</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
+         y="10.428109">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="68.060432"
+       y="12.628078"
+       id="text1251-0-4"><tspan
+         sodipodi:role="line"
+         id="tspan1249-7-2"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
          x="68.060432"
-         y="12.628078"
-         id="text1251-0-4"><tspan
-           sodipodi:role="line"
-           id="tspan1249-7-2"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="68.060432"
-           y="12.628078">ENS</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
+         y="12.628078">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="63.877598"
+       y="21.427954"
+       id="text1251-4"><tspan
+         sodipodi:role="line"
+         id="tspan1249-56"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
          x="63.877598"
-         y="21.427954"
-         id="text1251-4"><tspan
-           sodipodi:role="line"
-           id="tspan1249-56"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="63.877598"
-           y="21.427954">ENS</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
+         y="21.427954">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="63.877598"
+       y="10.428109"
+       id="text1251-9-30"><tspan
+         sodipodi:role="line"
+         id="tspan1249-0-9"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
          x="63.877598"
-         y="10.428109"
-         id="text1251-9-30"><tspan
-           sodipodi:role="line"
-           id="tspan1249-0-9"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="63.877598"
-           y="10.428109">ENS</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
+         y="10.428109">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="63.877598"
+       y="12.628078"
+       id="text1251-0-7"><tspan
+         sodipodi:role="line"
+         id="tspan1249-7-3"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
          x="63.877598"
-         y="12.628078"
-         id="text1251-0-7"><tspan
-           sodipodi:role="line"
-           id="tspan1249-7-3"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="63.877598"
-           y="12.628078">ENS</tspan></text>
+         y="12.628078">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="59.694763"
+       y="21.427954"
+       id="text1251-41"><tspan
+         sodipodi:role="line"
+         id="tspan1249-72"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="59.694763"
+         y="21.427954">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="59.694763"
+       y="10.428109"
+       id="text1251-9-61"><tspan
+         sodipodi:role="line"
+         id="tspan1249-0-2"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="59.694763"
+         y="10.428109">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="59.694763"
+       y="12.628078"
+       id="text1251-0-2"><tspan
+         sodipodi:role="line"
+         id="tspan1249-7-36"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="59.694763"
+         y="12.628078">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="55.511932"
+       y="21.427954"
+       id="text1251-3"><tspan
+         sodipodi:role="line"
+         id="tspan1249-69"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="55.511932"
+         y="21.427954">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="55.511932"
+       y="10.428109"
+       id="text1251-9-35"><tspan
+         sodipodi:role="line"
+         id="tspan1249-0-96"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="55.511932"
+         y="10.428109">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="55.511932"
+       y="12.628078"
+       id="text1251-0-71"><tspan
+         sodipodi:role="line"
+         id="tspan1249-7-31"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="55.511932"
+         y="12.628078">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="51.329098"
+       y="21.427954"
+       id="text1251-529"><tspan
+         sodipodi:role="line"
+         id="tspan1249-55"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="51.329098"
+         y="21.427954">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="51.329098"
+       y="10.428109"
+       id="text1251-9-5"><tspan
+         sodipodi:role="line"
+         id="tspan1249-0-08"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="51.329098"
+         y="10.428109">ENS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.363344;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+       x="51.329098"
+       y="12.628078"
+       id="text1251-0-95"><tspan
+         sodipodi:role="line"
+         id="tspan1249-7-7"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="51.329098"
+         y="12.628078">ENS</tspan></text>
+    <g
+       id="g1340-9"
+       transform="translate(17.889404)"
+       style="opacity:0.363344;fill:#000000;fill-opacity:1">
       <text
          xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-         x="59.694763"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
          y="21.427954"
-         id="text1251-41"><tspan
+         id="text1251-90"><tspan
            sodipodi:role="line"
-           id="tspan1249-72"
+           id="tspan1249-44"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="59.694763"
+           x="29.256859"
            y="21.427954">ENS</tspan></text>
       <text
          xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-         x="59.694763"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
          y="10.428109"
-         id="text1251-9-61"><tspan
+         id="text1251-9-8"><tspan
            sodipodi:role="line"
-           id="tspan1249-0-2"
+           id="tspan1249-0-6"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="59.694763"
+           x="29.256859"
            y="10.428109">ENS</tspan></text>
       <text
          xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-         x="59.694763"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
          y="12.628078"
-         id="text1251-0-2"><tspan
+         id="text1251-0-47"><tspan
            sodipodi:role="line"
-           id="tspan1249-7-36"
+           id="tspan1249-7-5"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="59.694763"
+           x="29.256859"
            y="12.628078">ENS</tspan></text>
+    </g>
+    <g
+       id="g1340-52"
+       transform="translate(13.70657)"
+       style="opacity:0.363344;fill:#000000;fill-opacity:1">
       <text
          xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-         x="55.511932"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
          y="21.427954"
-         id="text1251-3"><tspan
+         id="text1251-7"><tspan
            sodipodi:role="line"
-           id="tspan1249-69"
+           id="tspan1249-3"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="55.511932"
+           x="29.256859"
            y="21.427954">ENS</tspan></text>
       <text
          xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-         x="55.511932"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
          y="10.428109"
-         id="text1251-9-35"><tspan
+         id="text1251-9-1"><tspan
            sodipodi:role="line"
-           id="tspan1249-0-96"
+           id="tspan1249-0-95"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="55.511932"
+           x="29.256859"
            y="10.428109">ENS</tspan></text>
       <text
          xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-         x="55.511932"
+         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;fill:#000000;fill-opacity:1;stroke-width:0.223657"
+         x="29.256859"
          y="12.628078"
-         id="text1251-0-71"><tspan
+         id="text1251-0-64"><tspan
            sodipodi:role="line"
-           id="tspan1249-7-31"
+           id="tspan1249-7-59"
            style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="55.511932"
+           x="29.256859"
            y="12.628078">ENS</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-         x="51.329098"
-         y="21.427954"
-         id="text1251-529"><tspan
-           sodipodi:role="line"
-           id="tspan1249-55"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="51.329098"
-           y="21.427954">ENS</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-         x="51.329098"
-         y="10.428109"
-         id="text1251-9-5"><tspan
-           sodipodi:role="line"
-           id="tspan1249-0-08"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="51.329098"
-           y="10.428109">ENS</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.36334405;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-         x="51.329098"
-         y="12.628078"
-         id="text1251-0-95"><tspan
-           sodipodi:role="line"
-           id="tspan1249-7-7"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-           x="51.329098"
-           y="12.628078">ENS</tspan></text>
-      <g
-         id="g1340-9"
-         transform="translate(17.889404)"
-         style="opacity:0.36334405;fill-opacity:1;fill:#000000">
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="21.427954"
-           id="text1251-90"><tspan
-             sodipodi:role="line"
-             id="tspan1249-44"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="21.427954">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="10.428109"
-           id="text1251-9-8"><tspan
-             sodipodi:role="line"
-             id="tspan1249-0-6"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="10.428109">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="12.628078"
-           id="text1251-0-47"><tspan
-             sodipodi:role="line"
-             id="tspan1249-7-5"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="12.628078">ENS</tspan></text>
-      </g>
-      <g
-         id="g1340-52"
-         transform="translate(13.70657)"
-         style="opacity:0.36334405;fill-opacity:1;fill:#000000">
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="21.427954"
-           id="text1251-7"><tspan
-             sodipodi:role="line"
-             id="tspan1249-3"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="21.427954">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="10.428109"
-           id="text1251-9-1"><tspan
-             sodipodi:role="line"
-             id="tspan1249-0-95"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="10.428109">ENS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-weight:900;font-size:1.78926px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:0px;opacity:0.44373;stroke-width:0.223657;fill-opacity:1;fill:#000000"
-           x="29.256859"
-           y="12.628078"
-           id="text1251-0-64"><tspan
-             sodipodi:role="line"
-             id="tspan1249-7-59"
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.78926px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';opacity:0.414791;fill:#000000;fill-opacity:1;stroke-width:0.223657"
-             x="29.256859"
-             y="12.628078">ENS</tspan></text>
-      </g>
     </g>
     <text
        xml:space="preserve"
@@ -4829,219 +4822,216 @@
          x="33.255524"
          y="72.147171"
          id="tspan3318">ntownsaylordokwon3acsuzhucelsiusmarkrektlolallwhyplshelpmafamiliia</tspan></text>
-    <g
-       id="g2723"
-       transform="translate(0.0092837,-1.3103593e-4)">
-      <text
-         xml:space="preserve"
-         style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="31.488983"
-         y="28.109808"
-         id="text2137-1"><tspan
-           sodipodi:role="line"
-           id="tspan2135-89"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="31.488983"
-           y="28.109808">INDEX</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="31.488983"
-         y="32.046951"
-         id="text2137-7-9"><tspan
-           sodipodi:role="line"
-           id="tspan2135-7-9"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="31.488983"
-           y="32.046951">EVEN</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="31.587095"
-         y="35.984097"
-         id="text2137-4-6"><tspan
-           sodipodi:role="line"
-           id="tspan2135-1-0"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="31.587095"
-           y="35.984097">ODD</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="31.488983"
-         y="43.85585"
-         id="text2137-8-9"><tspan
-           sodipodi:role="line"
-           id="tspan2135-13-0"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="31.488983"
-           y="43.85585">PRIME</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="31.488983"
-         y="47.795528"
-         id="text2137-6-2"><tspan
-           sodipodi:role="line"
-           id="tspan2135-76-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="31.488983"
-           y="47.795528">PRIME COUNT</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="31.488983"
-         y="39.921242"
-         id="text2137-73-0-25"><tspan
-           sodipodi:role="line"
-           id="tspan2135-8-2-5"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="31.488983"
-           y="39.921242">PALINDROME</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.46439px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="77.833931"
-         y="28.10981"
-         id="text2137-72-0"><tspan
-           sodipodi:role="line"
-           id="tspan2135-3-4"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="77.733604"
-           y="28.10981">YZK</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.46439px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="77.950638"
-         y="32.046955"
-         id="text2137-7-4-7"><tspan
-           sodipodi:role="line"
-           id="tspan2135-7-8-2"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="77.850311"
-           y="32.046955">YOL1</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.46439px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="77.950638"
-         y="35.9841"
-         id="text2137-4-8-9"><tspan
-           sodipodi:role="line"
-           id="tspan2135-1-5-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="77.850311"
-           y="35.9841">NOL1</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.46439px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;letter-spacing:-0.100323px;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="77.935265"
-         y="43.855854"
-         id="text2137-8-0-6"><tspan
-           sodipodi:role="line"
-           id="tspan2135-13-5-7"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="77.834938"
-           y="43.855854">NOL2</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:-0.100323px;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="77.972641"
-         y="47.795532"
-         id="text2137-6-4-5"><tspan
-           sodipodi:role="line"
-           id="tspan2135-76-0-9"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="77.872314"
-           y="47.795532">_-</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.46439px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="77.935265"
-         y="39.921246"
-         id="text2137-73-0-2-3"><tspan
-           sodipodi:role="line"
-           id="tspan2135-8-2-3-8"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="77.834938"
-           y="39.921246">YOL2</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:300;font-size:3.4644px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="31.492447"
-         y="51.741562"
-         id="text2137-7-8"><tspan
-           sodipodi:role="line"
-           id="tspan2135-7-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="31.492447"
-           y="51.741562">REPEATING</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:300;font-size:3.4644px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="31.590559"
-         y="55.678707"
-         id="text2137-4-88"><tspan
-           sodipodi:role="line"
-           id="tspan2135-1-54"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="31.590559"
-           y="55.678707">Alternating</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:300;font-size:3.4644px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="31.492447"
-         y="59.615852"
-         id="text2137-73-0-5"><tspan
-           sodipodi:role="line"
-           id="tspan2135-8-2-37"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="31.492447"
-           y="59.615852">incrementing</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.4644px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="77.954109"
-         y="51.741566"
-         id="text2137-7-4-9"><tspan
-           sodipodi:role="line"
-           id="tspan2135-7-8-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="77.85379"
-           y="51.741566">YOL3</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.4644px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="77.954109"
-         y="55.678711"
-         id="text2137-4-8-5"><tspan
-           sodipodi:role="line"
-           id="tspan2135-1-5-6"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="77.853783"
-           y="55.678711">NOL3</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.4644px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="77.938736"
-         y="59.615852"
-         id="text2137-73-0-2-7"><tspan
-           sodipodi:role="line"
-           id="tspan2135-8-2-3-3"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="77.838409"
-           y="59.615852">YOL4</tspan></text>
-      <text
-         xml:space="preserve"
-         style="font-weight:300;font-size:1.64436px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0.0815581px;opacity:0.758842;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.03;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="-37.802071"
-         y="29.127274"
-         id="text2137-73-2-8"
-         transform="rotate(-90)"><tspan
-           sodipodi:role="line"
-           id="tspan2135-8-9-1"
-           style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono Light';text-align:end;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.03;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-           x="-37.720512"
-           y="29.127274">B<tspan
+    <text
+       xml:space="preserve"
+       style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="31.498266"
+       y="28.109676"
+       id="text2137-1"><tspan
+         sodipodi:role="line"
+         id="tspan2135-89"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="31.498266"
+         y="28.109676">INDEX</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="31.498266"
+       y="32.046822"
+       id="text2137-7-9"><tspan
+         sodipodi:role="line"
+         id="tspan2135-7-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="31.498266"
+         y="32.046822">EVEN</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="31.596378"
+       y="35.983967"
+       id="text2137-4-6"><tspan
+         sodipodi:role="line"
+         id="tspan2135-1-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="31.596378"
+         y="35.983967">ODD</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="31.498266"
+       y="43.855721"
+       id="text2137-8-9"><tspan
+         sodipodi:role="line"
+         id="tspan2135-13-0"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="31.498266"
+         y="43.855721">PRIME</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="31.498266"
+       y="47.795399"
+       id="text2137-6-2"><tspan
+         sodipodi:role="line"
+         id="tspan2135-76-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="31.498266"
+         y="47.795399">PRIME COUNT</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="31.498266"
+       y="39.921112"
+       id="text2137-73-0-25"><tspan
+         sodipodi:role="line"
+         id="tspan2135-8-2-5"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="31.498266"
+         y="39.921112">PALINDROME</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.46439px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="77.843216"
+       y="28.109678"
+       id="text2137-72-0"><tspan
+         sodipodi:role="line"
+         id="tspan2135-3-4"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="77.742889"
+         y="28.109678">YZK</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.46439px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="77.959923"
+       y="32.046825"
+       id="text2137-7-4-7"><tspan
+         sodipodi:role="line"
+         id="tspan2135-7-8-2"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="77.859596"
+         y="32.046825">YOL1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.46439px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="77.959923"
+       y="35.983971"
+       id="text2137-4-8-9"><tspan
+         sodipodi:role="line"
+         id="tspan2135-1-5-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="77.859596"
+         y="35.983971">NOL1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.46439px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;letter-spacing:-0.100323px;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="77.94455"
+       y="43.855724"
+       id="text2137-8-0-6"><tspan
+         sodipodi:role="line"
+         id="tspan2135-13-5-7"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="77.844223"
+         y="43.855724">NOL2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:-0.100323px;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="77.981926"
+       y="47.795403"
+       id="text2137-6-4-5"><tspan
+         sodipodi:role="line"
+         id="tspan2135-76-0-9"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="77.881599"
+         y="47.795403">_-</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.46439px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="77.94455"
+       y="39.921116"
+       id="text2137-73-0-2-3"><tspan
+         sodipodi:role="line"
+         id="tspan2135-8-2-3-8"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="77.844223"
+         y="39.921116">YOL2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:300;font-size:3.4644px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="31.50173"
+       y="51.741432"
+       id="text2137-7-8"><tspan
+         sodipodi:role="line"
+         id="tspan2135-7-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="31.50173"
+         y="51.741432">REPEATING</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:300;font-size:3.4644px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="31.599842"
+       y="55.678577"
+       id="text2137-4-88"><tspan
+         sodipodi:role="line"
+         id="tspan2135-1-54"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="31.599842"
+         y="55.678577">Alternating</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:300;font-size:3.4644px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="31.50173"
+       y="59.615723"
+       id="text2137-73-0-5"><tspan
+         sodipodi:role="line"
+         id="tspan2135-8-2-37"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#fa00ff;fill-opacity:1;stroke:#4800ad;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="31.50173"
+         y="59.615723">incrementing</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.4644px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="77.963394"
+       y="51.741436"
+       id="text2137-7-4-9"><tspan
+         sodipodi:role="line"
+         id="tspan2135-7-8-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="77.863075"
+         y="51.741436">YOL3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.4644px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="77.963394"
+       y="55.678581"
+       id="text2137-4-8-5"><tspan
+         sodipodi:role="line"
+         id="tspan2135-1-5-6"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="77.863068"
+         y="55.678581">NOL3</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.4644px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="77.948021"
+       y="59.615723"
+       id="text2137-73-0-2-7"><tspan
+         sodipodi:role="line"
+         id="tspan2135-8-2-3-3"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="77.847694"
+         y="59.615723">YOL4</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:300;font-size:1.64436px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0.0815581px;opacity:0.758842;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.03;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="-37.801941"
+       y="29.136557"
+       id="text2137-73-2-8"
+       transform="rotate(-90)"><tspan
+         sodipodi:role="line"
+         id="tspan2135-8-9-1"
+         style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono Light';text-align:end;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.03;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="-37.720387"
+         y="29.136557">B<tspan
    style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.06883px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono Light';baseline-shift:sub;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.03;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    id="tspan6524">2</tspan>C<tspan
    style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.06883px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono Light';baseline-shift:sub;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.03;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -5078,6 +5068,13 @@
    id="tspan6564">1</tspan>W<tspan
    style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:1.06883px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono Light';baseline-shift:sub;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.03;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
    id="tspan6566">5</tspan></tspan></text>
-    </g>
+    <rect
+       style="fill:none;fill-rule:evenodd;stroke:#0d1e86;stroke-width:0.294636;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.0403226;paint-order:stroke fill markers;stop-color:#000000"
+       id="rect1645"
+       width="57.173363"
+       height="114.64136"
+       x="26.184187"
+       y="-17.625978"
+       ry="1.4241015" />
   </g>
 </svg>

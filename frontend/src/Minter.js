@@ -7,10 +7,10 @@ import {
   mintNFT
 } from "./util/interact.js";
 import sample from "./img/samples.gif";
+import roadmap from "./img/roadmap.png";
 import './index.css';
 require("dotenv").config();
 const alchemyKeyMainnet = process.env.REACT_APP_ALCHEMY_KEY_MAINNET;
-const alchemyKeyGoerli = process.env.REACT_APP_ALCHEMY_KEY_MAINNET;
 
 const Minter = (props) => {
   const [walletAddress, setWallet] = useState("");
@@ -23,7 +23,7 @@ const Minter = (props) => {
   const [nft, setNFT] = useState("");
   const [record, setRecord] = useState("");
 
-  var mainnet = new ethers.providers.AlchemyProvider("goerli", alchemyKeyGoerli);
+  var mainnet = new ethers.providers.AlchemyProvider("homestead", alchemyKeyMainnet);
   useEffect(() => {
     let isComponentMounted = true;
     const fetchData = async () => {
@@ -81,7 +81,7 @@ const Minter = (props) => {
 
   const switchWalletPressed = async () => {
     if (walletAddress) {
-      console.log(walletAddress);
+      // console.log(walletAddress);
       const accounts = await window.ethereum.request({
         method: "wallet_requestPermissions",
         params: [{eth_accounts: {}}]
@@ -119,77 +119,84 @@ const Minter = (props) => {
     ) {
       setStatus('⌛ Checking ENS digit ownership... please wait!');
       const addressResolve = await mainnet.resolveName(`${digit}.eth`);
-      if ( addressResolve.toLowerCase() === walletAddress.toLowerCase() ) {
-        setStatus('✅ Ownership confirmed! Waiting for Signature ⌛');
-        const provider = new ethers.providers.Web3Provider(window.ethereum);
-        const signer = provider.getSigner();
-        const timestamp = Date.now();
-        const rawMessage = `Signed by ${walletAddress} at time ${timestamp}`;
-        const toSign = ethers.utils.id(rawMessage);
-        const payload = ethers.utils.defaultAbiCoder.encode([ "bytes32", "string" ], [ toSign, rawMessage ]);
-        const messageHashed = ethers.utils.keccak256(payload);
-        setMessageHash(toSign);
-        setMessage(rawMessage);
-        if (message !== '') {
-          console.log('⌛ Signing and generating card... Please wait!');
-          const messageBytes = ethers.utils.arrayify(messageHashed);
-          const signedValue = await signer.signMessage(messageBytes);
-          setSignature(signedValue);
-          if (signedValue) {
-            setStatus('⌛ Signed! Generating card... please wait! (can take up to 60 seconds)');
-          } else {
-            setStatus('❌ Signature declined or failed to Sign. Try again!');
-          }
-          const meta = {
-            signature: signedValue,
-            message: toSign,
-            ens: ens,
-            toSign: message,
-            prompt: 'mint'
-          };
-          try {
-            // console.log(meta);
-            await fetch(
-              "https://indexit.club:3001/write",
-              {
-                method: "post",
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(meta)
-              })
-              .then(response => response.json())
-              .then(data => {
-                // console.log(data);
-                setURI(data.uri);
-                if (data.signature !== signedValue) {
-                  if (data.signature !== 'wait') {
-                    window.alert('✋ Slow down champ! Let the previous request finish ⌛')
-                    setStatus('✋ Slow down champ! Let the previous request finish ⌛');
-                  } else if (data.signature !== 'reset') {
-                    window.alert('❌ Your card could not be generated. Devs have been woken 🥴')
-                    setStatus('❌ Your card could not be generated. Devs have been woken 🥴');
+      if ( addressResolve ) {
+        if ( addressResolve.toLowerCase() === walletAddress.toLowerCase() ) {
+          setStatus('✅ Ownership confirmed! Waiting for Signature ⌛');
+          const provider = new ethers.providers.Web3Provider(window.ethereum);
+          const signer = provider.getSigner();
+          const timestamp = Date.now();
+          const rawMessage = `Signed by ${walletAddress} at time ${timestamp}`;
+          const toSign = ethers.utils.id(rawMessage);
+          const payload = ethers.utils.defaultAbiCoder.encode([ "bytes32", "string" ], [ toSign, rawMessage ]);
+          const messageHashed = ethers.utils.keccak256(payload);
+          setMessageHash(toSign);
+          setMessage(rawMessage);
+          if (message !== '') {
+            console.log('⌛ Signing and generating card... Please wait!');
+            const messageBytes = ethers.utils.arrayify(messageHashed);
+            const signedValue = await signer.signMessage(messageBytes);
+            setSignature(signedValue);
+            if (signedValue) {
+              setStatus('⌛ Signed! Generating card... please wait! (can take up to 60 seconds)');
+            } else {
+              setStatus('❌ Signature declined or failed to Sign. Try again!');
+            }
+            const meta = {
+              signature: signedValue,
+              message: toSign,
+              ens: ens,
+              toSign: message,
+              prompt: 'mint'
+            };
+            try {
+              console.log('Request ↓↓↓');
+              console.log(meta);
+              await fetch(
+                "https://indexit.club:3001/write",
+                {
+                  method: "post",
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify(meta)
+                })
+                .then(response => response.json())
+                .then(data => {
+                  console.log('Response ↓↓↓');
+                  console.log(data);
+                  setURI(data.uri);
+                  if (data.signature !== signedValue) {
+                    if (data.signature === 'wait') {
+                      window.alert('✋ You are in queue! Try again in a few minutes ⌛')
+                      setStatus('✋ You are in queue! Try again in a few minutes ⌛');
+                    } else if (data.signature === 'reset') {
+                      window.alert('❌ Your card could not be generated. Try again 🥴')
+                      setStatus('❌ Your card could not be generated. Try again 🥴');
+                    } else {
+                      window.alert('❌ Error! Signature mismatch!')
+                      setStatus('❌ Error! Signature mismatch!');
+                    }
+                  } else if (data.image === 'empty') {
+                      setStatus('✋ You are in queue! Try again in a few minutes ⌛');
+                      window.alert('✋ You are in queue! Try again in a few minutes ⌛')
+                  } else if (data.image === 'reset') {
+                    setStatus('❌ Your card could not be generated. Try again 🥴');
+                    window.alert('❌ Your card could not be generated. Try again 🥴')
                   } else {
-                    window.alert('❌ Error! Signature mismatch!')
-                    setStatus('❌ Error! Signature mismatch!');
+                    setNFT(data.link);
+                    setStatus("💾 Card generated! Click on 'MINT' (or Sign again)");
                   }
-                } else if (data.image === 'empty') {
-                    setStatus('✋ Slow down champ! Let the previous request finish ⌛');
-                    window.alert('✋ Slow down champ! Let the previous request finish ⌛')
-                } else if (data.image === 'reset') {
-                  setStatus('❌ Your card could not be generated. Devs have been woken 🥴');
-                  window.alert('❌ Your card could not be generated. Devs have been woken 🥴')
-                } else {
-                  setNFT(data.image);
-                  setStatus("💾 Card generated! Click on 'MINT' (or Sign again)");
-                }
-              });
-          } catch (error) {
-            setStatus('✋ Hold up! Backend is not reachable. Try later ⌛');
-            window.alert('✋ Hold up! Backend is not reachable. Try later ⌛')
+                });
+            } catch (error) {
+              setStatus('✋ Hold up! Backend is not reachable. Try later ⌛');
+              window.alert('✋ Hold up! Backend is not reachable. Try later ⌛')
+            }
+          } else {
+            setStatus("✅ Valid ENS! Click 'NEXT ▶▶▶' to Sign");
           }
         } else {
-          setStatus("✅ Valid ENS! Click 'NEXT ▶▶▶' to Sign");
+          window.alert('❌ You are not the owner of this ENS digit ✋')
+          setStatus('❌ You are not the owner of this ENS digit ✋');
         }
       } else {
         window.alert('❌ You are not the owner of this ENS digit ✋')
@@ -203,11 +210,12 @@ const Minter = (props) => {
   };
 
   const onMintPressed = async () => {
+    setStatus('⌛ Minting Card... Please Wait!');
     const { success, status } = await mintNFT(uri, ens, message, signature, messageHash);
     setStatus(status);
     if (success) {
-      console.log('✅✅✅ Transaction Sent!');
-      window.alert('✅✅✅ Transaction Sent!');
+      console.log('🚀 Transaction sent! Check your wallet or LooksRare/Rarible/OpenSea.');
+      window.alert('🚀 Transaction sent! Check your wallet or LooksRare/Rarible/OpenSea.');
     } else {
       window.alert(status);
     }
@@ -222,7 +230,7 @@ const Minter = (props) => {
         🎁 SAMPLES
       </button>
       <button id="sampleButton" onClick={goToAlgorithm}>
-        📃 ALGORITHM
+        📃 INFO
       </button>
       <button id="walletButton" onClick={connectWalletPressed}>
         {walletAddress.length > 0 ? (
@@ -255,12 +263,13 @@ const Minter = (props) => {
         </button>
       )}
       <br></br>
-      <h1 id="title" style={{ marginTop: '100px' }}>🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
+      <h3 style={{ marginTop: '70px', marginLeft: '300px' }}><span style={{ fontSize: 24, color: '#370080' }} className='blink_fast'>🚀🚀🚀 live on mainnet!</span></h3>
+      <h1 id="title" style={{ marginTop: '20px' }}>🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
       <img style={{ float: 'right', marginBottom: '20px' }} alt="sample" src={sample} width="337" height="400"/>
-      <h3 style={{ marginTop: '10px', marginLeft: '20px' }}><span style={{ fontSize: 30 }}>🦊 </span>  connect metamask (goerli)</h3>
-      <h4 style={{ marginTop: '10px', marginLeft: '30px' }}>Connect with wallet that owns digit name (on goerli!)</h4>
+      <h3 style={{ marginTop: '10px', marginLeft: '20px' }}><span style={{ fontSize: 30 }}>🦊 </span>  connect metamask</h3>
+      <h4 style={{ marginTop: '10px', marginLeft: '30px' }}>connect with wallet that owns digit name</h4>
       <h3 style={{ marginTop: '10px', marginLeft: '20px' }}><span style={{ fontSize: 30 }}>🕙 </span>  sign a timestamp to generate card</h3>
-      <h4 style={{ marginTop: '10px', marginLeft: '30px' }}>Why Sign? Unique verifiable Signature will be printed on your card!</h4>
+      <h4 style={{ marginTop: '10px', marginLeft: '30px' }}>why sign<span style={{ fontFamily: 'DM Mono' }}>?</span> unique verifiable signature will be printed on your card!</h4>
       <h3 style={{ marginTop: '10px', marginLeft: '20px' }}><span style={{ fontSize: 30 }}>🖨️ </span>  mint your unique card!</h3>
       {!walletAddress ? (
         <div style={{ fontFamily:'SFMono', marginLeft: '30px' }}>
@@ -275,18 +284,19 @@ const Minter = (props) => {
         </div>
       ) : (
         <div style={{ fontFamily:'SFMono', marginLeft: '30px' }}>
-          <form style={{ marginBottom: '10px', width: '300px' }}>
+          <form style={{ marginBottom: '10px', width: '350px' }}>
             <input
               id="ens"
               type="text"
-              placeholder="Enter ENS & Click on 'NEXT ▶▶▶'"
+              placeholder="Enter digit.eth & Click on 'NEXT ▶▶▶'"
               onChange={(event) => setENS(event.target.value)}
+
             />
           </form>
         </div>
       )}
-      <h5 style={{ marginTop: '-8px', color: 'blue', fontSize: 15, marginLeft: '30px', fontFamily: 'SFMono', fontWeight: 15 }}>999, 10k, 100k, 24h and 0xdigit Clubs only,</h5>
-      <h5 style={{ marginTop: '-28px', color: 'blue', fontSize: 15, marginLeft: '30px', fontFamily: 'SFMono', fontWeight: 15 }}>e.g. 034.eth, 0x01397.eth, 05h11.eth etc</h5>
+      <h6 style={{ marginTop: '-8px', color: 'blue', fontSize: 15, marginLeft: '30px', fontFamily: 'SFMono', fontWeight: 15 }}>999, 10k, 100k, 24h and 0xdigit Clubs only,</h6>
+      <h6 style={{ marginTop: '-38px', color: 'blue', fontSize: 15, marginLeft: '30px', fontFamily: 'SFMono', fontWeight: 15 }}>e.g. 034.eth, 0x01397.eth, 05h11.eth etc</h6>
       {!ens.endsWith(".eth") || !walletAddress ? (
         <div style={{ marginleft: '60px' }}>
           <button id="signButton" style={{ background: 'grey', color: 'white' }}>
@@ -323,29 +333,35 @@ const Minter = (props) => {
         </div>
       )}
       {nft ? (
-        <div><img style={{ marginTop: '100px', marginBottom: '5px', marginLeft: '20px' }} alt="nft" src={nft} width="674" height="400"/></div>
+        <div><img style={{ marginTop: '100px', marginBottom: '5px', marginLeft: '20px' }} alt="nft" src={nft} width="674"/></div>
         ) : (
         <p></p>
       )}
-      <h1 style={{ marginTop: '250px' }}>FAQ:</h1>
+      <h1 style={{ marginTop: '100px' }}>FAQ:</h1>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>🀄 WHAT ARE RARITY CARDS FOR DIGIT CLUBS?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>Rarity cards assign rarity to ENS names in <span style={{ fontWeight: 600 }}>999</span>, <span style={{ fontWeight: 600 }}>10k</span>, <span style={{ fontWeight: 600 }}>100k</span>, <span style={{ fontWeight: 600 }}>24h</span> and <span style={{ fontWeight: 600 }}>0xdigit</span> clubs based on their mathematical properties. Each card is unique to an ENS name, printed with signature of the owning wallet, thereby making it conceptually SOULBOUND to an ENS name (aka TokenBound Token or TBT), but not contractually - yet. </h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>rarity cards assign rarity to ens names in <span style={{ fontWeight: 600 }}>999</span>, <span style={{ fontWeight: 600 }}>10k</span>, <span style={{ fontWeight: 600 }}>100k</span>, <span style={{ fontWeight: 600 }}>24h</span> and <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span> clubs based on their mathematical properties. each card is unique to an ens name, printed with signature of the owning wallet, thereby making it conceptually soulbound to an ens name (aka tokenbound token or tbt), but not contractually - yet. </h4>
+      <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>📚 LINK TO COLLECTION?</h2>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'blue', textDecoration: 'none' }} href="https://looksrare.org/collections/0x14aB45F6EdC154E338E27f8d1d2A7caD4ed62EC2" target='_blank' rel="noreferrer">looksrare</a> ✅, <a style={{ color: 'blue', textDecoration: 'none' }} href="https://rarible.com/collection/0x14aB45F6EdC154E338E27f8d1d2A7caD4ed62EC2" target='_blank' rel="noreferrer">rarible</a> ✅, <a style={{ color: 'blue', textDecoration: 'none' }} href="https://opensea.io/collection/iigenesis?search[sortAscending]=false&search[sortBy]=CREATED_DATE" target='_blank' rel="noreferrer">opensea</a> ✅</h4>
+      <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>📓 CONTRACT ADDRESS?</h2>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'blue', textDecoration: 'none' }} href="https://etherscan.io/address/0x14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2" target='_blank' rel="noreferrer">0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2</a></h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>⏰ WHEN CAN I MINT?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>Soon! We are still in beta but it will not be long! In the meantime, you can test the mint on Goerli Testnet!</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>we are going live on <span style={{ fontWeight: 600 }}>mainnet on june 30 2022</span>! in the meantime, you can generate sample unsigned cards in the 'samples' tab!</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>🍾 WHO CAN MINT?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>Wallet owning an ENS name in <span style={{ fontWeight: 600 }}>999</span>, <span style={{ fontWeight: 600 }}>10k</span>, <span style={{ fontWeight: 600 }}>100k</span>, <span style={{ fontWeight: 600 }}>24h</span> and <span style={{ fontWeight: 600 }}>0xdigit</span> club can mint! You can only mint the card for an ENS digit that you own.</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>wallet owning an ens name in <span style={{ fontWeight: 600 }}>999</span>, <span style={{ fontWeight: 600 }}>10k</span>, <span style={{ fontWeight: 600 }}>100k</span>, <span style={{ fontWeight: 600 }}>24h</span> and <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span> club can mint! you can only mint the card for an ens digit that you own.</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>💸 WHAT'S THE MINT PRICE?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>999 </span>club: 0.1 ETH + gas</h4>
-      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>10k </span>club: 0.01 ETH + gas</h4>
-      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>24h </span>club: 0.01 ETH + gas</h4>
-      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>100k </span>club: 0.005 ETH + gas</h4>
-      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>0xdigit </span>club: 0.005 ETH + gas</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>3l </span>clubs: 0.050 eth + gas (999, arabic 999, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>1l)</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>4l </span>clubs: 0.010 eth + gas (10k, arabic 10k, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>2l)</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>5l </span>clubs: 0.005 eth + gas (24h, 100k, arabic 100k, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>3l, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>4l, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>5l)</h4>
+      <h3 style={{ marginTop: '10px', marginLeft: '35px' }}>🎁 card holders will be eligible for premium zero-cost features in the future, such as wrapped subdomains hosting their digiverse, card drops on polygon and more! check out the roadmap below!</h3>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>⚙️ WHAT CRITERIA ARE TESTED FOR RARITY?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>The algorithm checks for whether the number is <span style={{ fontWeight: 600 }}>Even</span>, <span style={{ fontWeight: 600 }}>Odd</span>, <span style={{ fontWeight: 600 }}>Palindrome</span>, has <span style={{ fontWeight: 600 }}>repeating</span>, <span style={{ fontWeight: 600 }}>alternating</span> and/or <span style={{ fontWeight: 600 }}>incrementing</span> characters, and <span style={{ fontWeight: 600 }}>69</span> types (honest conincidence 😋) of <span style={{ fontWeight: 600 }}>Primes</span>! Types of Primes checked by the algorithm are: Balanced, Bell, Chen, Circular, Cousin, Cuban, Dihedral, Eisenstein, Emirp, Euclid, Factorial, Fermat, Fibonacci, Fortunate, Gaussian, Good, Happy, Harmonic, Higgs, Home, Irregular, Isolated, Leyland, Long, Lucas, Lucky, Mersenne, Repunit, Mills, Minimal, N4, Non-generous, Palindromic, Partition, Pell, Permutable, Perrin, Pierpoint, Pillai, Primeval, Primorial, Proth, Pythagorean, Quadruplet, Quartan, Ramanujan, Safe, Self, Sexy, Smarandache-Wellin, Solinas, Stern, Strobo-grammatic, Super-singular, Thabit, Two-sided, Triplet, Twin, Unique, Wagstaff, Weakly, Wilson, Wolstenholme and Woodall Primes.</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>the algorithm checks for whether the number is <span style={{ fontWeight: 600 }}>even</span>, <span style={{ fontWeight: 600 }}>odd</span>, <span style={{ fontWeight: 600 }}>palindrome</span>, has <span style={{ fontWeight: 600 }}>repeating</span>, <span style={{ fontWeight: 600 }}>alternating</span> and/or <span style={{ fontWeight: 600 }}>incrementing</span> characters, and <span style={{ fontWeight: 600 }}>69</span> types (honest coincidence 😋) of <span style={{ fontWeight: 600 }}>primes</span>! types of primes checked by the algorithm are: </h4>
+      <h5 style={{ marginTop: '20px', marginLeft: '45px' }}>balanced<br></br> bell<br></br> chen<br></br> circular<br></br> cousin<br></br> cuban<br></br> dihedral<br></br> eisenstein<br></br> emirp<br></br> euclid<br></br> factorial<br></br> fermat<br></br> fibonacci<br></br> fortunate<br></br> gaussian<br></br> good<br></br> happy<br></br> harmonic<br></br> higgs<br></br> home<br></br> irregular<br></br> isolated<br></br> leyland<br></br> long<br></br> lucas<br></br> lucky<br></br> mersenne<br></br> repunit<br></br> mills<br></br> minimal<br></br> n4<br></br> non-generous<br></br> palindromic<br></br> partition<br></br> pell<br></br> permutable<br></br> perrin<br></br> pierpoint<br></br> pillai<br></br> primeval<br></br> primorial<br></br> proth<br></br> pythagorean<br></br> quadruplet<br></br> quartan<br></br> ramanujan<br></br> safe<br></br> self<br></br> sexy<br></br> smarandache-wellin<br></br> solinas<br></br> stern<br></br> strobo-grammatic<br></br> super-singular<br></br> thabit<br></br> two-sided<br></br> triplet<br></br> twin<br></br> unique<br></br> wagstaff<br></br> weakly<br></br> wilson<br></br> wolstenholme<br></br> woodall primes</h5>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>🚧 ROADMAP?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>Incoming TokenBound Token,  more clubs to be added, and more!</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>support for Arabic numerals, indexit.eth subdomains for card holders, support non-digit ens, and more!</h4>
       <br></br>
+      <img style={{ position: 'float', marginLeft: '150px', marginTop: '250px', marginBottom: '100px', transform: 'rotate(90deg)' }} alt="roadmap" src={roadmap} width="850" />
       <br></br>
+      <br></br><br></br><br></br><br></br><br></br><br></br>
       <span style={{ fontFamily: 'Major Mono Display', fontSize: '14px', fontWeight: 600, marginLeft: '10%' }}>twitter: <a style={{ color: 'blue', textDecoration: 'none' }} href="https://twitter.com/indexit_eth" target='_blank' rel="noreferrer">@indexit_eth</a></span>
       <br></br>
     </div>

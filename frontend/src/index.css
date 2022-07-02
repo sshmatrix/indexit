@@ -131,21 +131,31 @@ h3 {
   -moz-osx-font-smoothing: grayscale
 }
 h4 {
-  font-size: 18px;
-  font-weight: 500;
-  font-family: 'DM Mono';
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Major Mono Display';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale
 }
 h5 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
-  font-family: 'SFPro';
+  font-family: 'Major Mono Display';
   color: #000000;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
+  -moz-osx-font-smoothing: grayscale;
+  column-count: 4
 }
 a { color: inherit }
+
+h6 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+  font-family: 'Major Mono Display';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 button {
   padding: 9px 16px;
@@ -287,10 +297,12 @@ button:hover {
 .blink_me {
   animation: blinker 3s linear infinite;
 }
-
+.blink_fast {
+  animation: blinker 1s linear infinite;
+}
 @keyframes blinker {
-  50% {
-    opacity: 0.65;
+  20% {
+    opacity: 0.15;
   }
 }
 

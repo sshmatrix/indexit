@@ -4,11 +4,11 @@ const { API_URL_MAINNET, API_URL_GOERLI, PRIVATE_KEY_MAINNET, PRIVATE_KEY_GOERLI
 const signer = new ethers.Wallet(PRIVATE_KEY_GOERLI);
 
 async function main() {
-  const IndexIt = await hardhat.ethers.getContractFactory("IndexIt");
+  const Tester = await hardhat.ethers.getContractFactory("Tester");
   const owner = await ethers.getSigner(signer.address);
-  const indexIt = await IndexIt.connect(owner).deploy();
-  await indexIt.deployed();
-  console.log("IndexIt is deployed to:", indexIt.address);
+  const tester = await Tester.connect(owner).deploy();
+  await tester.deployed();
+  console.log("Tester is deployed to:", tester.address);
 }
 
 main()
