@@ -94,13 +94,13 @@ else
     
     if [[ "$lang" == "korean" ]]; then
         if [[ "$clubName" == "999" ]]; then
-            clubName="일일일"
+            clubName="국999"
         fi
         if [[ "$clubName" == "10k" ]]; then
-            clubName="십k"
+            clubName="국10k"
         fi
         if [[ "$clubName" == "100k" ]]; then
-            clubName="백k"
+            clubName="국100k"
         fi
     fi
     
@@ -132,13 +132,13 @@ else
     # index=$string$index
 
     # ensName
-    if [[ "$clubName" == "999" || "$clubName" == "९९९" || "$clubName" == "٩٩٩" || "$clubName" == "九九九" || "$clubName" == "일일일" ]]; then
+    if [[ "$clubName" == "999" || "$clubName" == "९९९" || "$clubName" == "٩٩٩" || "$clubName" == "九九九" || "$clubName" == "국999" ]]; then
         sed -i "s/x1x/$ensName/g" $cardBack
         sed -i "s/x-x/$ensName/g" $cardFront
-    elif [[ "$clubName" == "10k" || "$clubName" == "१०k" || "$clubName" == "١٠k" || "$clubName" == "十k" || "$clubName" == "십k" ]]; then
+    elif [[ "$clubName" == "10k" || "$clubName" == "१०k" || "$clubName" == "١٠k" || "$clubName" == "十k" || "$clubName" == "국10k" ]]; then
         sed -i "s/xxxx/$ensName/g" $cardBack
         sed -i "s/xxxx/$ensName/g" $cardFront
-    elif [[ "$clubName" == "100k" || "$clubName" == "१००k" || "$clubName" == "١٠٠k" || "$clubName" == "一百k" || "$clubName" == "백k" ]]; then
+    elif [[ "$clubName" == "100k" || "$clubName" == "१००k" || "$clubName" == "١٠٠k" || "$clubName" == "一百k" || "$clubName" == "국100k" ]]; then
         sed -i "s/xxxxx/$ensName/g" $cardBack
         sed -i "s/xxxxx/$ensName/g" $cardFront
     elif [[ "$clubName" == "0xdigit" ]]; then

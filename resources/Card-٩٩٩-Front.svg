@@ -3690,7 +3690,7 @@
      showgrid="false"
      inkscape:window-width="1252"
      inkscape:window-height="819"
-     inkscape:window-x="114"
+     inkscape:window-x="1"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
      fit-margin-left="0"
@@ -6319,22 +6319,22 @@
          style="font-weight:900;font-size:7.41642px;line-height:1.44;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:-0.781362px;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
          id="text1038"
          y="18.53186"
-         x="44.582634"
+         x="54.848946"
          inkscape:export-filename="/Users/avneetsingh/Documents/Self/Fun/indexIt/minter/public/nft.png"
          inkscape:export-xdpi="600"
          inkscape:export-ydpi="600"><tspan
            sodipodi:role="line"
            id="tspan1036"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.67825px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
-           x="44.582634"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.67825px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:center;text-anchor:middle;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
+           x="54.848946"
            y="18.53186"><tspan
-             style="stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+             style="text-align:center;text-anchor:middle;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
              id="tspan13284"><tspan
-               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Amiri;-inkscape-font-specification:Amiri;letter-spacing:-0.529167px"
+               style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:8.73658px;font-family:Amiri;-inkscape-font-specification:Amiri;text-align:center;letter-spacing:-0.529167px;text-anchor:middle"
                id="tspan2534">x-x</tspan><tspan
-               style="font-size:2.03381px"
+               style="font-size:2.03381px;text-align:center;text-anchor:middle"
                id="tspan5070"> </tspan></tspan><tspan
-             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:5.64444px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';letter-spacing:0px;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
+             style="font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;font-size:5.64444px;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';text-align:center;letter-spacing:0px;text-anchor:middle;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
              id="tspan913">.eth</tspan></tspan></text>
       <path
          style="fill:#000000;stroke-width:0.0265713;opacity:0.76527331"
@@ -9414,7 +9414,7 @@
       </g>
       <text
          xml:space="preserve"
-         style="font-weight:900;font-size:7.41643px;line-height:0.94;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:-0.529167px;fill:url(#linearGradient2172);fill-opacity:1;stroke:#643e00;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         style="font-weight:900;font-size:7.41643px;line-height:0.8;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:-0.529167px;fill:url(#linearGradient2172);fill-opacity:1;stroke:#643e00;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          id="text1038-1"
          y="45.62952"
          x="54.773235"
@@ -9423,13 +9423,13 @@
          inkscape:export-ydpi="600"><tspan
            sodipodi:role="line"
            id="tspan1036-1"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:9.08937px;font-family:Amiri;-inkscape-font-specification:Amiri;text-align:center;text-anchor:middle;fill:url(#linearGradient2172);fill-opacity:1;stroke:#643e00;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.8533px;font-family:Amiri;-inkscape-font-specification:Amiri;text-align:center;text-anchor:middle;fill:url(#linearGradient2172);fill-opacity:1;stroke:#643e00;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            x="54.773235"
            y="45.62952">٩٩٩</tspan><tspan
            sodipodi:role="line"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.67826px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:center;text-anchor:middle;fill:url(#linearGradient2172);fill-opacity:1;stroke:#643e00;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            x="54.508652"
-           y="54.530727"
+           y="53.816738"
            id="tspan2139">CLUB</tspan></text>
       <text
          xml:space="preserve"

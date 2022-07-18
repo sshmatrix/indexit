@@ -186,8 +186,8 @@ const Samples = (props) => {
 
         />
       </form>
-      <h6 style={{ marginTop: '-8px', color: 'blue', fontSize: 15, marginLeft: '10px', fontFamily: 'SFMono', fontWeight: 15 }}>999, 10k, 100k (english/العربية/देवनागरी/中国人), e.g. 034.eth, ४५६७.eth, ٢٣٢٣٤.eth, 四五六七.eth</h6>
-      <h6 style={{ marginTop: '-38px', color: 'blue', fontSize: 15, marginLeft: '10px', fontFamily: 'SFMono', fontWeight: 15 }}>24h, 0xdigit, Roman, e.g. 0x01397.eth, 05h11.eth, dcccxxxix.eth</h6>
+      <h6 style={{ marginTop: '-8px', color: 'blue', fontSize: 15, marginLeft: '10px', fontFamily: 'SFMono', fontSize: 15, fontWeight: 100 }}>999, 10k, 100k (english/العربية/देवनागरी/中国人/한국인), 24h, 0xdigit, Roman</h6>
+      <h6 style={{ marginTop: '-38px', color: 'blue', fontSize: 15, marginLeft: '20px', fontFamily: 'SFMono', fontSize: 12, fontWeight: 100 }}>✓ 034.eth, ٢٣٢٣٤.eth, ४५६७.eth, 四五六七.eth, 육구구오.eth, 05h11.eth, 0x01397.eth, dcccxxxix.eth</h6>
       {!ens.endsWith(".eth") ? (
         <div>
           <button id="signButton" style={{ background: 'grey', color: 'white', marginLeft: '10px' }}>

@@ -37,9 +37,9 @@ const Algorithm = (props) => {
       <h3 style={{ marginTop: '20px', marginLeft: '30px' }}>iigenesis (iig)</h3>
       <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'blue', textDecoration: 'none' }} href="https://etherscan.io/address/0x14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2" target='_blank' rel="noreferrer">0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2</a> (on-chain erc721)</h4>
       <h2 style={{ marginTop: '10px', marginLeft: '5px' }}>📓 CLUBS SO FAR</h2>
-      <h4 style={{ marginTop: '2px', marginLeft: '15px' }}><span style={{ fontWeight: 600 }}>999, 10k & 100k</span> (<span style={{ fontWeight: 200 }}>中国人</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span>), <span style={{ fontWeight: 600 }}>24h</span>, <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span>, roman clubs</h4>
+      <h4 style={{ marginTop: '2px', marginLeft: '15px' }}><span style={{ fontWeight: 600 }}>999, 10k & 100k</span> (<span style={{ fontWeight: 200 }}>中国人/한국인</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span>), <span style={{ fontWeight: 600 }}>24h</span>, <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span>, roman clubs</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '5px' }}>📓 CLUBS COMING SOON</h2>
-      <h4 style={{ marginTop: '2px', marginLeft: '15px' }}><span style={{ fontWeight: 600 }}>hebrew</span>, <span style={{ fontWeight: 600 }}>korean</span> digits</h4>
+      <h4 style={{ marginTop: '2px', marginLeft: '15px' }}><span style={{ fontWeight: 600 }}>hebrew</span>, <span style={{ fontWeight: 600 }}>persian</span> digits</h4>
       <h2 style={{ marginTop: '10px', marginLeft: '5px' }}>📓 ABOUT THE TRAITS</h2>
       <h3 style={{ marginTop: '10px', marginLeft: '15px' }}>📊 index</h3>
       <h4 style={{ marginTop: '10px', marginLeft: '20px' }}> if a digit is <span style={{ fontWeight: 600 }}>odd</span> and <span style={{ fontWeight: 600 }}>prime</span>, it is assigned <span style={{ fontWeight: 600 }}>index 1.0 (highest)</span>, otherwise it is assigned <span style={{ fontWeight: 600 }}>index 0.0 (lowest)</span>. if a digit is <span style={{ fontWeight: 600 }}>even</span> but its <span style={{ fontWeight: 600 }}>half is a prime</span>, then it is assigned <span style={{ fontWeight: 600 }}>index 0.5 (mid-tier)</span>, otherwise it is assigned <span style={{ fontWeight: 600 }}>index 0 (lowest)</span>. </h4>
@@ -74,8 +74,9 @@ const Algorithm = (props) => {
       <h6 style={{ marginTop: '01px', marginLeft: '50px' }}>⚙️ fix implemented</h6>
       <h4 style={{ marginTop: '20px', marginLeft: '20px' }}>✅ 29/06/2022: dynamic metadata implemented </h4>
       <h4 style={{ marginTop: '20px', marginLeft: '20px' }}>🚀 30/06/2022: launch! </h4>
-      <h4 style={{ marginTop: '20px', marginLeft: '20px' }}>✅ 03/07/2022: العربية and <span style={{ fontWeight: 200 }}>देवनागरी </span> support added to 999, 10k and 100k clubs </h4>
-      <h4 style={{ marginTop: '20px', marginLeft: '20px' }}>✅ 04/07/2022: <span style={{ fontWeight: 200 }}>中国人</span> clubs and roman (spqr) clubs supported </h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '20px' }}>✅ 03/07/2022: العربية (arabic) and <span style={{ fontWeight: 200 }}>देवनागरी </span> (hindi) support added to 999, 10k and 100k clubs </h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '20px' }}>✅ 04/07/2022: <span style={{ fontWeight: 200 }}>中国人</span> (chinese) and roman (spqr) clubs supported </h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '20px' }}>✅ 18/07/2022: <span style={{ fontWeight: 200 }}>한국인</span> (korean) clubs supported </h4>
       <br></br>
       <span style={{ fontFamily: 'Major Mono Display', fontSize: '14px', fontWeight: 600, marginLeft: '10%' }}>twitter: <a style={{ color: 'blue', textDecoration: 'none' }} href="https://twitter.com/indexit_eth" target='_blank' rel="noreferrer">@indexit_eth</a></span>
     </div>
