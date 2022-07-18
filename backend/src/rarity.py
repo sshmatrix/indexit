@@ -9,28 +9,28 @@ def rotate(l, n):
     return l[-n:] + l[:-n]
     
 def club(ens):
-    if len(ens) == 3:
+    if len(ens) == 3 and ens[:2] != '0x' and ens[2] != 'h':
         clubName = '999'
-    elif len(ens) == 4:
+    elif len(ens) == 4 and ens[:2] != '0x' and ens[2] != 'h':
         clubName = '10k'
     elif len(ens) == 5 and ens[:2] != '0x' and ens[2] != 'h':
         clubName = '100k'
     elif len(ens) == 5 and ens[2] == 'h':
         clubName = '24h'
-    elif 7 >= len(ens) >= 5 and ens[:2] == '0x':
+    elif 7 >= len(ens) >= 3 and ens[:2] == '0x':
         clubName = '0xdigit'
     return(clubName)
     
 def isAlternating(ens):
-    if len(ens) == 3 and ens[0] == ens[2]:
+    if len(ens) == 3 and ens[2] != 'h' and ens[:2] != '0x' and ens[0] == ens[2]:
         return('Y')
-    elif len(ens) == 4 and ens[0] == ens[2] and ens[1] == ens[3]:
+    elif len(ens) == 4 and ens[2] != 'h' and ens[:2] != '0x' and ens[0] == ens[2] and ens[1] == ens[3]:
         return('Y')
-    elif len(ens) == 5 and ens[0] == ens[2] == ens[4] and ens[1] == ens[3]:
+    elif len(ens) == 5 and ens[2] != 'h' and ens[:2] != '0x' and ens[0] == ens[2] == ens[4] and ens[1] == ens[3]:
         return('Y')
     elif len(ens) == 5 and ens[2] == 'h' and ens[0] == ens[3] and ens[1] == ens[4]:
         return('Y')
-    elif 7 >= len(ens) >= 5 and ens[:2] == '0x':
+    elif 7 >= len(ens) >= 3 and ens[:2] == '0x':
         if len(ens[2:]) == 3 and ens[2] == ens[4]:
             return('Y')
         elif len(ens[2:]) == 4 and ens[2] == ens[4] and ens[3] == ens[5]:
@@ -43,9 +43,9 @@ def isAlternating(ens):
         return('N')
         
 def isIncrementing(ens):
-    if len(ens) == 3 and int(ens[0]) - int(ens[1]) == int(ens[1]) - int(ens[2]):
+    if len(ens) == 3 and ens[2] != 'h' and ens[:2] != '0x' and int(ens[0]) - int(ens[1]) == int(ens[1]) - int(ens[2]):
         return('Y')
-    elif len(ens) == 4 and int(ens[0]) - int(ens[1]) == int(ens[1]) - int(ens[2]) == int(ens[2]) - int(ens[3]):
+    elif len(ens) == 4 and ens[2] != 'h' and ens[:2] != '0x' and int(ens[0]) - int(ens[1]) == int(ens[1]) - int(ens[2]) == int(ens[2]) - int(ens[3]):
         return('Y')
     elif len(ens) == 5 and ens[2] != 'h' and ens[:2] != '0x':
         if int(ens[0]) - int(ens[1]) == int(ens[1]) - int(ens[2]) == int(ens[2]) - int(ens[3]) == int(ens[3]) - int(ens[4]):
@@ -57,7 +57,7 @@ def isIncrementing(ens):
             return('Y')
         else:
             return('N')
-    elif 7 >= len(ens) >= 5 and ens[:2] == '0x':
+    elif 7 >= len(ens) >= 3 and ens[:2] == '0x':
         if len(ens[2:]) == 3 and int(ens[2]) - int(ens[3]) == int(ens[3]) - int(ens[4]):
             return('Y')
         elif len(ens[2:]) == 4 and int(ens[2]) - int(ens[3]) == int(ens[3]) - int(ens[4]) == int(ens[4]) - int(ens[5]):
@@ -77,7 +77,7 @@ def isRepeating(string):
     store = []
     if 5 >= len(string) >= 3 and string[:2] != '0x' and string[2] != 'h':
         valid = string;
-    elif 7 >= len(string) >= 5 and string[:2] == '0x':
+    elif 7 >= len(string) >= 3 and string[:2] == '0x':
         valid = string[2:]
     elif len(string) == 5 and string[2] == 'h':
         valid = string[:2] + string[3:]

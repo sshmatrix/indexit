@@ -36,7 +36,7 @@ mkdir -p ${dist}$folder
 chmod 755 ${dist}$folder
 
 status=$(timeout 60 python3 ${src}$'rarity.py' $trans $'all' $'0' $'' $src)
-# echo $status
+echo $status
 if [ -z "${status}" ]; then
     echo "timeout" 1>&2
     exit 64
@@ -55,6 +55,19 @@ else
             clubName="١٠٠k"
         fi
     fi
+    
+    if [[ "$lang" == "persian" ]]; then
+        if [[ "$clubName" == "999" ]]; then
+            clubName="٩٩٩"
+        fi
+        if [[ "$clubName" == "10k" ]]; then
+            clubName="١٠k"
+        fi
+        if [[ "$clubName" == "100k" ]]; then
+            clubName="١٠٠k"
+        fi
+    fi
+    
     if [[ "$lang" == "hindi" ]]; then
         if [[ "$clubName" == "999" ]]; then
             clubName="९९९"

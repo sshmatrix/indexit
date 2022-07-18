@@ -5,11 +5,13 @@ import {
   chinese,
   hindi,
   korean,
+  persian,
   parseRoman,
   h2e,
   a2e,
   c2e,
-  k2e
+  k2e,
+  p2e
 } from "./util/nonascii.js";
 import sample from "./img/samples.gif";
 
@@ -49,13 +51,14 @@ const Samples = (props) => {
     var isHindi = [...digit].every(item => hindi.includes(item));
     var isChinese = [...digit].every(item => chinese.includes(item));
     var isKorean = [...digit].every(item => korean.includes(item));
+    var isPersian = [...digit].every(item => persian.includes(item));
     var isRoman = /^(m{1,4}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})|m{0,4}(cm|c?d|d?c{1,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})|m{0,4}(cm|cd|d?c{0,3})(xc|x?l|l?x{1,3})(ix|iv|v?i{0,3})|m{0,4}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|i?v|v?i{1,3}))$/.test(digit.toLowerCase());
 
     if (
       (
         !isRoman && hasNonAscii &&
         (
-          (digit.length >= 3 && digit.length <= 5 && isArabic) || (digit.length >= 3 && digit.length <= 5 && isHindi) || (digit.length >= 3 && digit.length <= 5 && isChinese) || (digit.length >= 3 && digit.length <= 5 && isKorean)
+          (digit.length >= 3 && digit.length <= 5 && isArabic) || (digit.length >= 3 && digit.length <= 5 && isHindi) || (digit.length >= 3 && digit.length <= 5 && isChinese) || (digit.length >= 3 && digit.length <= 5 && isKorean) || (digit.length >= 3 && digit.length <= 5 && isPersian)
         )
       ) ||
       (
@@ -102,6 +105,9 @@ const Samples = (props) => {
         } else if (isKorean) {
           trans = k2e(digit);
           lang = 'korean';
+        } else if (isPersian) {
+          trans = p2e(digit);
+          lang = 'persian';
         } else {
           trans = digit;
           lang = 'english';
@@ -186,8 +192,8 @@ const Samples = (props) => {
 
         />
       </form>
-      <h6 style={{ marginTop: '-8px', color: 'blue', fontSize: 15, marginLeft: '10px', fontFamily: 'SFMono', fontSize: 15, fontWeight: 100 }}>999, 10k, 100k (english/العربية/देवनागरी/中国人/한국인), 24h, 0xdigit, Roman</h6>
-      <h6 style={{ marginTop: '-38px', color: 'blue', fontSize: 15, marginLeft: '20px', fontFamily: 'SFMono', fontSize: 12, fontWeight: 100 }}>✓ 034.eth, ٢٣٢٣٤.eth, ४५६७.eth, 四五六七.eth, 육구구오.eth, 05h11.eth, 0x01397.eth, dcccxxxix.eth</h6>
+      <h6 style={{ marginTop: '-8px', color: 'blue', marginLeft: '10px', fontFamily: 'SFMono', fontSize: 15, fontWeight: 100 }}>999, 10k, 100k (english/العربية/देवनागरी/中国人/한국인/فارسی), 24h, 0xdigit, Roman</h6>
+      <h6 style={{ marginTop: '-38px', color: 'blue', marginLeft: '20px', fontFamily: 'SFMono', fontSize: 12, fontWeight: 100 }}>✓ 034.eth, ٢٣٢٣٤.eth, ४५६७.eth, 四五六七.eth, 육구구오.eth, ۳۵۴.eth, 05h11.eth, 0x01397.eth, dcccxxxix.eth</h6>
       {!ens.endsWith(".eth") ? (
         <div>
           <button id="signButton" style={{ background: 'grey', color: 'white', marginLeft: '10px' }}>
