@@ -59,9 +59,11 @@ app.post('/write', jsonParser, function (request, response) {
 		/* let signature = request.body.signature.slice(0,-4); */
 		let signature = request.body.signature;
 		let ens = request.body.ens;
-		let message = request.body.message;
+		var message = request.body.message;
 		let toSign = request.body.toSign;
 		let prompt = request.body.prompt;
+		let trans = request.body.trans;
+		let lang = request.body.lang;
 		var direc = '';
 		var holder = '';
 		var name = '';
@@ -87,7 +89,8 @@ app.post('/write', jsonParser, function (request, response) {
 		}
 		console.log(direc);
 		console.log(JSON.stringify(request.body));
-		let command = 'bash /root/indexit/src/rarity.sh ' + ens + ' ' + message + ' ' + direc + ' ' + signature;
+
+		let command = 'bash /root/indexit/src/rarity.sh ' + ens + ' ' + message + ' ' + direc + ' ' + signature + ' ' + trans + ' ' + lang;
 		console.log(command);
 		if (fs.existsSync(`/var/www/html/public/${direc}/${name}/${holder}.json`)) {
 			let res = { signature: signature, uri: `https://indexit.club/public/${direc}/${name}/${holder}.json`, image: 'exists', link: `https://indexit.club/public/${direc}/${name}/${holder}.png` };
@@ -114,6 +117,8 @@ app.post('/write', jsonParser, function (request, response) {
 					console.log(res);
 					response.json(res);
 		    } else {
+					// console.log(stdout);
+					// console.log(stderr);
 					{/*
 					let dataImage = new FormData();
     			dataImage.append('file', fs.createReadStream(`/var/www/html/public/${direc}/${name}/${holder}.png`));
@@ -239,7 +244,13 @@ app.post('/write', jsonParser, function (request, response) {
 						} else {
 							isIncrementing = false;
 						}
-						var identifier = crypto.randomBytes(6).toString('hex');
+
+						if (prompt === 'sample') {
+							var identifier = `${holder}`;
+						} else {
+							var identifier = crypto.randomBytes(6).toString('hex');
+						}
+
 						const jsonData = {
 							"name": `Rarity Card for ${ens}`,
 							"external_url": 'https://indexit.xyz/',

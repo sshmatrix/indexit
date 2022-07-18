@@ -5,6 +5,8 @@ ensName=$1
 message=$2
 direc=$3
 signature=$4
+trans=$5
+lang=$6
 
 src='/root/indexit/src/'
 dist='/var/www/html/public/'$direc$'/'
@@ -16,6 +18,7 @@ resources='/root/indexit/resources/'
 markerFirst='0xfuckthisfuckwhyfuckberaswagmigmgmgmgmggmygmigmiaaauuurrgggggobli'
 markerLast='ntownsaylordokwon3acsuzhucelsiusmarkrektlolallwhyplshelpmafamiliia'
 ensName=${ensName%.*}
+trans=${trans%.*}
 
 if [ "$direc" == "samples" ]; then
     holder=$ensName
@@ -32,7 +35,7 @@ fi
 mkdir -p ${dist}$folder
 chmod 755 ${dist}$folder
 
-status=$(timeout 60 python3 ${src}$'rarity.py' $ensName $'all' $'0' $'' $src)
+status=$(timeout 60 python3 ${src}$'rarity.py' $trans $'all' $'0' $'' $src)
 # echo $status
 if [ -z "${status}" ]; then
     echo "timeout" 1>&2
@@ -41,6 +44,66 @@ else
     echo $status
     IFS=',' read -ra ADDR <<< "$status"
     clubName="${ADDR[0]}"
+    if [[ "$lang" == "arabic" ]]; then
+        if [[ "$clubName" == "999" ]]; then
+            clubName="٩٩٩"
+        fi
+        if [[ "$clubName" == "10k" ]]; then
+            clubName="١٠k"
+        fi
+        if [[ "$clubName" == "100k" ]]; then
+            clubName="١٠٠k"
+        fi
+    fi
+    if [[ "$lang" == "hindi" ]]; then
+        if [[ "$clubName" == "999" ]]; then
+            clubName="९९९"
+        fi
+        if [[ "$clubName" == "10k" ]]; then
+            clubName="१०k"
+        fi
+        if [[ "$clubName" == "100k" ]]; then
+            clubName="१००k"
+        fi
+    fi
+    if [[ "$lang" == "english" ]]; then
+        if [[ "$clubName" == "999" ]]; then
+            clubName="999"
+        fi
+        if [[ "$clubName" == "10k" ]]; then
+            clubName="10k"
+        fi
+        if [[ "$clubName" == "100k" ]]; then
+            clubName="100k"
+        fi
+    fi
+    if [[ "$lang" == "roman" ]]; then
+        clubName="Roman"
+    fi
+    if [[ "$lang" == "chinese" ]]; then
+        if [[ "$clubName" == "999" ]]; then
+            clubName="九九九"
+        fi
+        if [[ "$clubName" == "10k" ]]; then
+            clubName="十k"
+        fi
+        if [[ "$clubName" == "100k" ]]; then
+            clubName="一百k"
+        fi
+    fi
+    
+    if [[ "$lang" == "korean" ]]; then
+        if [[ "$clubName" == "999" ]]; then
+            clubName="일일일"
+        fi
+        if [[ "$clubName" == "10k" ]]; then
+            clubName="십k"
+        fi
+        if [[ "$clubName" == "100k" ]]; then
+            clubName="백k"
+        fi
+    fi
+    
     index="${ADDR[1]}"
     isEven="${ADDR[2]}"
     isOdd="${ADDR[3]}"
@@ -69,13 +132,13 @@ else
     # index=$string$index
 
     # ensName
-    if [[ "$clubName" == "999" ]]; then
+    if [[ "$clubName" == "999" || "$clubName" == "९९९" || "$clubName" == "٩٩٩" || "$clubName" == "九九九" || "$clubName" == "일일일" ]]; then
         sed -i "s/x1x/$ensName/g" $cardBack
         sed -i "s/x-x/$ensName/g" $cardFront
-    elif [[ "$clubName" == "10k" ]]; then
+    elif [[ "$clubName" == "10k" || "$clubName" == "१०k" || "$clubName" == "١٠k" || "$clubName" == "十k" || "$clubName" == "십k" ]]; then
         sed -i "s/xxxx/$ensName/g" $cardBack
         sed -i "s/xxxx/$ensName/g" $cardFront
-    elif [[ "$clubName" == "100k" ]]; then
+    elif [[ "$clubName" == "100k" || "$clubName" == "१००k" || "$clubName" == "١٠٠k" || "$clubName" == "一百k" || "$clubName" == "백k" ]]; then
         sed -i "s/xxxxx/$ensName/g" $cardBack
         sed -i "s/xxxxx/$ensName/g" $cardFront
     elif [[ "$clubName" == "0xdigit" ]]; then
@@ -84,6 +147,9 @@ else
     elif [[ "$clubName" == "24h" ]]; then
         sed -i "s/xxhxx/$ensName/g" $cardBack
         sed -i "s/xxhxx/$ensName/g" $cardFront
+    elif [[ "$clubName" == "Roman" ]]; then
+        sed -i "s/xxxxxxxxxx/${ensName^^}/g" $cardBack
+        sed -i "s/xxxxxxxxxx/${ensName^^}/g" $cardFront
     fi
 
     sed -i "s/YZK/$index/g" $cardBack

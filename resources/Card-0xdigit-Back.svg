@@ -6,7 +6,7 @@
    version="1.1"
    id="svg6"
    inkscape:version="1.1-dev (b39e6d56, 2020-09-19)"
-   sodipodi:docname="Card-0x-Back.svg"
+   sodipodi:docname="Card-0xdigit-Back.svg"
    inkscape:export-filename="/Users/avneetsingh/Documents/Self/Fun/indexIt/minter/public/samples/0x-Back.png"
    inkscape:export-xdpi="600"
    inkscape:export-ydpi="600"
@@ -1689,7 +1689,7 @@
        xlink:href="#linearGradient13264"
        id="linearGradient1638"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.69946725,0,0,0.69946725,10.638778,13.136222)"
+       gradientTransform="matrix(0.69946725,0,0,0.69946725,11.04263,13.136222)"
        x1="56.265202"
        y1="48.689278"
        x2="75.858978"
@@ -2403,7 +2403,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.07"
      inkscape:cx="264.48598"
-     inkscape:cy="107.00935"
+     inkscape:cy="107.94393"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="false"
@@ -2512,14 +2512,14 @@
        style="font-weight:900;font-size:7.41642px;line-height:1.44;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:-0.781362px;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
        id="text1038"
        y="19.061028"
-       x="54.92017"
+       x="54.647144"
        inkscape:export-filename="/Users/avneetsingh/Documents/Self/Fun/indexIt/minter/public/nft.png"
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600"><tspan
          sodipodi:role="line"
          id="tspan1036"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:7.67825px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:center;text-anchor:middle;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
-         x="54.92017"
+         x="54.647144"
          y="19.061028"><tspan
            style="text-align:center;text-anchor:middle;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            id="tspan13284">0xxxxxx</tspan><tspan
@@ -4992,17 +4992,17 @@
     </g>
     <text
        xml:space="preserve"
-       style="font-weight:900;font-size:5.18756px;line-height:1.44;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:-0.370135px;opacity:0.308682;fill:url(#linearGradient1638);fill-opacity:1.0;stroke-width:0.139893;stroke-miterlimit:4;stroke-dasharray:none"
+       style="font-weight:900;font-size:5.18756px;line-height:1.44;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:-0.370135px;opacity:0.308682;fill:url(#linearGradient1638);fill-opacity:1;stroke-width:0.139893;stroke-miterlimit:4;stroke-dasharray:none"
        id="text1038-1"
        y="47.582188"
-       x="44.291965"
+       x="54.819824"
        inkscape:export-filename="/Users/avneetsingh/Documents/Self/Fun/indexIt/minter/public/nft.png"
        inkscape:export-xdpi="600"
        inkscape:export-ydpi="600"><tspan
          sodipodi:role="line"
          id="tspan1036-1"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.3707px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';fill:url(#linearGradient1638);fill-opacity:1.0;stroke:#000000;stroke-width:0.139893;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-         x="44.291965"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.3707px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:center;text-anchor:middle;fill:url(#linearGradient1638);fill-opacity:1;stroke:#000000;stroke-width:0.139893;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="54.634758"
          y="47.582188">0xxxxxx</tspan></text>
     <text
        xml:space="preserve"

@@ -1,5 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import {
+  arabic,
+  chinese,
+  hindi,
+  korean,
+  parseRoman,
+  h2e,
+  a2e,
+  c2e,
+  k2e
+} from "./util/nonascii.js";
 import sample from "./img/samples.gif";
 
 const Samples = (props) => {
@@ -33,10 +44,39 @@ const Samples = (props) => {
   const onGeneratePressed = async () => {
     setStatus('Processing... ⌛');
     var digit = ens.slice(0, -4);
+    var hasNonAscii = !/^[\u0000-\u007f]*$/.test(digit);
+    var isArabic = [...digit].every(item => arabic.includes(item));
+    var isHindi = [...digit].every(item => hindi.includes(item));
+    var isChinese = [...digit].every(item => chinese.includes(item));
+    var isKorean = [...digit].every(item => korean.includes(item));
+    var isRoman = /^(m{1,4}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})|m{0,4}(cm|c?d|d?c{1,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})|m{0,4}(cm|cd|d?c{0,3})(xc|x?l|l?x{1,3})(ix|iv|v?i{0,3})|m{0,4}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|i?v|v?i{1,3}))$/.test(digit.toLowerCase());
+
     if (
-      (digit.length === 5 && digit.substring(2,3) === "h" && ( (/^[0-1]+$/.test(digit.substring(0,1)) && /^[0-9]+$/.test(digit.substring(1,2))) || (/^[2-2]+$/.test(digit.substring(0,1)) && /^[0-9]+$/.test(digit.substring(1,2))) ) && /^[0-5]+$/.test(digit.substring(3,4)) && /^[0-9]+$/.test(digit.substring(4,5))) ||
-      (digit.length >= 3 && digit.length <= 5 && /^[0-9]+$/.test(digit)) ||
-      (digit.length >= 3 && digit.length <= 7 && digit.startsWith("0x") && /^[0-9]+$/.test(digit.substring(2)))
+      (
+        !isRoman && hasNonAscii &&
+        (
+          (digit.length >= 3 && digit.length <= 5 && isArabic) || (digit.length >= 3 && digit.length <= 5 && isHindi) || (digit.length >= 3 && digit.length <= 5 && isChinese) || (digit.length >= 3 && digit.length <= 5 && isKorean)
+        )
+      ) ||
+      (
+        isRoman && !hasNonAscii &&
+        (
+          parseRoman(digit) < 4000
+        ) && digit.length >= 3 && digit.length <= 15
+      ) ||
+      (
+        !hasNonAscii && !isRoman &&
+        (
+          (digit.length === 5
+            && digit.substring(2,3) === "h"
+            && ( (/^[0-1]+$/.test(digit.substring(0,1)) && /^[0-9]+$/.test(digit.substring(1,2))) || (/^[2-2]+$/.test(digit.substring(0,1)) && /^[0-9]+$/.test(digit.substring(1,2))) )
+            && /^[0-5]+$/.test(digit.substring(3,4))
+            && /^[0-9]+$/.test(digit.substring(4,5))
+          )
+          || (digit.length >= 3 && digit.length <= 5 && /^[0-9]+$/.test(digit))
+          || (digit.length >= 3 && digit.length <= 7 && digit.startsWith("0x") && /^[0-9]+$/.test(digit.substring(2)))
+        )
+      )
     ) {
       setENS(`${digit}.eth`);
       setStatus('⌛ Generating card... please wait! (up to 60 seconds)');
@@ -44,15 +84,41 @@ const Samples = (props) => {
       try {
         console.log('⌛ Generating card... please wait!');
         const timestamp = Date.now();
+        var trans = '';
+        var lang = '';
+        if (isArabic) {
+          trans = a2e(digit);
+          lang = 'arabic';
+        } else if (isHindi) {
+          trans = h2e(digit);
+          lang = 'hindi';
+        } else if (isRoman) {
+          trans = parseRoman(digit);
+          lang = 'roman';
+          digit = digit.toLowerCase();
+        } else if (isChinese) {
+          trans = c2e(digit);
+          lang = 'chinese';
+        } else if (isKorean) {
+          trans = k2e(digit);
+          lang = 'korean';
+        } else {
+          trans = digit;
+          lang = 'english';
+        }
+
         const meta = {
           signature: '0xfuckthisfuckwhyfuckberaswagmigmgmgmgmggmygmigmiaaauuurrgggggoblintownsaylordokwon3acsuzhucelsiusmarkrektlolallwhyplshelpmafamiliia',
           message: '0xwenmoonwenlambowenmonieshelpsirpleasengmimcdonaldsmcafeesamsifuo',
           ens: ens,
+          trans: trans + '.eth',
+          lang: lang,
           toSign: `Signed by ${digit}.eth at time ${timestamp}`,
           prompt: 'sample'
         };
         try {
-          // console.log(meta);
+          console.log('Request ↓↓↓');
+          console.log(meta);
           await fetch(
             "https://indexit.club:3001/write",
             {
@@ -64,7 +130,8 @@ const Samples = (props) => {
             })
             .then(response => response.json())
             .then(data => {
-              // console.log(data);
+              console.log('Response ↓↓↓');
+              console.log(data);
               if (data.image === 'empty') {
                 setStatus('✋ Slow down champ! Let the previous request finish ⌛');
                 window.alert('✋ Slow down champ! Let the previous request finish ⌛')
@@ -90,8 +157,8 @@ const Samples = (props) => {
       }
     } else {
       setENS('.none');
-      window.alert("❌ Provided ENS doesn't belong to 999, 10k, 100k, 24h or 0xdigit Clubs!");
-      setStatus("❌ Provided ENS doesn't belong to 999, 10k, 100k, 24h or 0xdigit Clubs!");
+      window.alert("❌ Provided ENS doesn't belong to 999, 10k, 100k, SPQR, 24h or 0xdigit Clubs!");
+      setStatus("❌ Provided ENS doesn't belong to 999, 10k, 100k, SPQR, 24h or 0xdigit Clubs!");
     }
   }
   return (
@@ -116,10 +183,11 @@ const Samples = (props) => {
           type="text"
           placeholder="Enter ENS & Click on 'NEXT ▶▶▶'"
           onChange={(event) => setENS(event.target.value)}
+
         />
       </form>
-      <h6 style={{ marginTop: '-8px', color: 'blue', fontSize: 15, marginLeft: '10px', fontFamily: 'SFMono', fontWeight: 15 }}>999, 10k, 100k, 24h and 0xdigit Clubs only,</h6>
-      <h6 style={{ marginTop: '-38px', color: 'blue', fontSize: 15, marginLeft: '10px', fontFamily: 'SFMono', fontWeight: 15 }}>e.g. 034.eth, 0x01397.eth, 05h11.eth etc</h6>
+      <h6 style={{ marginTop: '-8px', color: 'blue', fontSize: 15, marginLeft: '10px', fontFamily: 'SFMono', fontWeight: 15 }}>999, 10k, 100k (english/العربية/देवनागरी/中国人), e.g. 034.eth, ४५६७.eth, ٢٣٢٣٤.eth, 四五六七.eth</h6>
+      <h6 style={{ marginTop: '-38px', color: 'blue', fontSize: 15, marginLeft: '10px', fontFamily: 'SFMono', fontWeight: 15 }}>24h, 0xdigit, Roman, e.g. 0x01397.eth, 05h11.eth, dcccxxxix.eth</h6>
       {!ens.endsWith(".eth") ? (
         <div>
           <button id="signButton" style={{ background: 'grey', color: 'white', marginLeft: '10px' }}>
@@ -152,6 +220,8 @@ const Samples = (props) => {
       )}
       <br></br>
       <p></p>
+      <br></br><br></br><br></br><br></br><br></br><br></br>
+      <br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br>

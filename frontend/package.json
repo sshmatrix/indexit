@@ -9,13 +9,13 @@
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.27.2",
     "caniuse-lite": "^1.0.30001352",
+    "chinese-numbers-converter": "^2.3.1",
     "ethers": "^5.6.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router": "^6.1.0",
     "react-router-dom": "^6.0.0-beta.8",
     "react-scripts": "^4.0.3",
-    "utf8": "^3.0.0",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

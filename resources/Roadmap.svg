@@ -152,7 +152,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.3106999"
      inkscape:cx="-22.888535"
-     inkscape:cy="259.78487"
+     inkscape:cy="260.54782"
      inkscape:document-units="mm"
      inkscape:current-layer="g3050"
      showgrid="false"
@@ -397,16 +397,21 @@
       </g>
       <text
          xml:space="preserve"
-         style="font-weight:300;font-size:4.23333px;line-height:1;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;text-align:end;letter-spacing:0px;text-anchor:end;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"
+         style="font-weight:300;font-size:2.82222px;line-height:1;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;text-align:end;letter-spacing:0px;text-anchor:end;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none"
          x="-106.61072"
-         y="34.183338"
+         y="31.537502"
          id="text1019-0"
          transform="rotate(-90)"><tspan
            sodipodi:role="line"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Mandatory Plaything';-inkscape-font-specification:'Mandatory Plaything';text-align:start;text-anchor:start;stroke:#000000;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'Mandatory Plaything';-inkscape-font-specification:'Mandatory Plaything';text-align:start;text-anchor:start;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            x="-106.61072"
-           y="34.183338"
-           id="tspan1233">ARABIC </tspan></text>
+           y="31.537502"
+           id="tspan1233">ARABIC, HINDI</tspan><tspan
+           sodipodi:role="line"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.82222px;font-family:'Mandatory Plaything';-inkscape-font-specification:'Mandatory Plaything';text-align:start;text-anchor:start;stroke:#000000;stroke-width:0.1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           x="-106.61072"
+           y="34.416775"
+           id="tspan909">Chinese, ROMAN</tspan></text>
       <text
          xml:space="preserve"
          style="font-weight:300;font-size:4.23333px;line-height:1;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;text-align:end;letter-spacing:0px;text-anchor:end;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none"

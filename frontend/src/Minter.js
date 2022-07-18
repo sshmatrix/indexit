@@ -6,9 +6,20 @@ import {
   getCurrentWalletConnected,
   mintNFT
 } from "./util/interact.js";
+import {
+  arabic,
+  chinese,
+  hindi,
+  korean,
+  parseRoman,
+  h2e,
+  a2e,
+  c2e,
+  k2e
+} from "./util/nonascii.js";
+import './index.css';
 import sample from "./img/samples.gif";
 import roadmap from "./img/roadmap.png";
-import './index.css';
 require("dotenv").config();
 const alchemyKeyMainnet = process.env.REACT_APP_ALCHEMY_KEY_MAINNET;
 
@@ -22,8 +33,8 @@ const Minter = (props) => {
   const [signature, setSignature] = useState("");
   const [nft, setNFT] = useState("");
   const [record, setRecord] = useState("");
-
   var mainnet = new ethers.providers.AlchemyProvider("homestead", alchemyKeyMainnet);
+
   useEffect(() => {
     let isComponentMounted = true;
     const fetchData = async () => {
@@ -112,11 +123,62 @@ const Minter = (props) => {
 
   const onSignPressed = async () => {
     var digit = ens.slice(0, -4);
+    var hasNonAscii = !/^[\u0000-\u007f]*$/.test(digit);
+    var isArabic = [...digit].every(item => arabic.includes(item));
+    var isHindi = [...digit].every(item => hindi.includes(item));
+    var isChinese = [...digit].every(item => chinese.includes(item));
+    var isKorean = [...digit].every(item => korean.includes(item));
+    var isRoman = /^(m{1,4}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})|m{0,4}(cm|c?d|d?c{1,3})(xc|xl|l?x{0,3})(ix|iv|v?i{0,3})|m{0,4}(cm|cd|d?c{0,3})(xc|x?l|l?x{1,3})(ix|iv|v?i{0,3})|m{0,4}(cm|cd|d?c{0,3})(xc|xl|l?x{0,3})(ix|i?v|v?i{1,3}))$/.test(digit.toLowerCase());
+
     if (
-      (digit.length === 5 && digit.substring(2,3) === "h" && ( (/^[0-1]+$/.test(digit.substring(0,1)) && /^[0-9]+$/.test(digit.substring(1,2))) || (/^[2-2]+$/.test(digit.substring(0,1)) && /^[0-9]+$/.test(digit.substring(1,2))) ) && /^[0-5]+$/.test(digit.substring(3,4)) && /^[0-9]+$/.test(digit.substring(4,5))) ||
-      (digit.length >= 3 && digit.length <= 5 && /^[0-9]+$/.test(digit)) ||
-      (digit.length >= 3 && digit.length <= 7 && digit.startsWith("0x") && /^[0-9]+$/.test(digit.substring(2)))
+      (
+        !isRoman && hasNonAscii &&
+        (
+          (digit.length >= 3 && digit.length <= 5 && isArabic) || (digit.length >= 3 && digit.length <= 5 && isHindi) || (digit.length >= 3 && digit.length <= 5 && isChinese) || (digit.length >= 3 && digit.length <= 5 && isKorean)
+        )
+      ) ||
+      (
+        isRoman && !hasNonAscii &&
+        (
+          parseRoman(digit) < 4000
+        ) && digit.length >= 3 && digit.length <= 10
+      ) ||
+      (
+        !hasNonAscii && !isRoman &&
+        (
+          (digit.length === 5
+            && digit.substring(2,3) === "h"
+            && ( (/^[0-1]+$/.test(digit.substring(0,1)) && /^[0-9]+$/.test(digit.substring(1,2))) || (/^[2-2]+$/.test(digit.substring(0,1)) && /^[0-9]+$/.test(digit.substring(1,2))) )
+            && /^[0-5]+$/.test(digit.substring(3,4))
+            && /^[0-9]+$/.test(digit.substring(4,5))
+          )
+          || (digit.length >= 3 && digit.length <= 5 && /^[0-9]+$/.test(digit))
+          || (digit.length >= 3 && digit.length <= 7 && digit.startsWith("0x") && /^[0-9]+$/.test(digit.substring(2)))
+        )
+      )
     ) {
+      var trans = '';
+      var lang = '';
+      if (isArabic) {
+        trans = a2e(digit);
+        lang = 'arabic';
+      } else if (isHindi) {
+        trans = h2e(digit);
+        lang = 'hindi';
+      } else if (isRoman) {
+        trans = parseRoman(digit);
+        lang = 'roman';
+        digit = digit.toLowerCase();
+      } else if (isChinese) {
+        trans = c2e(digit);
+        lang = 'chinese';
+      } else if (isKorean) {
+        trans = k2e(digit);
+        lang = 'korean';
+      } else {
+        trans = digit;
+        lang = 'english';
+      }
       setStatus('⌛ Checking ENS digit ownership... please wait!');
       const addressResolve = await mainnet.resolveName(`${digit}.eth`);
       if ( addressResolve ) {
@@ -145,6 +207,8 @@ const Minter = (props) => {
               signature: signedValue,
               message: toSign,
               ens: ens,
+              trans: trans + '.eth',
+              lang: lang,
               toSign: message,
               prompt: 'mint'
             };
@@ -204,8 +268,8 @@ const Minter = (props) => {
       }
     } else {
       setENS('.none');
-      window.alert("❌ Provided ENS doesn't belong to 999, 10k, 100k, 24h or 0xdigit Clubs!");
-      setStatus("❌ Provided ENS doesn't belong to 999, 10k, 100k, 24h or 0xdigit Clubs!");
+      window.alert("❌ Provided ENS doesn't belong to 999, 10k, 100k, 24h, SPQR or 0xdigit Clubs!");
+      setStatus("❌ Provided ENS doesn't belong to 999, 10k, 100k, 24h, SPQR or 0xdigit Clubs!");
     }
   };
 
@@ -263,7 +327,7 @@ const Minter = (props) => {
         </button>
       )}
       <br></br>
-      <h3 style={{ marginTop: '70px', marginLeft: '300px' }}><span style={{ fontSize: 24, color: '#370080' }} className='blink_fast'>🚀🚀🚀 live on mainnet!</span></h3>
+      <h3 style={{ marginTop: '70px', marginLeft: '200px' }}><span style={{ fontSize: 20, color: '#370080' }} className='blink_fast'>🚀🚀🚀 العربية/<span style={{ fontWeight: 200 }}>中国人</span>/<span style={{ fontWeight: 200 }}>देवनागरी</span>/roman digits supported!</span></h3>
       <h1 id="title" style={{ marginTop: '20px' }}>🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
       <img style={{ float: 'right', marginBottom: '20px' }} alt="sample" src={sample} width="337" height="400"/>
       <h3 style={{ marginTop: '10px', marginLeft: '20px' }}><span style={{ fontSize: 30 }}>🦊 </span>  connect metamask</h3>
@@ -295,8 +359,8 @@ const Minter = (props) => {
           </form>
         </div>
       )}
-      <h6 style={{ marginTop: '-8px', color: 'blue', fontSize: 15, marginLeft: '30px', fontFamily: 'SFMono', fontWeight: 15 }}>999, 10k, 100k, 24h and 0xdigit Clubs only,</h6>
-      <h6 style={{ marginTop: '-38px', color: 'blue', fontSize: 15, marginLeft: '30px', fontFamily: 'SFMono', fontWeight: 15 }}>e.g. 034.eth, 0x01397.eth, 05h11.eth etc</h6>
+      <h6 style={{ marginTop: '-8px', color: 'blue', fontSize: 15, marginLeft: '30px', fontFamily: 'SFMono', fontWeight: 15 }}>999, 10k, 100k (english/العربية/देवनागरी/中国人), e.g. 034.eth, ४५६७.eth, ٢٣٢٣٤.eth, 四五六七.eth</h6>
+      <h6 style={{ marginTop: '-38px', color: 'blue', fontSize: 15, marginLeft: '30px', fontFamily: 'SFMono', fontWeight: 15 }}>24h, 0xdigit, Roman, e.g. 0x01397.eth, 05h11.eth, dcccxxxix.eth</h6>
       {!ens.endsWith(".eth") || !walletAddress ? (
         <div style={{ marginleft: '60px' }}>
           <button id="signButton" style={{ background: 'grey', color: 'white' }}>
@@ -339,7 +403,7 @@ const Minter = (props) => {
       )}
       <h1 style={{ marginTop: '100px' }}>FAQ:</h1>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>🀄 WHAT ARE RARITY CARDS FOR DIGIT CLUBS?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>rarity cards assign rarity to ens names in <span style={{ fontWeight: 600 }}>999</span>, <span style={{ fontWeight: 600 }}>10k</span>, <span style={{ fontWeight: 600 }}>100k</span>, <span style={{ fontWeight: 600 }}>24h</span> and <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span> clubs based on their mathematical properties. each card is unique to an ens name, printed with signature of the owning wallet, thereby making it conceptually soulbound to an ens name (aka tokenbound token or tbt), but not contractually - yet. </h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>rarity cards assign rarity to ens names in <span style={{ fontWeight: 600 }}>999</span>, <span style={{ fontWeight: 600 }}>10k</span>, <span style={{ fontWeight: 600 }}>100k</span> (<span style={{ fontWeight: 200 }}>中国人</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span>) & <span style={{ fontWeight: 600 }}>24h</span>, <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span>, roman clubs based on their mathematical properties. each card is unique to an ens name, printed with signature of the owning wallet, thereby making it conceptually soulbound to an ens name (aka tokenbound token or tbt), but not contractually - yet. </h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>📚 LINK TO COLLECTION?</h2>
       <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'blue', textDecoration: 'none' }} href="https://looksrare.org/collections/0x14aB45F6EdC154E338E27f8d1d2A7caD4ed62EC2" target='_blank' rel="noreferrer">looksrare</a> ✅, <a style={{ color: 'blue', textDecoration: 'none' }} href="https://rarible.com/collection/0x14aB45F6EdC154E338E27f8d1d2A7caD4ed62EC2" target='_blank' rel="noreferrer">rarible</a> ✅, <a style={{ color: 'blue', textDecoration: 'none' }} href="https://opensea.io/collection/iigenesis?search[sortAscending]=false&search[sortBy]=CREATED_DATE" target='_blank' rel="noreferrer">opensea</a> ✅</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>📓 CONTRACT ADDRESS?</h2>
@@ -347,17 +411,17 @@ const Minter = (props) => {
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>⏰ WHEN CAN I MINT?</h2>
       <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>we are going live on <span style={{ fontWeight: 600 }}>mainnet on june 30 2022</span>! in the meantime, you can generate sample unsigned cards in the 'samples' tab!</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>🍾 WHO CAN MINT?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>wallet owning an ens name in <span style={{ fontWeight: 600 }}>999</span>, <span style={{ fontWeight: 600 }}>10k</span>, <span style={{ fontWeight: 600 }}>100k</span>, <span style={{ fontWeight: 600 }}>24h</span> and <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span> club can mint! you can only mint the card for an ens digit that you own.</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>wallet owning an ens name in <span style={{ fontWeight: 600 }}>999, 10k, 100k</span> (<span style={{ fontWeight: 200 }}>中国人</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span>) & <span style={{ fontWeight: 600 }}>24h</span>, <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span>, roman club can mint! you can only mint the card for an ens digit that you own.</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>💸 WHAT'S THE MINT PRICE?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>3l </span>clubs: 0.050 eth + gas (999, arabic 999, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>1l)</h4>
-      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>4l </span>clubs: 0.010 eth + gas (10k, arabic 10k, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>2l)</h4>
-      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>5l </span>clubs: 0.005 eth + gas (24h, 100k, arabic 100k, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>3l, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>4l, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>5l)</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>3l </span>clubs: 0.050 eth + gas (<span style={{ fontWeight: 200 }}>中国人</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span> 999 & 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>1l)</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>4l </span>clubs: 0.010 eth + gas (<span style={{ fontWeight: 200 }}>中国人</span>/english/العربية/<span style={{ fontWeight: 200 }}><span style={{ fontWeight: 200 }}>देवनागरी </span> </span> 10k & 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>2l)</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>5l </span>clubs: 0.005 eth + gas (24h, <span style={{ fontWeight: 200 }}>中国人</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span> 100k, roman & 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>3l, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>4l, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>5l)</h4>
       <h3 style={{ marginTop: '10px', marginLeft: '35px' }}>🎁 card holders will be eligible for premium zero-cost features in the future, such as wrapped subdomains hosting their digiverse, card drops on polygon and more! check out the roadmap below!</h3>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>⚙️ WHAT CRITERIA ARE TESTED FOR RARITY?</h2>
       <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>the algorithm checks for whether the number is <span style={{ fontWeight: 600 }}>even</span>, <span style={{ fontWeight: 600 }}>odd</span>, <span style={{ fontWeight: 600 }}>palindrome</span>, has <span style={{ fontWeight: 600 }}>repeating</span>, <span style={{ fontWeight: 600 }}>alternating</span> and/or <span style={{ fontWeight: 600 }}>incrementing</span> characters, and <span style={{ fontWeight: 600 }}>69</span> types (honest coincidence 😋) of <span style={{ fontWeight: 600 }}>primes</span>! types of primes checked by the algorithm are: </h4>
       <h5 style={{ marginTop: '20px', marginLeft: '45px' }}>balanced<br></br> bell<br></br> chen<br></br> circular<br></br> cousin<br></br> cuban<br></br> dihedral<br></br> eisenstein<br></br> emirp<br></br> euclid<br></br> factorial<br></br> fermat<br></br> fibonacci<br></br> fortunate<br></br> gaussian<br></br> good<br></br> happy<br></br> harmonic<br></br> higgs<br></br> home<br></br> irregular<br></br> isolated<br></br> leyland<br></br> long<br></br> lucas<br></br> lucky<br></br> mersenne<br></br> repunit<br></br> mills<br></br> minimal<br></br> n4<br></br> non-generous<br></br> palindromic<br></br> partition<br></br> pell<br></br> permutable<br></br> perrin<br></br> pierpoint<br></br> pillai<br></br> primeval<br></br> primorial<br></br> proth<br></br> pythagorean<br></br> quadruplet<br></br> quartan<br></br> ramanujan<br></br> safe<br></br> self<br></br> sexy<br></br> smarandache-wellin<br></br> solinas<br></br> stern<br></br> strobo-grammatic<br></br> super-singular<br></br> thabit<br></br> two-sided<br></br> triplet<br></br> twin<br></br> unique<br></br> wagstaff<br></br> weakly<br></br> wilson<br></br> wolstenholme<br></br> woodall primes</h5>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>🚧 ROADMAP?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>support for Arabic numerals, indexit.eth subdomains for card holders, support non-digit ens, and more!</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>indexit.eth subdomains for card holders, support non-digit ens, and more!</h4>
       <br></br>
       <img style={{ position: 'float', marginLeft: '150px', marginTop: '250px', marginBottom: '100px', transform: 'rotate(90deg)' }} alt="roadmap" src={roadmap} width="850" />
       <br></br>

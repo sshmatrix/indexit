@@ -13,7 +13,7 @@ const tokenId = "12";
 const tokenType = "erc721";
 const chain = 'mainnet';
 
-/*
+{/*
 // moralis
 await Moralis.start({
             serverUrl: moralisUrl,
@@ -29,7 +29,7 @@ const options = {
 
 const tokenIdMetadata = await Moralis.Web3API.token.getTokenIdMetadata(options);
 console.log(tokenIdMetadata);
-*/
+*/}
 
 // alchemy
 const apiKey = alchemyKey;
