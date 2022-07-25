@@ -2,10 +2,16 @@ import { useNavigate } from "react-router-dom";
 import algorithm from "./img/algorithm.png";
 
 const Algorithm = (props) => {
-
+  const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
   let navigate = useNavigate();
+
+  function isMobileDevice() {
+    return 'ontouchstart' in window || 'onmsgesturechange' in window;
+  }
+  const isMobile = isMobileDevice();
+
   const goToHome = () =>{
-    let path = `/`;
+    let path = `/minter`
     navigate(path);
   }
 
@@ -35,7 +41,7 @@ const Algorithm = (props) => {
       <img style={{ float: 'right', marginLeft: '100px', marginBottom: '30px'  }} alt="sample" src={algorithm} height="700"/>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>📓 CONTRACT</h2>
       <h3 style={{ marginTop: '20px', marginLeft: '30px' }}>iigenesis (iig)</h3>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'blue', textDecoration: 'none' }} href="https://etherscan.io/address/0x14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2" target='_blank' rel="noreferrer">0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2</a> (on-chain erc721)</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'blue', textDecoration: 'none' }} href="https://etherscan.io/address/0x14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2" target='_blank' rel="noreferrer">0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>14ab45f ... ed62ec2</a> (erc721)</h4>
       <h2 style={{ marginTop: '10px', marginLeft: '5px' }}>📓 CLUBS SO FAR</h2>
       <h4 style={{ marginTop: '2px', marginLeft: '15px' }}><span style={{ fontWeight: 600 }}>999, 10k & 100k</span> (<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span>), <span style={{ fontWeight: 600 }}>24h</span>, <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span>, roman clubs</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '5px' }}>📓 CLUBS COMING SOON</h2>
@@ -56,14 +62,18 @@ const Algorithm = (props) => {
       <h3 style={{ marginTop: '10px', marginLeft: '15px' }}>📊 prime form</h3>
       <h4 style={{ marginTop: '10px', marginLeft: '20px' }}> An abbreviation showing the different memberships in the form <span style={{ fontWeight: 600 }}>n<sub>k</sub></span>, where <span style={{ fontWeight: 600 }}>n is the initial of family name</span>, and <span style={{ fontWeight: 600 }}>c is the number of memberships</span> corresponding to n. for instance, if a digit is of type bell, balanced, chen but not higgs, then it will have a form of b<sub>2</sub>c<sub>1</sub>h<sub>0</sub>. </h4>
       <h3 style={{ marginTop: '10px', marginLeft: '15px' }}>📊 repeating</h3>
-      <h4 style={{ marginTop: '10px', marginLeft: '20px' }}> ratio between <span style={{ fontWeight: 600 }}>maximum repetitions of a character</span> (after removing '0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>' and 'h', if applicable) and the length of ens name, i.e. 02323.eth → 0.4, 01234 → <span style={{ fontWeight: 600 }}>0.2 (lowest)</span>, 0000.eth → <span style={{ fontWeight: 600 }}>1.0 (highest)</span> etc. Ratio is rounded to one decimal. note: for 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit and 24h clubs, '0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>' and 'h' are removed before calculating the numerator, i.e. 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>0000.eth → 0.7, 23h21.eth → 0.4 etc.</h4>
+      <h4 style={{ marginTop: '10px', marginLeft: '20px' }}> ratio between <span style={{ fontWeight: 600 }}>maximum repetitions of a character</span> (after removing '0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>' and 'h', if applicable) and the length of ens name, i.e. 02323.eth → 0.4, 01234 → <span style={{ fontWeight: 600 }}>0.2 (lowest)</span>, 0000.eth → <span style={{ fontWeight: 600 }}>1.0 (highest)</span> etc. ratio is rounded to one decimal. note: for 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit and 24h clubs, '0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>' and 'h' are removed before calculating the numerator, i.e. 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>0000.eth → 0.7, 23h21.eth → 0.4 etc.</h4>
       <h3 style={{ marginTop: '10px', marginLeft: '15px' }}>📊 alternating</h3>
       <h4 style={{ marginTop: '10px', marginLeft: '20px' }}> if the name has <span style={{ fontWeight: 600 }}>strictly alternating characters</span> (after removing '0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>' and 'h', if applicable), e.g. 01010.eth, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>7575.eth, 13h13.eth, 121.eth etc. </h4>
       <h3 style={{ marginTop: '10px', marginLeft: '15px' }}>📊 incrementing</h3>
       <h4 style={{ marginTop: '10px', marginLeft: '20px' }}> if the <span style={{ fontWeight: 600 }}>difference between successive characters is a constant</span> positive or negative number (after removing '0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>' and 'h', if applicable), e.g. 321.eth, 1357.eth, 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>2468.eth, 23h45.eth, 97531.eth etc. </h4>
       <h2 style={{ marginTop: '10px', marginLeft: '5px' }}>📓 TYPES OF PRIMES</h2>
       <h4 style={{ marginTop: '10px', marginLeft: '20px' }}> the algorithm checks for <span style={{ fontWeight: 600 }}>69 types of primes</span>. these primes are:</h4>
-      <h5 style={{ marginTop: '10px', marginLeft: '20px' }}>balanced<br></br> bell<br></br> chen<br></br> circular<br></br> cousin<br></br> cuban<br></br> dihedral<br></br> eisenstein<br></br> emirp<br></br> euclid<br></br> factorial<br></br> fermat<br></br> fibonacci<br></br> fortunate<br></br> gaussian<br></br> good<br></br> happy<br></br> harmonic<br></br> higgs<br></br> home<br></br> irregular<br></br> isolated<br></br> leyland<br></br> long<br></br> lucas<br></br> lucky<br></br> mersenne<br></br> repunit<br></br> mills<br></br> minimal<br></br> n4<br></br> non-generous<br></br> palindromic<br></br> partition<br></br> pell<br></br> permutable<br></br> perrin<br></br> pierpoint<br></br> pillai<br></br> primeval<br></br> primorial<br></br> proth<br></br> pythagorean<br></br> quadruplet<br></br> quartan<br></br> ramanujan<br></br> safe<br></br> self<br></br> sexy<br></br> smarandache-wellin<br></br> solinas<br></br> stern<br></br> strobo-grammatic<br></br> super-singular<br></br> thabit<br></br> two-sided<br></br> triplet<br></br> twin<br></br> unique<br></br> wagstaff<br></br> weakly<br></br> wilson<br></br> wolstenholme<br></br> woodall</h5>
+      {width > 1050 ? (
+        <h5 style={{ marginTop: '20px', marginLeft: '45px' }}>balanced<br></br> bell<br></br> chen<br></br> circular<br></br> cousin<br></br> cuban<br></br> dihedral<br></br> eisenstein<br></br> emirp<br></br> euclid<br></br> factorial<br></br> fermat<br></br> fibonacci<br></br> fortunate<br></br> gaussian<br></br> good<br></br> happy<br></br> harmonic<br></br> higgs<br></br> home<br></br> irregular<br></br> isolated<br></br> leyland<br></br> long<br></br> lucas<br></br> lucky<br></br> mersenne<br></br> repunit<br></br> mills<br></br> minimal<br></br> n4<br></br> non-generous<br></br> palindromic<br></br> partition<br></br> pell<br></br> permutable<br></br> perrin<br></br> pierpoint<br></br> pillai<br></br> primeval<br></br> primorial<br></br> proth<br></br> pythagorean<br></br> quadruplet<br></br> quartan<br></br> ramanujan<br></br> safe<br></br> self<br></br> sexy<br></br> smarandache-wellin<br></br> solinas<br></br> stern<br></br> strobo-grammatic<br></br> super-singular<br></br> thabit<br></br> two-sided<br></br> triplet<br></br> twin<br></br> unique<br></br> wagstaff<br></br> weakly<br></br> wilson<br></br> wolstenholme<br></br> woodall primes</h5>
+      ) : (
+        <h6 style={{ marginTop: '20px', marginLeft: '45px', fontSize: 16 }}>balanced, bell, chen, circular, cousin, cuban, dihedral, eisenstein, emirp, euclid, factorial, fermat, fibonacci, fortunate, gaussian, good, happy, harmonic, higgs, home, irregular, isolated, leyland, long, lucas, lucky, mersenne, repunit, mills, minimal, n4, non-generous, palindromic, partition, pell, permutable, perrin, pierpoint, pillai, primeval, primorial, proth, pythagorean, quadruplet, quartan, ramanujan, safe, self, sexy, smarandache-wellin, solinas, stern, strobo-grammatic, super-singular, thabit, two-sided, triplet, twin, unique, wagstaff, weakly, wilson, wolstenholme, woodall primes</h6>
+      )}
       <h2 style={{ marginTop: '20px', marginLeft: '05px' }}>📓 NEWS & UPDATES</h2>
       <h4 style={{ marginTop: '20px', marginLeft: '20px' }}>✅ 29/06/2022: contract deployed</h4>
       <h4 style={{ marginTop: '20px', marginLeft: '20px' }}>⚠️ 29/06/2022: bug reported during mainnet testing in backend queuing</h4>

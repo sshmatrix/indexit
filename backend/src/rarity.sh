@@ -7,6 +7,7 @@ direc=$3
 signature=$4
 trans=$5
 lang=$6
+identifier=$7
 
 src='/root/indexit/src/'
 dist='/var/www/html/public/'$direc$'/'
@@ -26,7 +27,7 @@ if [ "$direc" == "samples" ]; then
     sigFirst=$markerFirst
     sigLast=$markerLast
 elif [ "$direc" == "cards" ]; then
-    holder=$message
+    holder=$identifier
     folder=$ensName
     sigFirst=${signature:0:${#signature}/2}
     sigLast=${signature:${#signature}/2}

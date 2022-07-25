@@ -20,16 +20,20 @@ const Samples = (props) => {
   const [status, setStatus] = useState("");
   const [nftFront, setNFTFront] = useState("");
   const [nftBack, setNFTBack] = useState("");
-
+  let navigate = useNavigate();
   useEffect((status) => {
     return () => {
       setStatus(status);
     }
   }, []);
 
-  let navigate = useNavigate();
+  function isMobileDevice() {
+    return 'ontouchstart' in window || 'onmsgesturechange' in window;
+  }
+  const isMobile = isMobileDevice();
+
   const goToHome = () =>{
-    let path = `/`;
+    let path = `/minter`
     navigate(path);
   }
 
@@ -179,7 +183,7 @@ const Samples = (props) => {
         📃 INFO
       </button>
       <br></br><br></br>
-      <img style={{ float: 'right', marginBottom: '20px' }} alt="sample" src={sample} width="337" height="400"/>
+      <img style={{ float: 'right', marginBottom: '20px', marginTop: '30px' }} alt="sample" src={sample} width="337" height="400"/>
       <br></br><br></br>
       <h1 id="title" style={{ marginTop: '100px' }}>🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
       <h4 style={{ marginTop: '10px', marginLeft: '10px' }}><span style={{ fontSize: 30 }}>🎁 </span>enter ens name & generate a sample unsigned card</h4>

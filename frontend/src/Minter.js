@@ -22,6 +22,7 @@ import {
 import './index.css';
 import sample from "./img/samples.gif";
 import roadmap from "./img/roadmap.png";
+import { homepage } from '../package.json';
 require("dotenv").config();
 const alchemyKeyMainnet = process.env.REACT_APP_ALCHEMY_KEY_MAINNET;
 
@@ -35,7 +36,14 @@ const Minter = (props) => {
   const [signature, setSignature] = useState("");
   const [nft, setNFT] = useState("");
   const [record, setRecord] = useState("");
+
+  function isMobileDevice() {
+    return 'ontouchstart' in window || 'onmsgesturechange' in window;
+  }
+  const isMobile = isMobileDevice();
+
   var mainnet = new ethers.providers.AlchemyProvider("homestead", alchemyKeyMainnet);
+  const width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 
   useEffect(() => {
     let isComponentMounted = true;
@@ -54,9 +62,15 @@ const Minter = (props) => {
   }, []);
 
   let navigate = useNavigate();
+
   const goToHome = () =>{
-    let path = `/`;
-    navigate(path);
+    if (!isMobile) {
+      let path = `/`;
+      navigate(path);
+    } else {
+      let path = `/minter`;
+      navigate(path);
+    }
   }
 
   const goToAlgorithm = () =>{
@@ -68,7 +82,6 @@ const Minter = (props) => {
     let path = `/samples`;
     navigate(path);
   }
-
 
   async function addWalletListener(address) {
     const nameResolve = await mainnet.lookupAddress(address);
@@ -265,12 +278,12 @@ const Minter = (props) => {
             setStatus("✅ Valid ENS! Click 'NEXT ▶▶▶' to Sign");
           }
         } else {
-          window.alert('❌ You are not the owner of this ENS digit ✋')
-          setStatus('❌ You are not the owner of this ENS digit ✋');
+          window.alert('❌ ENS digit does not resolve to connect wallet ✋')
+          setStatus('❌ ENS digit does not resolve to connect wallet ✋');
         }
       } else {
-        window.alert('❌ You are not the owner of this ENS digit ✋')
-        setStatus('❌ You are not the owner of this ENS digit ✋');
+        window.alert('❌ ENS digit does not resolve to connect wallet ✋')
+        setStatus('❌ ENS digit does not resolve to connect wallet ✋');
       }
     } else {
       setENS('.none');
@@ -323,21 +336,25 @@ const Minter = (props) => {
           <span>🦊 CONNECT WALLET</span>
         )}
       </button>
-      {!walletAddress ? (
+
+      {!walletAddress && !isMobile ? (
         <button id="switchWalletButton" style={{ background: 'grey', color: 'white' }}>
           🔒 CHANGE WALLET
         </button>
-      ) : (
+      ) : walletAddress && !isMobile ? (
         <button id="switchWalletButton" onClick={switchWalletPressed}>
           🔐 CHANGE WALLET
         </button>
+      ) : (
+        <div></div>
       )}
+
       <br></br>
-      <h3 style={{ marginTop: '70px', marginLeft: '170px' }}><span style={{ fontSize: 20, color: '#370080' }} className='blink_fast'>🚀🚀🚀 العربية/<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/<span style={{ fontWeight: 200 }}>देवनागरी</span>/roman digits supported!</span></h3>
+      <h3 style={{ marginTop: '70px', marginLeft: '10px' }}><span style={{ fontSize: 20, color: '#370080' }} className='blink_fast'>📰 العربية/<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/<span style={{ fontWeight: 200 }}>देवनागरी</span>/roman digits supported!</span></h3>
       <h1 id="title" style={{ marginTop: '20px' }}>🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
       <img style={{ float: 'right', marginBottom: '20px' }} alt="sample" src={sample} width="337" height="400"/>
       <h3 style={{ marginTop: '10px', marginLeft: '20px' }}><span style={{ fontSize: 30 }}>🦊 </span>  connect metamask</h3>
-      <h4 style={{ marginTop: '10px', marginLeft: '30px' }}>connect with wallet that owns digit name</h4>
+      <h4 style={{ marginTop: '10px', marginLeft: '30px' }}>connect wallet resolved by a digit name (requires a resolver)</h4>
       <h3 style={{ marginTop: '10px', marginLeft: '20px' }}><span style={{ fontSize: 30 }}>🕙 </span>  sign a timestamp to generate card</h3>
       <h4 style={{ marginTop: '10px', marginLeft: '30px' }}>why sign<span style={{ fontFamily: 'DM Mono' }}>?</span> unique verifiable signature will be printed on your card!</h4>
       <h3 style={{ marginTop: '10px', marginLeft: '20px' }}><span style={{ fontSize: 30 }}>🖨️ </span>  mint your unique card!</h3>
@@ -407,17 +424,17 @@ const Minter = (props) => {
         ) : (
         <p></p>
       )}
-      <h1 style={{ marginTop: '100px' }}>FAQ:</h1>
+      <h1 style={{ marginTop: '150px' }}>FAQ:</h1>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>🀄 WHAT ARE RARITY CARDS FOR DIGIT CLUBS?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>rarity cards assign rarity to ens names in <span style={{ fontWeight: 600 }}>999</span>, <span style={{ fontWeight: 600 }}>10k</span>, <span style={{ fontWeight: 600 }}>100k</span> (<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span>) & <span style={{ fontWeight: 600 }}>24h</span>, <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span>, roman clubs based on their mathematical properties. each card is unique to an ens name, printed with signature of the owning wallet, thereby making it conceptually soulbound to an ens name (aka tokenbound token or tbt), but not contractually - yet. </h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>rarity cards assign rarity to ens names in <span style={{ fontWeight: 600 }}>999</span>, <span style={{ fontWeight: 600 }}>10k</span>, <span style={{ fontWeight: 600 }}>100k</span> (<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span>) & <span style={{ fontWeight: 600 }}>24h</span>, <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span>, roman clubs based on their mathematical properties. each card is unique to an ens name, printed with signature of the resolved wallet, thereby making it conceptually soulbound to an ens name (aka tokenbound token or tbt), but not contractually - yet. </h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>📚 LINK TO COLLECTION?</h2>
       <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'blue', textDecoration: 'none' }} href="https://looksrare.org/collections/0x14aB45F6EdC154E338E27f8d1d2A7caD4ed62EC2" target='_blank' rel="noreferrer">looksrare</a> ✅, <a style={{ color: 'blue', textDecoration: 'none' }} href="https://rarible.com/collection/0x14aB45F6EdC154E338E27f8d1d2A7caD4ed62EC2" target='_blank' rel="noreferrer">rarible</a> ✅, <a style={{ color: 'blue', textDecoration: 'none' }} href="https://opensea.io/collection/iigenesis?search[sortAscending]=false&search[sortBy]=CREATED_DATE" target='_blank' rel="noreferrer">opensea</a> ✅</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>📓 CONTRACT ADDRESS?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'blue', textDecoration: 'none' }} href="https://etherscan.io/address/0x14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2" target='_blank' rel="noreferrer">0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2</a></h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'blue', textDecoration: 'none' }} href="https://etherscan.io/address/0x14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2" target='_blank' rel="noreferrer">0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>14ab45f6 ... 4ed62ec2</a></h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>⏰ WHEN CAN I MINT?</h2>
       <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>we are going live on <span style={{ fontWeight: 600 }}>mainnet on june 30 2022</span>! in the meantime, you can generate sample unsigned cards in the 'samples' tab!</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>🍾 WHO CAN MINT?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>wallet owning an ens name in <span style={{ fontWeight: 600 }}>999, 10k, 100k</span> (<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span>) & <span style={{ fontWeight: 600 }}>24h</span>, <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span>, roman club can mint! you can only mint the card for an ens digit that you own.</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>wallet <span style={{ fontWeight: 600 }}>resolved</span> by an ens name in <span style={{ fontWeight: 600 }}>999, 10k, 100k</span> (<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span>) & <span style={{ fontWeight: 600 }}>24h</span>, <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span>, roman club can mint! you can only mint the card for an ens digit for which a resolver is set pointing to your wallet. ownership (registrant) or control (controller) is not necessary.</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>💸 WHAT'S THE MINT PRICE?</h2>
       <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>3l </span>clubs: 0.050 eth + gas (<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span> 999 & 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>1l)</h4>
       <h4 style={{ marginTop: '20px', marginLeft: '50px' }}><span style={{ fontWeight: 600 }}>4l </span>clubs: 0.010 eth + gas (<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/english/العربية/<span style={{ fontWeight: 200 }}><span style={{ fontWeight: 200 }}>देवनागरी </span> </span> 10k & 0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>2l)</h4>
@@ -425,11 +442,15 @@ const Minter = (props) => {
       <h3 style={{ marginTop: '10px', marginLeft: '35px' }}>🎁 card holders will be eligible for premium zero-cost features in the future, such as wrapped subdomains hosting their digiverse, card drops on polygon and more! check out the roadmap below!</h3>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>⚙️ WHAT CRITERIA ARE TESTED FOR RARITY?</h2>
       <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>the algorithm checks for whether the number is <span style={{ fontWeight: 600 }}>even</span>, <span style={{ fontWeight: 600 }}>odd</span>, <span style={{ fontWeight: 600 }}>palindrome</span>, has <span style={{ fontWeight: 600 }}>repeating</span>, <span style={{ fontWeight: 600 }}>alternating</span> and/or <span style={{ fontWeight: 600 }}>incrementing</span> characters, and <span style={{ fontWeight: 600 }}>69</span> types (honest coincidence 😋) of <span style={{ fontWeight: 600 }}>primes</span>! types of primes checked by the algorithm are: </h4>
-      <h5 style={{ marginTop: '20px', marginLeft: '45px' }}>balanced<br></br> bell<br></br> chen<br></br> circular<br></br> cousin<br></br> cuban<br></br> dihedral<br></br> eisenstein<br></br> emirp<br></br> euclid<br></br> factorial<br></br> fermat<br></br> fibonacci<br></br> fortunate<br></br> gaussian<br></br> good<br></br> happy<br></br> harmonic<br></br> higgs<br></br> home<br></br> irregular<br></br> isolated<br></br> leyland<br></br> long<br></br> lucas<br></br> lucky<br></br> mersenne<br></br> repunit<br></br> mills<br></br> minimal<br></br> n4<br></br> non-generous<br></br> palindromic<br></br> partition<br></br> pell<br></br> permutable<br></br> perrin<br></br> pierpoint<br></br> pillai<br></br> primeval<br></br> primorial<br></br> proth<br></br> pythagorean<br></br> quadruplet<br></br> quartan<br></br> ramanujan<br></br> safe<br></br> self<br></br> sexy<br></br> smarandache-wellin<br></br> solinas<br></br> stern<br></br> strobo-grammatic<br></br> super-singular<br></br> thabit<br></br> two-sided<br></br> triplet<br></br> twin<br></br> unique<br></br> wagstaff<br></br> weakly<br></br> wilson<br></br> wolstenholme<br></br> woodall primes</h5>
+      {width > 1050 ? (
+        <h5 style={{ marginTop: '20px', marginLeft: '45px' }}>balanced<br></br> bell<br></br> chen<br></br> circular<br></br> cousin<br></br> cuban<br></br> dihedral<br></br> eisenstein<br></br> emirp<br></br> euclid<br></br> factorial<br></br> fermat<br></br> fibonacci<br></br> fortunate<br></br> gaussian<br></br> good<br></br> happy<br></br> harmonic<br></br> higgs<br></br> home<br></br> irregular<br></br> isolated<br></br> leyland<br></br> long<br></br> lucas<br></br> lucky<br></br> mersenne<br></br> repunit<br></br> mills<br></br> minimal<br></br> n4<br></br> non-generous<br></br> palindromic<br></br> partition<br></br> pell<br></br> permutable<br></br> perrin<br></br> pierpoint<br></br> pillai<br></br> primeval<br></br> primorial<br></br> proth<br></br> pythagorean<br></br> quadruplet<br></br> quartan<br></br> ramanujan<br></br> safe<br></br> self<br></br> sexy<br></br> smarandache-wellin<br></br> solinas<br></br> stern<br></br> strobo-grammatic<br></br> super-singular<br></br> thabit<br></br> two-sided<br></br> triplet<br></br> twin<br></br> unique<br></br> wagstaff<br></br> weakly<br></br> wilson<br></br> wolstenholme<br></br> woodall primes</h5>
+      ) : (
+        <h6 style={{ marginTop: '20px', marginLeft: '45px', fontSize: 16 }}>balanced, bell, chen, circular, cousin, cuban, dihedral, eisenstein, emirp, euclid, factorial, fermat, fibonacci, fortunate, gaussian, good, happy, harmonic, higgs, home, irregular, isolated, leyland, long, lucas, lucky, mersenne, repunit, mills, minimal, n4, non-generous, palindromic, partition, pell, permutable, perrin, pierpoint, pillai, primeval, primorial, proth, pythagorean, quadruplet, quartan, ramanujan, safe, self, sexy, smarandache-wellin, solinas, stern, strobo-grammatic, super-singular, thabit, two-sided, triplet, twin, unique, wagstaff, weakly, wilson, wolstenholme, woodall primes</h6>
+      )}
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>🚧 ROADMAP?</h2>
       <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>indexit.eth subdomains for card holders, support non-digit ens, and more!</h4>
       <br></br>
-      <img style={{ position: 'float', marginLeft: '150px', marginTop: '250px', marginBottom: '100px', transform: 'rotate(90deg)' }} alt="roadmap" src={roadmap} width="850" />
+      <img style={{ marginLeft: '10px', marginTop: '10px', marginBottom: '100px' }} alt="roadmap" src={roadmap} height="750" />
       <br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br>
       <span style={{ fontFamily: 'Major Mono Display', fontSize: '14px', fontWeight: 600, marginLeft: '10%' }}>twitter: <a style={{ color: 'blue', textDecoration: 'none' }} href="https://twitter.com/indexit_eth" target='_blank' rel="noreferrer">@indexit_eth</a></span>

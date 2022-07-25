@@ -67,18 +67,18 @@ app.post('/write', jsonParser, function (request, response) {
 		var direc = '';
 		var holder = '';
 		var name = '';
+		var identifier = '';
 		if (prompt === 'mint') {
 			direc = 'cards';
-			holder = message;
 			name = ens.slice(0,-4);
+			identifier = crypto.randomBytes(6).toString('hex');
+			holder = identifier;
 		} else if (prompt === 'sample') {
 			direc = 'samples';
 			name = ens.slice(0,-4);
+			identifier = `${name}`;
 			holder = name;
 		} else {
-			direc = '';
-			holder = '';
-			name = '';
 			console.log('Unidentified Prompt!');
 			queue = 0;
 			console.log('Resetting queue ...');
@@ -90,7 +90,7 @@ app.post('/write', jsonParser, function (request, response) {
 		console.log(direc);
 		console.log(JSON.stringify(request.body));
 
-		let command = 'bash /root/indexit/src/rarity.sh ' + ens + ' ' + message + ' ' + direc + ' ' + signature + ' ' + trans + ' ' + lang;
+		let command = 'bash /root/indexit/src/rarity.sh ' + ens + ' ' + message + ' ' + direc + ' ' + signature + ' ' + trans + ' ' + lang + ' ' + identifier;
 		console.log(command);
 		if (fs.existsSync(`/var/www/html/public/${direc}/${name}/${holder}.json`)) {
 			let res = { signature: signature, uri: `https://indexit.club/public/${direc}/${name}/${holder}.json`, image: 'exists', link: `https://indexit.club/public/${direc}/${name}/${holder}.png` };
@@ -243,12 +243,6 @@ app.post('/write', jsonParser, function (request, response) {
 							isIncrementing = true;
 						} else {
 							isIncrementing = false;
-						}
-
-						if (prompt === 'sample') {
-							var identifier = `${holder}`;
-						} else {
-							var identifier = crypto.randomBytes(6).toString('hex');
 						}
 
 						const jsonData = {
