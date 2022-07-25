@@ -126,13 +126,17 @@ const Minter = (props) => {
 
   const connectWalletPressed = async () => {
     const walletResponse = await connectWallet();
-    setStatus(walletResponse.status);
-    setWallet(walletResponse.address);
-    const nameResolve = await mainnet.lookupAddress(walletResponse.address);
-    if (nameResolve) {
-      setRecord(nameResolve);
-    } else {
-      setRecord(walletAddress.address);
+    if (walletResponse.address) {
+      setStatus(walletResponse.status);
+      setWallet(walletResponse.address);
+      const nameResolve = await mainnet.lookupAddress(walletResponse.address);
+      if (nameResolve) {
+        setRecord(nameResolve);
+      } else {
+        setRecord(walletAddress.address);
+      }
+    } else if (isMobile) {
+      navigate('/');
     }
   };
 
@@ -350,7 +354,7 @@ const Minter = (props) => {
       )}
 
       <br></br>
-      <h3 style={{ marginTop: '70px', marginLeft: '10px' }}><span style={{ fontSize: 20, color: '#370080' }} className='blink_fast'>📰 العربية/<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/<span style={{ fontWeight: 200 }}>देवनागरी</span>/roman digits supported!</span></h3>
+      <h3 style={{ marginTop: '70px', marginLeft: '10px' }}><span style={{ fontSize: 20, color: 'black' }} className='blink_fast'>📰 العربية/<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/<span style={{ fontWeight: 200 }}>देवनागरी</span>/roman digits supported!</span></h3>
       <h1 id="title" style={{ marginTop: '20px' }}>🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
       <img style={{ float: 'right', marginBottom: '20px' }} alt="sample" src={sample} width="337" height="400"/>
       <h3 style={{ marginTop: '10px', marginLeft: '20px' }}><span style={{ fontSize: 30 }}>🦊 </span>  connect metamask</h3>
@@ -382,8 +386,8 @@ const Minter = (props) => {
           </form>
         </div>
       )}
-      <h6 style={{ marginTop: '-8px', color: 'blue', marginLeft: '30px', fontFamily: 'SFMono', fontSize: 15, fontWeight: 100 }}>999, 10k, 100k (english/العربية/देवनागरी/中国人/한국인/فارسی), 24h, 0xdigit, Roman</h6>
-      <h6 style={{ marginTop: '-38px', color: 'blue', marginLeft: '40px', fontFamily: 'SFMono', fontSize: 12, fontWeight: 100 }}>✓ 034.eth, ٢٣٢٣٤.eth, ४५६७.eth, 四五六七.eth, 육구구오.eth, ۳۵۴.eth, 05h11.eth, 0x01397.eth, dcccxxxix.eth</h6>
+      <h6 style={{ marginTop: '-8px', color: 'black', marginLeft: '30px', fontFamily: 'SFMono', fontSize: 15, fontWeight: 100 }}>999, 10k, 100k (english/العربية/देवनागरी/中国人/한국인/فارسی), 24h, 0xdigit, Roman</h6>
+      <h6 style={{ marginTop: '-38px', color: 'black', marginLeft: '40px', fontFamily: 'SFMono', fontSize: 12, fontWeight: 100 }}>✓ 034.eth, ٢٣٢٣٤.eth, ४५६७.eth, 四五六七.eth, 육구구오.eth, ۳۵۴.eth, 05h11.eth, 0x01397.eth, dcccxxxix.eth</h6>
       {!ens.endsWith(".eth") || !walletAddress ? (
         <div style={{ marginleft: '60px' }}>
           <button id="signButton" style={{ background: 'grey', color: 'white' }}>
@@ -419,7 +423,9 @@ const Minter = (props) => {
             {"🦊 Connect to MetaMask using 'Connect Wallet' button".toLowerCase()}
         </div>
       )}
-      {nft ? (
+      {nft && !isMobile ? (
+        <div><img style={{ marginTop: '100px', marginBottom: '5px', marginLeft: '20px' }} alt="nft" src={nft} width="674"/></div>
+        ) : nft && isMobile ? (
         <div><img style={{ marginTop: '100px', marginBottom: '5px', marginLeft: '20px' }} alt="nft" src={nft} width="674"/></div>
         ) : (
         <p></p>
@@ -428,9 +434,9 @@ const Minter = (props) => {
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>🀄 WHAT ARE RARITY CARDS FOR DIGIT CLUBS?</h2>
       <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>rarity cards assign rarity to ens names in <span style={{ fontWeight: 600 }}>999</span>, <span style={{ fontWeight: 600 }}>10k</span>, <span style={{ fontWeight: 600 }}>100k</span> (<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span>) & <span style={{ fontWeight: 600 }}>24h</span>, <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span>, roman clubs based on their mathematical properties. each card is unique to an ens name, printed with signature of the resolved wallet, thereby making it conceptually soulbound to an ens name (aka tokenbound token or tbt), but not contractually - yet. </h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>📚 LINK TO COLLECTION?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'blue', textDecoration: 'none' }} href="https://looksrare.org/collections/0x14aB45F6EdC154E338E27f8d1d2A7caD4ed62EC2" target='_blank' rel="noreferrer">looksrare</a> ✅, <a style={{ color: 'blue', textDecoration: 'none' }} href="https://rarible.com/collection/0x14aB45F6EdC154E338E27f8d1d2A7caD4ed62EC2" target='_blank' rel="noreferrer">rarible</a> ✅, <a style={{ color: 'blue', textDecoration: 'none' }} href="https://opensea.io/collection/iigenesis?search[sortAscending]=false&search[sortBy]=CREATED_DATE" target='_blank' rel="noreferrer">opensea</a> ✅</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'black', textDecoration: 'none' }} href="https://looksrare.org/collections/0x14aB45F6EdC154E338E27f8d1d2A7caD4ed62EC2" target='_blank' rel="noreferrer">looksrare</a> ✅, <a style={{ color: 'black', textDecoration: 'none' }} href="https://rarible.com/collection/0x14aB45F6EdC154E338E27f8d1d2A7caD4ed62EC2" target='_blank' rel="noreferrer">rarible</a> ✅, <a style={{ color: 'black', textDecoration: 'none' }} href="https://opensea.io/collection/iigenesis?search[sortAscending]=false&search[sortBy]=CREATED_DATE" target='_blank' rel="noreferrer">opensea</a> ✅</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>📓 CONTRACT ADDRESS?</h2>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'blue', textDecoration: 'none' }} href="https://etherscan.io/address/0x14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2" target='_blank' rel="noreferrer">0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>14ab45f6 ... 4ed62ec2</a></h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'black', textDecoration: 'none' }} href="https://etherscan.io/address/0x14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2" target='_blank' rel="noreferrer">0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>14ab45f6 ... 4ed62ec2</a></h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>⏰ WHEN CAN I MINT?</h2>
       <h4 style={{ marginTop: '20px', marginLeft: '30px' }}>we are going live on <span style={{ fontWeight: 600 }}>mainnet on june 30 2022</span>! in the meantime, you can generate sample unsigned cards in the 'samples' tab!</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>🍾 WHO CAN MINT?</h2>
@@ -453,7 +459,7 @@ const Minter = (props) => {
       <img style={{ marginLeft: '10px', marginTop: '10px', marginBottom: '100px' }} alt="roadmap" src={roadmap} height="750" />
       <br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br>
-      <span style={{ fontFamily: 'Major Mono Display', fontSize: '14px', fontWeight: 600, marginLeft: '10%' }}>twitter: <a style={{ color: 'blue', textDecoration: 'none' }} href="https://twitter.com/indexit_eth" target='_blank' rel="noreferrer">@indexit_eth</a></span>
+      <span style={{ fontFamily: 'Major Mono Display', fontSize: '14px', fontWeight: 600, marginLeft: '10%' }}>twitter: <a style={{ color: 'black', textDecoration: 'none' }} href="https://twitter.com/indexit_eth" target='_blank' rel="noreferrer">@indexit_eth</a></span>
       <br></br>
     </div>
   );

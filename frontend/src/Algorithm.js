@@ -41,7 +41,7 @@ const Algorithm = (props) => {
       <img style={{ float: 'right', marginLeft: '100px', marginBottom: '30px'  }} alt="sample" src={algorithm} height="700"/>
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>📓 CONTRACT</h2>
       <h3 style={{ marginTop: '20px', marginLeft: '30px' }}>iigenesis (iig)</h3>
-      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'blue', textDecoration: 'none' }} href="https://etherscan.io/address/0x14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2" target='_blank' rel="noreferrer">0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>14ab45f ... ed62ec2</a> (erc721)</h4>
+      <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'black', textDecoration: 'none' }} href="https://etherscan.io/address/0x14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2" target='_blank' rel="noreferrer">0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>14ab45f ... ed62ec2</a> (erc721)</h4>
       <h2 style={{ marginTop: '10px', marginLeft: '5px' }}>📓 CLUBS SO FAR</h2>
       <h4 style={{ marginTop: '2px', marginLeft: '15px' }}><span style={{ fontWeight: 600 }}>999, 10k & 100k</span> (<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/english/العربية/<span style={{ fontWeight: 200 }}>देवनागरी</span>), <span style={{ fontWeight: 600 }}>24h</span>, <span style={{ fontWeight: 600 }}>0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>digit</span>, roman clubs</h4>
       <h2 style={{ marginTop: '20px', marginLeft: '5px' }}>📓 CLUBS COMING SOON</h2>
@@ -88,7 +88,7 @@ const Algorithm = (props) => {
       <h4 style={{ marginTop: '20px', marginLeft: '20px' }}>✅ 04/07/2022: <span style={{ fontWeight: 200 }}>中国人</span> (chinese) and roman (spqr) clubs supported </h4>
       <h4 style={{ marginTop: '20px', marginLeft: '20px' }}>✅ 18/07/2022: <span style={{ fontWeight: 200 }}>한국인</span> (korean) and فارسی (persian) clubs supported </h4>
       <br></br>
-      <span style={{ fontFamily: 'Major Mono Display', fontSize: '14px', fontWeight: 600, marginLeft: '10%' }}>twitter: <a style={{ color: 'blue', textDecoration: 'none' }} href="https://twitter.com/indexit_eth" target='_blank' rel="noreferrer">@indexit_eth</a></span>
+      <span style={{ fontFamily: 'Major Mono Display', fontSize: '14px', fontWeight: 600, marginLeft: '10%' }}>twitter: <a style={{ color: 'black', textDecoration: 'none' }} href="https://twitter.com/indexit_eth" target='_blank' rel="noreferrer">@indexit_eth</a></span>
     </div>
   );
 };
