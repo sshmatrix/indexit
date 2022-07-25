@@ -38,7 +38,12 @@ const Algorithm = (props) => {
       </button>
       <br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br>
-      <img style={{ float: 'right', marginLeft: '100px', marginBottom: '30px'  }} alt="sample" src={algorithm} height="700"/>
+      {isMobile ? (
+        <img style={{ float: 'right', marginLeft: '100px', marginBottom: '30px'  }} alt="sample" src={algorithm} height="550"/>
+        ) : (
+        <img style={{ float: 'right', marginLeft: '100px', marginBottom: '30px'  }} alt="sample" src={algorithm} height="700"/>
+      )}
+
       <h2 style={{ marginTop: '20px', marginLeft: '10px' }}>📓 CONTRACT</h2>
       <h3 style={{ marginTop: '20px', marginLeft: '30px' }}>iigenesis (iig)</h3>
       <h4 style={{ marginTop: '20px', marginLeft: '30px' }}><a style={{ color: 'black', textDecoration: 'none' }} href="https://etherscan.io/address/0x14ab45f6edc154e338e27f8d1d2a7cad4ed62ec2" target='_blank' rel="noreferrer">0<span style={{ fontFamily: 'SFMono', fontWeight: 400 }}>x</span>14ab45f ... ed62ec2</a> (erc721)</h4>

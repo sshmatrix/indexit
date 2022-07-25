@@ -356,7 +356,11 @@ const Minter = (props) => {
       <br></br>
       <h3 style={{ marginTop: '70px', marginLeft: '10px' }}><span style={{ fontSize: 20, color: 'black' }} className='blink_fast'>📰 العربية/<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/<span style={{ fontWeight: 200 }}>देवनागरी</span>/roman digits supported!</span></h3>
       <h1 id="title" style={{ marginTop: '20px' }}>🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
-      <img style={{ float: 'right', marginBottom: '20px' }} alt="sample" src={sample} width="337" height="400"/>
+      {isMobile ? (
+        <img style={{ float: 'right', marginBottom: '20px', marginTop: '30px' }} alt="sample" src={sample} width="253" height="300"/>
+        ) : (
+        <img style={{ float: 'right', marginBottom: '20px', marginTop: '30px' }} alt="sample" src={sample} width="337" height="400"/>
+      )}
       <h3 style={{ marginTop: '10px', marginLeft: '20px' }}><span style={{ fontSize: 30 }}>🦊 </span>  connect metamask</h3>
       <h4 style={{ marginTop: '10px', marginLeft: '30px' }}>connect wallet resolved by a digit name (requires a resolver)</h4>
       <h3 style={{ marginTop: '10px', marginLeft: '20px' }}><span style={{ fontSize: 30 }}>🕙 </span>  sign a timestamp to generate card</h3>
@@ -424,9 +428,9 @@ const Minter = (props) => {
         </div>
       )}
       {nft && !isMobile ? (
-        <div><img style={{ marginTop: '100px', marginBottom: '5px', marginLeft: '20px' }} alt="nft" src={nft} width="674"/></div>
+        <div><img style={{ marginTop: '100px', marginBottom: '5px', marginLeft: '0px' }} alt="nft" src={nft} width="674"/></div>
         ) : nft && isMobile ? (
-        <div><img style={{ marginTop: '100px', marginBottom: '5px', marginLeft: '20px' }} alt="nft" src={nft} width="674"/></div>
+        <div><img style={{ marginTop: '100px', marginBottom: '5px', marginRight: '10px' }} alt="nft" src={nft} width="400"/></div>
         ) : (
         <p></p>
       )}

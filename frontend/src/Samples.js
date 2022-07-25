@@ -183,7 +183,11 @@ const Samples = (props) => {
         📃 INFO
       </button>
       <br></br><br></br>
-      <img style={{ float: 'right', marginBottom: '20px', marginTop: '30px' }} alt="sample" src={sample} width="337" height="400"/>
+      {isMobile ? (
+        <img style={{ float: 'right', marginBottom: '20px', marginTop: '30px' }} alt="sample" src={sample} width="253" height="300"/>
+        ) : (
+        <img style={{ float: 'right', marginBottom: '20px', marginTop: '30px' }} alt="sample" src={sample} width="337" height="400"/>
+      )}
       <br></br><br></br>
       <h1 id="title" style={{ marginTop: '100px' }}>🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
       <h4 style={{ marginTop: '10px', marginLeft: '10px' }}><span style={{ fontSize: 30 }}>🎁 </span>enter ens name & generate a sample unsigned card</h4>
@@ -220,11 +224,16 @@ const Samples = (props) => {
         <p></p>
       )}
       <br></br>
-      {nftFront && nftBack ? (
-        <div style={{ float: 'left', marginLeft: '10px', marginTop: '100px', marginBottom: '100px' }}>
-          <img alt="nftfront" src={nftFront} width="337"/>
-          <img alt="nftback" src={nftBack} width="337"/>
-        </div>
+      {nftFront && nftBack && !isMobile ? (
+          <div style={{ float: 'left', marginLeft: '10px', marginTop: '100px', marginBottom: '100px' }}>
+            <img alt="nftfront" src={nftFront} width="337"/>
+            <img alt="nftback" src={nftBack} width="337"/>
+          </div>
+        ) : nftFront && nftBack && isMobile ? (
+          <div style={{ float: 'left', marginLeft: '10px', marginTop: '100px', marginBottom: '100px' }}>
+            <img alt="nftfront" src={nftFront} width="300"/>
+            <img alt="nftback" src={nftBack} width="300"/>
+          </div>
         ) : (
         <p></p>
       )}
