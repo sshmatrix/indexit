@@ -354,7 +354,7 @@ const Minter = (props) => {
       )}
 
       <br></br>
-      <h3 style={{ marginTop: '70px', marginLeft: '10px' }}><span style={{ fontSize: 20, color: 'black' }} className='blink_fast'>📰 العربية/<span style={{ fontWeight: 200 }}>中国人/한국인/فارسی</span>/<span style={{ fontWeight: 200 }}>देवनागरी</span>/roman digits supported!</span></h3>
+      <h3 style={{ marginTop: '70px', marginLeft: '10px' }}><span style={{ fontSize: 20, color: 'black' }} className='blink_fast'>📝 <span style={{ fontWeight: 200 }}>العربية</span>/<span style={{ fontWeight: 200 }}>中国人</span>/<span style={{ fontWeight: 200 }}>한국인</span>/<span style={{ fontWeight: 200 }}>فارسی</span>/<span style={{ fontWeight: 200 }}>देवनागरी</span>/roman digits supported!</span></h3>
       <h1 id="title" style={{ marginTop: '20px' }}>🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
       {isMobile ? (
         <img style={{ float: 'right', marginBottom: '20px', marginTop: '30px' }} alt="sample" src={sample} width="253" height="300"/>

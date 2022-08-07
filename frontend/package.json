@@ -1,6 +1,6 @@
 {
   "name": "indexit.eth",
-  "homepage": "https://indexit.xyz",
+  "homepage": "https://indexit.eth.limo",
   "version": "0.1.0",
   "dependencies": {
     "@alch/alchemy-web3": "^1.0.1",

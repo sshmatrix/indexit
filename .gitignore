@@ -3,8 +3,8 @@
 resources/*.png
 resources/gifs
 */package-lock.json
-*/out
-*/build
+*/out*
+*/build*
 next/public
 */*/img
 */artifacts

@@ -21,7 +21,7 @@ const Mobile = (props) => {
         <button
           onClick={() => {location.href='https://metamask.app.link/dapp/' + homepage.split("://").pop() + '/#/minter'}}
           id="sampleButton"
-          style= {{ marginBottom: '20px'}}
+          style= {{ marginBottom: '20px' }}
         >
           🦊 MetaMask Mobile
         </button>
