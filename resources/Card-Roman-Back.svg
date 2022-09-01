@@ -7862,9 +7862,9 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1.8501952"
      inkscape:cx="71.884307"
-     inkscape:cy="173.22497"
+     inkscape:cy="173.76545"
      inkscape:document-units="mm"
-     inkscape:current-layer="g10516"
+     inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="1252"
      inkscape:window-height="819"
@@ -8607,14 +8607,14 @@
          y="32.046822">EVEN</tspan></text>
     <text
        xml:space="preserve"
-       style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#ffb400;fill-opacity:1;stroke:#842c00;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;text-anchor:middle;text-align:center"
-       x="35.094524"
+       style="font-weight:300;font-size:3.46439px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;text-align:center;letter-spacing:0px;text-anchor:middle;fill:#ffb400;fill-opacity:1;stroke:#842c00;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       x="35.277744"
        y="35.983967"
        id="text2137-4-6"><tspan
          sodipodi:role="line"
          id="tspan2135-1-0"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#ffb400;fill-opacity:1;stroke:#842c00;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;text-anchor:middle;text-align:center"
-         x="31.594379"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:center;text-anchor:middle;fill:#ffb400;fill-opacity:1;stroke:#842c00;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="35.277744"
          y="35.983967">ODD</tspan></text>
     <text
        xml:space="preserve"

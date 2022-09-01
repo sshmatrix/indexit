@@ -28,7 +28,7 @@ contract IndexIt is ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() ERC721("INDEXIT-GENESIS", "IIG") {
+    constructor() ERC721("IIGENESIS", "IIG") {
     }
     
     // Library
@@ -118,16 +118,16 @@ contract IndexIt is ERC721URIStorage, Ownable {
         bytes32 messageHash = prefixed(payloadHash);
         address signer = recoverSigner(messageHash, signature);
         bytes32 nameHash = computeNameHash(name);
-        address owner = resolve(nameHash); // Results in 'Fail' transaction if ENS is not owned
+        address owner = resolve(nameHash); // Results in 'Fail' transaction if ENS doesn't resolve to owner
         // Require: Minter = Signer
-        require(msg.sender == signer, "Please no scam ser");
+        require(msg.sender == signer, "PLS_NO_SCAM_SIR");
         // Require: Minter = Owner (failsafe)
-        require(msg.sender == owner, "Don't fuck thy neighbour's wife");
+        require(msg.sender == owner, "PLS_NO_SNEAK");
         // Require: Owner = Signer (failsafe)
-        require(owner == signer, "There is no level you wouldn't stoop to");
+        require(owner == signer, "WHY_SO_SNEAKY");
         uint256 newTokenID = _tokenIds.current();
         uint256 mintPrice = price(name);
-        require(msg.value >= mintPrice, "Because you are a cheap motherfucker");
+        require(msg.value >= mintPrice, "YOU_CHEAP_MFER");
         string memory tokenURI = uri;
         _mint(msg.sender, newTokenID);
         _setTokenURI(newTokenID, tokenURI);
@@ -135,7 +135,7 @@ contract IndexIt is ERC721URIStorage, Ownable {
     }
 
     function withdraw() external onlyOwner {
-        require(address(this).balance > 0, "There is no money in the contract. Rugged!");
+        require(address(this).balance > 0, "RUGGED_LOL");
         payable(msg.sender).transfer(address(this).balance);
     }
 }

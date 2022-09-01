@@ -1,7 +1,7 @@
 {
   "name": "indexit.eth",
-  "homepage": "https://indexit.eth.limo",
-  "version": "0.1.0",
+  "homepage": "https://indexit.xyz",
+  "version": "1.0.5",
   "dependencies": {
     "@alch/alchemy-web3": "^1.0.1",
     "@testing-library/jest-dom": "^5.11.4",

@@ -18,22 +18,23 @@ const Mobile = (props) => {
     return (
       <div className="Mobile">
         <h6>you are accessing this app on mobile. open with metamask mobile to connect, or continue in browser without connecting.</h6>
-        <button
-          onClick={() => {location.href='https://metamask.app.link/dapp/' + homepage.split("://").pop() + '/#/minter'}}
-          id="sampleButton"
-          style= {{ marginBottom: '20px' }}
-        >
-          🦊 MetaMask Mobile
-        </button>
-        <br></br>
-        <br></br>
-        <button
-          onClick={goToHome}
-          id="sampleButton"
-          style= {{ marginBottom: '20px'}}
-        >
-          🌎 Continue in Browser
-        </button>
+        <div className="mobile-buttons">
+          <button
+            onClick={() => {location.href='https://metamask.app.link/dapp/' + homepage.split("://").pop() + '/#/minter'}}
+            id="sampleButton"
+            style= {{ marginBottom: '20px' }}
+          >
+            🦊 Open MetaMask
+          </button>
+          <br></br><br></br>
+          <button
+            onClick={goToHome}
+            id="sampleButton"
+            style= {{ marginBottom: '20px'}}
+          >
+            🌎 Continue in Browser
+          </button>
+        </div>
         <br></br>
         <br></br>
         <br></br>

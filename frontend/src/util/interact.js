@@ -13,7 +13,7 @@ export const connectWallet = async () => {
         method: "eth_requestAccounts",
       });
       const obj = {
-        status: "👆🏽 Enter ENS & click 'NEXT →'",
+        status: "👆🏽 Enter ENS & click 'NEXT'",
         address: addressArray[0],
       };
       return obj;
@@ -41,7 +41,7 @@ export const getCurrentWalletConnected = async () => {
       if (addressArray.length > 0) {
         return {
           address: addressArray[0],
-          status: "👆🏽 Enter ENS & click 'NEXT →'",
+          status: "👆🏽 Enter ENS & click 'NEXT'",
         };
       } else {
         return {

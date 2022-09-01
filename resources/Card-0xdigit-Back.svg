@@ -1689,7 +1689,7 @@
        xlink:href="#linearGradient13264"
        id="linearGradient1638"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.69946725,0,0,0.69946725,11.04263,13.136222)"
+       gradientTransform="matrix(0.69946725,0,0,0.69946725,11.04263,13.665389)"
        x1="56.265202"
        y1="48.689278"
        x2="75.858978"
@@ -2401,14 +2401,14 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.07"
-     inkscape:cx="264.48598"
-     inkscape:cy="107.94393"
+     inkscape:zoom="1.4876205"
+     inkscape:cx="127.04853"
+     inkscape:cy="103.85713"
      inkscape:document-units="mm"
      inkscape:current-layer="layer2"
      showgrid="false"
      inkscape:window-width="1252"
-     inkscape:window-height="819"
+     inkscape:window-height="791"
      inkscape:window-x="1"
      inkscape:window-y="25"
      inkscape:window-maximized="0"
@@ -4994,7 +4994,7 @@
        xml:space="preserve"
        style="font-weight:900;font-size:5.18756px;line-height:1.44;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Heavy';font-variant-ligatures:none;letter-spacing:-0.370135px;opacity:0.308682;fill:url(#linearGradient1638);fill-opacity:1;stroke-width:0.139893;stroke-miterlimit:4;stroke-dasharray:none"
        id="text1038-1"
-       y="47.582188"
+       y="48.111355"
        x="54.819824"
        inkscape:export-filename="/Users/avneetsingh/Documents/Self/Fun/indexIt/minter/public/nft.png"
        inkscape:export-xdpi="600"
@@ -5003,7 +5003,7 @@
          id="tspan1036-1"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.3707px;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:center;text-anchor:middle;fill:url(#linearGradient1638);fill-opacity:1;stroke:#000000;stroke-width:0.139893;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="54.634758"
-         y="47.582188">0xxxxxx</tspan></text>
+         y="48.111355">0xxxxxx</tspan></text>
     <text
        xml:space="preserve"
        style="font-weight:300;font-size:1.10548px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:-0.0331708px;opacity:1;fill:#7af2ff;fill-opacity:1;stroke:#cacaca;stroke-width:0.02;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
@@ -5206,68 +5206,68 @@
          xml:space="preserve"
          style="font-weight:300;font-size:3.4644px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#4f92ff;fill-opacity:1;stroke:#0024ff;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="31.492447"
-         y="51.61343"
+         y="51.741428"
          id="text2137-7-8"><tspan
            sodipodi:role="line"
            id="tspan2135-7-3"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#4f92ff;fill-opacity:1;stroke:#0024ff;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            x="31.492447"
-           y="51.61343">REPEATING</tspan></text>
+           y="51.741428">REPEATING</tspan></text>
       <text
          xml:space="preserve"
          style="font-weight:300;font-size:3.4644px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#4f92ff;fill-opacity:1;stroke:#0024ff;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="31.590559"
-         y="55.550575"
+         y="55.678574"
          id="text2137-4-88"><tspan
            sodipodi:role="line"
            id="tspan2135-1-54"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#4f92ff;fill-opacity:1;stroke:#0024ff;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            x="31.590559"
-           y="55.550575">Alternating</tspan></text>
+           y="55.678574">Alternating</tspan></text>
       <text
          xml:space="preserve"
          style="font-weight:300;font-size:3.4644px;line-height:1.25;font-family:'SF Pro Rounded';-inkscape-font-specification:'SF Pro Rounded Light';font-variant-ligatures:none;letter-spacing:0px;fill:#4f92ff;fill-opacity:1;stroke:#0024ff;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="31.492447"
-         y="59.48772"
+         y="59.615719"
          id="text2137-73-0-5"><tspan
            sodipodi:role="line"
            id="tspan2135-8-2-37"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';fill:#4f92ff;fill-opacity:1;stroke:#0024ff;stroke-width:0.2;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            x="31.492447"
-           y="59.48772">incrementing</tspan></text>
+           y="59.615719">incrementing</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.4644px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="77.954109"
-         y="51.613434"
+         y="51.741432"
          id="text2137-7-4-9"><tspan
            sodipodi:role="line"
            id="tspan2135-7-8-3"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'SF Mono';-inkscape-font-specification:'SF Mono';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            x="77.85379"
-           y="51.613434">YOL3</tspan></text>
+           y="51.741432">YOL3</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.4644px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="77.954109"
-         y="55.550579"
+         y="55.678577"
          id="text2137-4-8-5"><tspan
            sodipodi:role="line"
            id="tspan2135-1-5-6"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            x="77.853783"
-           y="55.550579">NOL3</tspan></text>
+           y="55.678577">NOL3</tspan></text>
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.4644px;line-height:1.25;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';font-variant-ligatures:none;text-align:end;letter-spacing:-0.100323px;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
          x="77.938736"
-         y="59.48772"
+         y="59.615719"
          id="text2137-73-0-2-7"><tspan
            sodipodi:role="line"
            id="tspan2135-8-2-3-3"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Earth Orbiter Bold';-inkscape-font-specification:'Earth Orbiter Bold, ';text-align:end;text-anchor:end;stroke:#000000;stroke-width:0.15;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
            x="77.838409"
-           y="59.48772">YOL4</tspan></text>
+           y="59.615719">YOL4</tspan></text>
     </g>
     <rect
        style="fill:none;fill-rule:evenodd;stroke:#0d1e86;stroke-width:0.294636;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:0.0403226;paint-order:stroke fill markers;stop-color:#000000"

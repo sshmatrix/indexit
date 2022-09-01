@@ -174,65 +174,64 @@ const Samples = (props) => {
   return (
     <div className="Minter">
       <button id="sampleButton" onClick={goToHome}>
-        🏛 HOME
+        🏛 home
       </button>
       <button id="sampleButton" onClick={goToGenerate}>
-        🎁 SAMPLES
+        🎁 samples
       </button>
       <button id="sampleButton" onClick={goToAlgorithm}>
-        📃 INFO
+        📃 info
       </button>
-      <br></br><br></br>
-      {isMobile ? (
-        <img style={{ float: 'right', marginBottom: '20px', marginTop: '30px' }} alt="sample" src={sample} width="253" height="300"/>
-        ) : (
-        <img style={{ float: 'right', marginBottom: '20px', marginTop: '30px' }} alt="sample" src={sample} width="337" height="400"/>
-      )}
-      <br></br><br></br>
-      <h1 id="title" style={{ marginTop: '100px' }}>🚀 RARITY CARDS FOR DIGIT CLUBS</h1>
-      <h4 style={{ marginTop: '10px', marginLeft: '10px' }}><span style={{ fontSize: 30 }}>🎁 </span>enter ens name & generate a sample unsigned card</h4>
-      <form style={{ marginBottom: '10px', width: '300px', marginLeft: '10px' }}>
-        <input
-          id="ens"
-          type="text"
-          placeholder="Enter ENS & Click on 'NEXT ▶▶▶'"
-          onChange={(event) => setENS(event.target.value)}
-
-        />
-      </form>
-      <h6 style={{ marginTop: '-8px', color: 'black', marginLeft: '10px', fontFamily: 'SFMono', fontSize: 15, fontWeight: 100 }}>999, 10k, 100k (english/العربية/देवनागरी/中国人/한국인/فارسی), 24h, 0xdigit, Roman</h6>
-      <h6 style={{ marginTop: '-38px', color: 'black', marginLeft: '20px', fontFamily: 'SFMono', fontSize: 12, fontWeight: 100 }}>✓ 034.eth, ٢٣٢٣٤.eth, ४५६७.eth, 四五六七.eth, 육구구오.eth, ۳۵۴.eth, 05h11.eth, 0x01397.eth, dcccxxxix.eth</h6>
+      <br></br><br></br><br></br><br></br>
+      <img className="img-front" alt="sample" src={sample}/>
+      <h1 id="title">🚀 sample rarity cards</h1>
+      <h3 style={{ marginTop: '10px' }}><span style={{ fontSize: 30 }}>🎁 </span>enter ens name & generate a sample unsigned card</h3>
+      <div className="form">
+        <form style={{ marginBottom: '10px', width: '300px' }}>
+          <input
+            id="ens"
+            type="text"
+            placeholder=" Enter ENS & Click on 'NEXT ▶▶▶'"
+            onChange={(event) => setENS(event.target.value)}
+            style={{ textAlign: 'center' }}
+          />
+        </form>
+      </div>
+      <div>
+        <h6 style={{ marginTop: '2px', color: 'black', fontFamily: 'SFMono', fontSize: 15, fontWeight: 100 }}>999, 10k, 100k (english, العربية, देवनागरी, 中国人, 한국인, فارسی), 24h, 0xdigit, Roman</h6>
+        <h6 style={{ marginTop: '-30px', color: 'blue', fontFamily: 'SFMono', fontSize: 12, fontWeight: 100 }}>034.eth, ٢٣٢٣٤.eth, ४५६७.eth, 四五六七.eth, 육구구오.eth, ۳۵۴.eth, 05h11.eth, 0x01397.eth, dcccxxxix.eth</h6>
+      </div>
       {!ens.endsWith(".eth") ? (
-        <div>
-          <button id="signButton" style={{ background: 'grey', color: 'white', marginLeft: '10px' }}>
-            <span>🔒 NEXT</span>
+        <div className="mint-refresh">
+          <button id="signButton" style={{ background: 'grey', color: 'white' }}>
+            <span>🔒 next</span>
           </button>
         </div>
         ) : (
-        <div>
-          <button id="signButton" onClick={onGeneratePressed} style={{ marginLeft: '10px' }}>
-            <span>NEXT ▶▶▶</span>
+        <div className="mint-refresh">
+          <button id="signButton" onClick={onGeneratePressed}>
+            <span>next ▶▶▶</span>
           </button>
         </div>
       )}
-      <br></br>
+      <br></br><br></br>
       {status ? (
-        <div className='errorbox' style={{marginTop: '50px', marginBottom: '100px'}}>
+        <div className='errorbox2' style={{ marginBottom: '100px'}}>
           {status.toString().toLowerCase()}
         </div>
         ) : (
         <p></p>
       )}
-      <br></br>
+      <br></br><br></br><br></br><br></br><br></br>
       {nftFront && nftBack && !isMobile ? (
-          <div style={{ float: 'left', marginLeft: '10px', marginTop: '100px', marginBottom: '100px' }}>
-            <img alt="nftfront" src={nftFront} width="337"/>
-            <img alt="nftback" src={nftBack} width="337"/>
+          <div style={{ justifyContent: 'center', display: 'flex', margin: '10px auto' }}>
+            <img alt="nftfront" src={nftFront} width="337" style={{ width:'337px', height:'400px', objectFit:'cover' }}/>
+            <img alt="nftback" src={nftBack} width="337" style={{ width:'337px', height:'400px', objectFit:'cover' }}/>
           </div>
         ) : nftFront && nftBack && isMobile ? (
-          <div style={{ float: 'left', marginLeft: '10px', marginTop: '100px', marginBottom: '100px' }}>
-            <img alt="nftfront" src={nftFront} width="300"/>
-            <img alt="nftback" src={nftBack} width="300"/>
+          <div style={{ justifyContent: 'center', display: 'flex', margin: '-40px auto' }}>
+            <img alt="nftfront" src={nftFront} width="200" style={{ width:'200px', height:'238px', objectFit:'cover' }}/>
+            <img alt="nftback" src={nftBack} width="200" style={{ width:'200px', height:'238px', objectFit:'cover' }}/>
           </div>
         ) : (
         <p></p>
@@ -247,7 +246,7 @@ const Samples = (props) => {
       <br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br>
       <br></br><br></br><br></br><br></br><br></br><br></br>
-      <span style={{ fontFamily: 'Major Mono Display', fontSize: '14px', fontWeight: 600, marginLeft: '10%' }}>twitter: <a style={{ color: 'black', textDecoration: 'none' }} href="https://twitter.com/indexit_eth" target='_blank' rel="noreferrer">@indexit_eth</a></span>
+      <span style={{ fontFamily: 'Major Mono Display', fontSize: '14px', fontWeight: 600, marginLeft: '10%' }}>twitter: <a style={{ color: 'blue', textDecoration: 'none' }} href="https://twitter.com/indexit_eth" target='_blank' rel="noreferrer">@indexit_eth</a></span>
       <br></br>
     </div>
   );
