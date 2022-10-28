@@ -4,12 +4,12 @@
 require('dotenv').config();
 require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-etherscan");
-const { API_URL_MAINNET, API_URL_GOERLI, PRIVATE_KEY_MAINNET, PRIVATE_KEY_GOERLI} = process.env;
+const { API_URL_MAINNET, API_URL_GOERLI, PRIVATE_KEY_MAINNET, PRIVATE_KEY_GOERLI, ETHERSCAN_KEY} = process.env;
 module.exports = {
    solidity: "0.8.4",
    defaultNetwork: "goerli",
    etherscan: {
-    apiKey: "N6BFYIQPNMEJJ9AT5SCUGM11UY9CU6TV6E",
+    apiKey: `${ETHERSCAN_KEY}`,
    },
    networks: {
       hardhat: {},
