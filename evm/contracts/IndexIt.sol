@@ -28,23 +28,15 @@ contract IndexIt is ERC721URIStorage, Ownable {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() ERC721("IIGENESIS", "IIG") {
+    constructor() ERC721("IITWIT", "IIT") {
     }
     
     // Library
-    function add(string memory a, string memory b) 
-    internal 
-    pure 
-    returns (string memory) 
-    {
+    function add(string memory a, string memory b) internal pure returns (string memory) {
         return string(abi.encodePacked(a, b));
     }
 
-    function splitSignature(bytes memory signature)
-    internal
-    pure
-    returns (uint8, bytes32, bytes32)
-    {
+    function splitSignature(bytes memory signature) internal pure returns (uint8, bytes32, bytes32) {
         require(signature.length == 65, "Signature length != 65");
         bytes32 r;
         bytes32 s;
@@ -66,13 +58,6 @@ contract IndexIt is ERC721URIStorage, Ownable {
     }
 
     // Resolves ENS
-    function computeNameHash(string memory name) public pure returns (bytes32 namehash) {
-        namehash = 0x0000000000000000000000000000000000000000000000000000000000000000;
-        namehash = keccak256(abi.encodePacked(namehash, keccak256(abi.encodePacked('eth'))));
-        namehash = keccak256(abi.encodePacked(namehash, keccak256(abi.encodePacked(name))));
-        return namehash;
-    }
-
     ENS ens = ENS(0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e);
     function resolve(bytes32 node) public view returns(address) {
         Resolver resolver = ens.resolver(node);
@@ -91,12 +76,9 @@ contract IndexIt is ERC721URIStorage, Ownable {
     }
     
     // Sets the mint price based on club
-    function price(
-        string memory name
-    ) public pure returns (uint256) {
+    function price(string memory name) public pure returns (uint256) {
         uint256 len = name.strlen();
         uint256 mintPrice;
-
         if (len == 3) {
             mintPrice = priceTier1;
         } else if (len == 4) {
@@ -106,7 +88,6 @@ contract IndexIt is ERC721URIStorage, Ownable {
         } else {
             mintPrice = priceIdiotClub;
         }
-        
         return mintPrice;
     }
 
@@ -114,20 +95,22 @@ contract IndexIt is ERC721URIStorage, Ownable {
         public
         payable
     {
-        bytes32 payloadHash = keccak256(abi.encode(hash, message));
-        bytes32 messageHash = prefixed(payloadHash);
-        address signer = recoverSigner(messageHash, signature);
-        bytes32 nameHash = computeNameHash(name);
-        address owner = resolve(nameHash); // Results in 'Fail' transaction if ENS doesn't resolve to owner
+        bytes32 payloadhash = keccak256(abi.encode(hash, message));
+        bytes32 messagehash = prefixed(payloadhash);
+        address signer = recoverSigner(messagehash, signature);
+        bytes32 namehash = keccak256(
+            abi.encodePacked(keccak256(abi.encodePacked(bytes32(0), keccak256("eth"))), keccak256(abi.encodePacked(name)))
+        );
+        address owner = resolve(namehash); // Results in 'Fail' transaction if ENS doesn't resolve to owner
         // Require: Minter = Signer
-        require(msg.sender == signer, "PLS_NO_SCAM_SIR");
+        require(msg.sender == signer, "ScammerAlert");
         // Require: Minter = Owner (failsafe)
-        require(msg.sender == owner, "PLS_NO_SNEAK");
+        require(msg.sender == owner, "YouShallNotPass");
         // Require: Owner = Signer (failsafe)
-        require(owner == signer, "WHY_SO_SNEAKY");
+        require(owner == signer, "BegoneWench");
         uint256 newTokenID = _tokenIds.current();
         uint256 mintPrice = price(name);
-        require(msg.value >= mintPrice, "YOU_CHEAP_MFER");
+        require(msg.value >= mintPrice, "YouCheapMfer");
         string memory tokenURI = uri;
         _mint(msg.sender, newTokenID);
         _setTokenURI(newTokenID, tokenURI);
@@ -135,7 +118,7 @@ contract IndexIt is ERC721URIStorage, Ownable {
     }
 
     function withdraw() external onlyOwner {
-        require(address(this).balance > 0, "RUGGED_LOL");
+        require(address(this).balance > 0, "RuggedNgmi");
         payable(msg.sender).transfer(address(this).balance);
     }
 }
