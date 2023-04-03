@@ -9,8 +9,8 @@ import fs from 'fs';
 const express = require("express");
 var bodyParser = require('body-parser')
 const options = {
-	key: fs.readFileSync('/root/.ssl/indexit_club.key'),
-	cert: fs.readFileSync('/root/.ssl/indexit_club.crt')
+	key: fs.readFileSync('/root/.ssl/indexit.club.key'),
+	cert: fs.readFileSync('/root/.ssl/indexit.club.crt')
 };
 require('dotenv').config();
 const key = process.env.PINATA_KEY;

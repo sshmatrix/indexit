@@ -1,3 +1,4 @@
+hosts*
 */.env*
 */node_modules/
 resources/*.png
